@@ -92,7 +92,7 @@ const Sponsor = () => {
                 <h3 className="text-xs font-bold text-white/50 uppercase tracking-[0.3em] font-jakarta">Sponsor Resmi</h3>
                 <span className="h-px w-8 bg-gradient-to-l from-transparent to-white/20" />
               </div>
-              <div className="marquee-outer">
+              <div className="marquee-outer" style={{ WebkitMaskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)', maskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)' }}>
                 <div className="marquee-track marquee-animate-left">
                   {repeatedSponsors.map((sponsor, idx) => (
                     <div key={'official-' + sponsor.file + idx} className="marquee-logo-item" style={{ minWidth: '180px' }}>
@@ -111,7 +111,7 @@ const Sponsor = () => {
               <h3 className="text-xs font-bold text-white/50 uppercase tracking-[0.3em] font-jakarta">Media Partner & Kolaborator</h3>
               <span className="h-px w-8 bg-gradient-to-l from-transparent to-white/20" />
             </div>
-            <div className="marquee-outer">
+            <div className="marquee-outer" style={{ WebkitMaskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)', maskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)' }}>
               <div className="marquee-track marquee-animate-left">
                 {[...mediaPartners, ...mediaPartners].map((sponsor, idx) => (
                   <div key={'media-left-' + sponsor.file + idx} className="marquee-logo-item" style={{ minWidth: '160px' }}>
@@ -120,7 +120,7 @@ const Sponsor = () => {
                 ))}
               </div>
             </div>
-            <div className="marquee-outer">
+            <div className="marquee-outer" style={{ WebkitMaskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)', maskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)' }}>
               <div className="marquee-track marquee-animate-right">
                 {[...mediaPartners, ...mediaPartners].reverse().map((sponsor, idx) => (
                   <div key={'media-right-' + sponsor.file + idx} className="marquee-logo-item" style={{ minWidth: '160px' }}>

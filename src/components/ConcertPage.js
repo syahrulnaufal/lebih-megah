@@ -396,7 +396,7 @@ const ConcertPage = () => {
               return (
                 <div key={idx} className="relative md:grid md:grid-cols-2 md:gap-16 items-center md:pb-8">
                   {/* Music Node marker (glowing) */}
-                  <div className="absolute left-[-29px] md:left-1/2 top-6 md:top-1/2 -translate-y-1/2 md:-translate-x-1/2 w-4 h-4 rounded-full border-2 border-black z-10 flex items-center justify-center bg-black transition-all group-hover:scale-110"
+                  <div className="absolute left-[-32.5px] md:left-1/2 top-6 md:top-1/2 -translate-y-1/2 md:-translate-x-1/2 w-4 h-4 rounded-full border-2 border-black z-10 flex items-center justify-center bg-black transition-all group-hover:scale-110"
                        style={{ borderColor: isEven ? '#ed374d' : '#f97540' }}>
                     <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: isEven ? '#ed374d' : '#f97540', boxShadow: `0 0 10px ${isEven ? '#ed374d' : '#f97540'}` }} />
                   </div>

@@ -156,7 +156,7 @@ const EsportPage = () => {
               return (
                 <div key={idx} className="relative md:grid md:grid-cols-2 md:gap-16 items-center md:pb-8">
                   {/* Glowing Diamond Node (centered) */}
-                  <div className="absolute left-[-29px] md:left-1/2 top-6 md:top-1/2 -translate-y-1/2 md:-translate-x-1/2 w-4 h-4 rotate-45 border-2 border-black z-10 flex items-center justify-center bg-black transition-all group-hover:scale-110"
+                  <div className="absolute left-[-32.5px] md:left-1/2 top-6 md:top-1/2 -translate-y-1/2 md:-translate-x-1/2 w-4 h-4 rotate-45 border-2 border-black z-10 flex items-center justify-center bg-black transition-all group-hover:scale-110"
                        style={{ borderColor: isEven ? '#5cb3ff' : '#7e5dc1' }}>
                     <div className="w-1.5 h-1.5" style={{ backgroundColor: isEven ? '#5cb3ff' : '#7e5dc1', boxShadow: `0 0 10px ${isEven ? '#5cb3ff' : '#7e5dc1'}` }} />
                   </div>

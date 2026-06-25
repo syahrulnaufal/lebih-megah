@@ -1,5 +1,6 @@
 // src/components/Timeline.js
 import React, { useEffect, useRef, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Calendar, Award, Trophy, Users, Mic, Music } from 'lucide-react';
 import SectionTitle from './common/SectionTitle';
 import TimelineCard from './cards/TimelineCard';
@@ -12,13 +13,15 @@ const timelineEvents = [
     desc: 'Opening ceremony peresmian rangkaian festival Switchfest 2026 secara simbolis.',
     icon: Calendar,
     color: '#7e5dc1', // Purple
+    link: '#',
   },
   {
-    date: '28 SEP - 01 OKT 2026',
+    date: '28 SEP - 06 OKT 2026',
     title: 'Lomba Eksternal IT',
     desc: 'Kompetisi IT tingkat nasional (Web Programming, UI/UX Design, dan Design Poster / Infografis) secara online & offline.',
     icon: Trophy,
     color: '#5cb3ff', // Sky Blue
+    link: '/lomba-it',
   },
   {
     date: '10 - 11 OKT 2026',
@@ -26,6 +29,7 @@ const timelineEvents = [
     desc: 'Kompetisi khusus mahasiswa Teknologi Informasi UIN Walisongo Semarang untuk mengasah bakat internal.',
     icon: Users,
     color: '#55D5E7', // Teal
+    link: '#',
   },
   {
     date: '17 OKT 2026',
@@ -33,6 +37,7 @@ const timelineEvents = [
     desc: 'Turnamen Mobile Legends: Bang Bang memperebutkan hadiah jutaan rupiah di panggung utama.',
     icon: Award,
     color: '#f97540', // Orange
+    link: '/esport',
   },
   {
     date: '24 - 25 OKT 2026',
@@ -40,6 +45,7 @@ const timelineEvents = [
     desc: 'Pertandingan futsal bergengsi antar instansi/sekolah untuk memperebutkan piala Switchfest.',
     icon: Trophy,
     color: '#ed374d', // Red
+    link: '/futsal',
   },
   {
     date: '5 NOV 2026',
@@ -47,6 +53,7 @@ const timelineEvents = [
     desc: 'Seminar nasional bertema "Ideas that Matter: Impactful Solution" bersama praktisi teknologi terkemuka Indonesia.',
     icon: Mic,
     color: '#f97540', // Orange
+    link: '/talkshow',
   },
   {
     date: 'JUM\'AT, 13 NOV 2026',
@@ -54,12 +61,14 @@ const timelineEvents = [
     desc: 'Konser penutup spektakuler sebagai perayaan puncak rangkaian festival SwitchFest 2026 bersama bintang tamu spesial.',
     icon: Music,
     color: '#a856ee', // Violet
+    link: '/concert',
   },
 ];
 
 const Timeline = () => {
   const sectionRef = useRef(null);
   const [visible, setVisible] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -133,7 +142,10 @@ const Timeline = () => {
               return (
                 <div 
                   key={evt.title}
+                  onClick={() => evt.link && evt.link !== '#' && navigate(evt.link)}
                   className={`flex flex-col lg:flex-row items-start lg:items-center relative w-full lg:min-h-[260px] transition-all duration-1000 ${
+                    evt.link && evt.link !== '#' ? 'cursor-pointer hover:opacity-90 hover:scale-[1.01]' : ''
+                  } ${
                     visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
                   }`}
                   style={{ transitionDelay: `${idx * 150}ms` }}

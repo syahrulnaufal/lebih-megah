@@ -79,15 +79,15 @@ const Navbar = () => {
     <>
       <nav
         aria-label="Main navigation"
-        className={`fixed top-0 left-0 w-full z-[60] flex justify-center transition-all duration-300 ease-in-out pointer-events-none ${
+        className={`fixed top-0 left-0 w-full z-[60] flex justify-center transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] pointer-events-none ${
           scrolled ? 'pt-4 px-4' : 'pt-0 px-0'
         }`}
       >
         <div
-          className={`flex items-center justify-between transition-all duration-300 pointer-events-auto ${
+          className={`flex items-center justify-between transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] pointer-events-auto ${
             scrolled
               ? 'w-full max-w-5xl py-2.5 px-6 md:px-8 bg-[#020817]/85 backdrop-blur-xl border border-[#5cb3ff]/15 rounded-full shadow-[0_10px_35px_rgba(0,0,0,0.8)]'
-              : 'w-full py-5 px-6 md:px-10 bg-[#020817]/40 backdrop-blur-md border-b border-[#5cb3ff]/10'
+              : 'w-full max-w-[100%] py-5 px-6 md:px-10 bg-[#020817]/40 backdrop-blur-md border-b border-[#5cb3ff]/10 rounded-none'
           }`}
         >
           {/* Logo */}

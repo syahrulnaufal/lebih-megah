@@ -31,13 +31,14 @@ const subComps = [
 ];
 
 const timelineData = [
-  { title: 'Pendaftaran', date: '20 Agustus - 20 September 2026', desc: 'Registrasi online seluruh peserta kompetisi IT nasional.' },
-  { title: 'Technical Meeting', date: '23 September 2026', desc: 'Sesi penjelasan tata tertib lomba dan tanya jawab teknis.' },
-  { title: 'Kualifikasi & Unggah Karya', date: '24 - 26 September 2026', desc: 'Batas akhir unggah berkas proposal dan mock-up karya.' },
-  { title: 'Grand Final UI/UX Design', date: '28 September 2026', desc: 'Presentasi karya finalis UI/UX di depan dewan juri secara offline.' },
-  { title: 'Grand Final Web Programming', date: '29 September 2026', desc: 'Presentasi aplikasi web buatan finalis secara langsung.' },
-  { title: 'Grand Final Infografis', date: '30 September 2026', desc: 'Presentasi konsep karya infografis digital secara luring.' },
-  { title: 'Awarding & Penutupan', date: '1 Oktober 2026', desc: 'Pengumuman resmi juara seluruh cabang lomba IT SwitchFest 2026.' },
+  { title: 'Pendaftaran Batch 1', date: '18 Agustus - 31 Agustus 2026', desc: 'Registrasi online seluruh peserta kompetisi IT nasional batch 1.' },
+  { title: 'Pendaftaran Batch 2', date: '1 September - 27 September 2026', desc: 'Registrasi online seluruh peserta kompetisi IT nasional batch 2.' },
+  { title: 'Kualifikasi & Unggah Karya', date: '18 - 27 September 2026 Pukul 23:59 WIB', desc: 'Batas akhir unggah berkas proposal dan mock-up karya.' },
+  { title: 'Babak Penyisihan', date: '28 - 30 September 2026', desc: 'Babak penyisihan seluruh cabang lomba IT SwitchFest 2026.' },
+  { title: 'Technical Meeting', date: '2 Oktober 2026', desc: 'Sesi penjelasan tata tertib lomba dan tanya jawab teknis.' },
+  { title: 'Grand Final UI/UX Design', date: '5 Oktober 2026', desc: 'Presentasi karya finalis UI/UX di depan dewan juri secara offline.' },
+  { title: 'Grand Final Web Programming', date: '6 Oktober 2026', desc: 'Presentasi aplikasi web buatan finalis secara langsung.' },
+  { title: 'Awarding & Penutupan', date: '9 Oktober 2026', desc: 'Pengumuman resmi juara seluruh cabang lomba IT SwitchFest 2026.' },
 ];
 
 const faqData = [
@@ -51,7 +52,7 @@ const faqData = [
   },
   {
     question: 'Di manakah babak final diselenggarakan?',
-    answer: 'Babak final (presentasi karya) akan diadakan secara luring/offline di Kampus UIN Walisongo Semarang.',
+    answer: 'Babak final (presentasi karya) akan diadakan secara Daring/Online melalui Google Meet.',
   },
 ];
 
@@ -76,7 +77,7 @@ const LombaItPage = () => {
         />
 
         {/* Cyber Hacker Terminal Mock */}
-        <div className="glass-navy rounded-[2.5rem] border border-[#5cb3ff]/10 max-w-3xl mx-auto overflow-hidden shadow-2xl font-mono text-xs relative">
+        <div className="glass-navy rounded-2xl border border-[#5cb3ff]/10 max-w-3xl mx-auto overflow-hidden shadow-2xl font-mono text-xs relative">
           <div className="absolute top-0 right-0 w-24 h-24 bg-[#7e5dc1]/10 rounded-full blur-2xl pointer-events-none" />
           <div className="bg-white/5 px-4 py-2.5 border-b border-white/5 flex items-center justify-between">
             <div className="flex items-center gap-1.5">
@@ -155,7 +156,7 @@ const LombaItPage = () => {
               return (
                 <div key={idx} className="relative md:grid md:grid-cols-2 md:gap-16 items-center md:pb-8">
                   {/* Circuit Node Marker (glowing) */}
-                  <div className="absolute left-[-29px] md:left-1/2 top-6 md:top-1/2 -translate-y-1/2 md:-translate-x-1/2 w-4 h-4 rounded-full border-2 border-black z-10 flex items-center justify-center bg-black transition-all group-hover:scale-110"
+                  <div className="absolute left-[-32.5px] md:left-1/2 top-6 md:top-1/2 -translate-y-1/2 md:-translate-x-1/2 w-4 h-4 rounded-full border-2 border-black z-10 flex items-center justify-center bg-black transition-all group-hover:scale-110"
                        style={{ borderColor: isEven ? '#7e5dc1' : '#f97540' }}>
                     <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: isEven ? '#7e5dc1' : '#f97540', boxShadow: `0 0 10px ${isEven ? '#7e5dc1' : '#f97540'}` }} />
                   </div>

@@ -388,7 +388,7 @@ const PartnershipPage = () => {
                   <div className="relative z-10 flex flex-col h-full space-y-6">
                     <div className="w-16 h-16 rounded-3xl flex items-center justify-center relative transition-transform duration-500 group-hover:scale-110 border border-[#f97540]/30" style={{ background: 'rgba(249, 117, 64, 0.1)' }}>
                       <BenefitIcon className="w-8 h-8 text-[#f97540]" />
-                      <div className="absolute inset-0 rounded-3xl blur-xl opacity-35 bg-[#f97540]" />
+                      <div className="absolute inset-0 rounded-3xl blur-xl opacity-30 bg-[#f97540]" />
                     </div>
                     <h3 className="font-black text-2xl md:text-3xl text-white font-jakarta tracking-tight">
                       {benefit.title}

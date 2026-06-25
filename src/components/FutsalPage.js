@@ -152,7 +152,7 @@ const FutsalPage = () => {
               return (
                 <div key={idx} className="relative md:grid md:grid-cols-2 md:gap-16 items-center md:pb-8">
                   {/* Soccer ball node marker */}
-                  <div className="absolute left-[-29px] md:left-1/2 top-6 md:top-1/2 -translate-y-1/2 md:-translate-x-1/2 w-4 h-4 rounded-full border border-black z-10 flex items-center justify-center bg-black transition-all group-hover:rotate-45"
+                  <div className="absolute left-[-32.5px] md:left-1/2 top-6 md:top-1/2 -translate-y-1/2 md:-translate-x-1/2 w-4 h-4 rounded-full border border-black z-10 flex items-center justify-center bg-black transition-all group-hover:rotate-45"
                        style={{ borderColor: isEven ? '#55D5E7' : '#5cb3ff' }}>
                     <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: isEven ? '#55D5E7' : '#5cb3ff', boxShadow: `0 0 10px ${isEven ? '#55D5E7' : '#5cb3ff'}` }} />
                   </div>
