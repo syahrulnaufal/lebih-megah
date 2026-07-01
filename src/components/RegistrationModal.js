@@ -94,8 +94,8 @@ export default function RegistrationModal() {
           {redirecting ? (
             <div className="flex flex-col items-center py-10 text-center space-y-6 animate-fadeIn">
               <div className="relative w-16 h-16">
-                <div className="absolute inset-0 rounded-full border-4 border-[#f97540]/10 border-t-[#f97540] animate-spin shadow-[0_0_15px_rgba(249,117,64,0.5)]" />
-                <div className="absolute inset-2 rounded-full border-4 border-[#7e5dc1]/10 border-b-[#7e5dc1] animate-spin [animation-direction:reverse] [animation-duration:1s]" />
+                <div className="absolute inset-0 rounded-full border-4 border-[var(--color-highlight-orange)]/10 border-t-[var(--color-highlight-orange)] animate-spin shadow-[0_0_15px_rgba(249,117,64,0.5)]" />
+                <div className="absolute inset-2 rounded-full border-4 border-[var(--color-highlight-lime)]/10 border-b-[var(--color-highlight-lime)] animate-spin [animation-direction:reverse] [animation-duration:1s]" />
               </div>
               
               <div className="space-y-2">
@@ -104,9 +104,9 @@ export default function RegistrationModal() {
                 </h3>
                 <p className="text-xs text-white/60 leading-relaxed font-jakarta">
                   {currentFormLink.includes('wa.me') ? (
-                    <>Anda akan dialihkan ke WhatsApp Ketua Konser untuk pemesanan tiket <strong className="text-[#ed374d]">{currentFormLabel}</strong>.</>
+                    <>Anda akan dialihkan ke WhatsApp Ketua Konser untuk pemesanan tiket <strong className="text-[var(--color-highlight-orange)]">{currentFormLabel}</strong>.</>
                   ) : (
-                    <>Anda akan dialihkan ke Google Form Pendaftaran untuk <strong className="text-[#5cb3ff]">{currentFormLabel}</strong>.</>
+                    <>Anda akan dialihkan ke Google Form Pendaftaran untuk <strong className="text-[var(--color-primary-light)]">{currentFormLabel}</strong>.</>
                   )}
                 </p>
               </div>
@@ -126,8 +126,8 @@ export default function RegistrationModal() {
           ) : (
             <div className="space-y-6 animate-fadeIn">
               <div className="flex flex-col items-center mb-2">
-                <div className="w-12 h-12 rounded-full bg-[#5cb3ff]/10 border border-[#5cb3ff]/30 flex items-center justify-center mb-4">
-                  <ExternalLink className="w-6 h-6 text-[#5cb3ff]" />
+                <div className="w-12 h-12 rounded-full bg-[var(--color-primary-light)]/10 border border-[var(--color-primary-light)]/30 flex items-center justify-center mb-4">
+                  <ExternalLink className="w-6 h-6 text-[var(--color-primary-light)]" />
                 </div>
                 <h2 className="text-xl font-bold font-jakarta text-white uppercase tracking-wider text-center">
                   Portal Pendaftaran
@@ -146,7 +146,7 @@ export default function RegistrationModal() {
                     name="event_category"
                     value={category}
                     onChange={handleCategoryChange}
-                    className="w-full bg-[#0b0b0c]/80 border border-white/10 px-4 py-3 rounded-xl text-xs text-white placeholder-white/30 focus:outline-none focus:border-[#5cb3ff]/30 transition-all duration-300 font-jakarta"
+                    className="w-full bg-[#0b0b0c]/80 border border-white/10 px-4 py-3 rounded-xl text-xs text-white placeholder-white/30 focus:outline-none focus:border-[var(--color-primary-light)]/30 transition-all duration-300 font-jakarta"
                   >
                     <option value="">Pilih Kategori...</option>
                     <option value="web_dev">Lomba IT – Web Programming</option>
@@ -161,7 +161,7 @@ export default function RegistrationModal() {
 
                 {!category && (
                   <div className="p-4 rounded-xl border border-white/5 bg-white/[0.01] flex items-start gap-3 text-white/50 text-[11px] leading-relaxed font-jakarta">
-                    <AlertCircle className="w-4 h-4 shrink-0 mt-0.5 text-[#5cb3ff]" />
+                    <AlertCircle className="w-4 h-4 shrink-0 mt-0.5 text-[var(--color-primary-light)]" />
                     <span>Silakan pilih salah satu kategori di atas untuk melanjutkan pendaftaran melalui Google Form resmi kami.</span>
                   </div>
                 )}

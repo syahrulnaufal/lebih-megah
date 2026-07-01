@@ -10,17 +10,17 @@ const events = [
     title: 'Lomba IT',
     badge: 'IT COMPETITION',
     description: 'Tantang kemampuan teknismu di bidang Web Programming, UI/UX Design, atau Infografis tingkat nasional dan buktikan karyamu!',
-    accentColor: '#7e5dc1', // Canva Purple
-    secondaryColor: '#f97540',
+    accentColor: 'var(--color-highlight-lime)', // Canva Purple
+    secondaryColor: 'var(--color-highlight-orange)',
     categories: ['SMA/SMK', 'Mahasiswa'],
     benefits: ['Total Hadiah Jutaan Rupiah', 'Sertifikat Tingkat Nasional', 'Kategori: Web, UI/UX & Infografis'],
     actionType: 'popup',
     path: '/lomba-it',
     icon: (
       <svg width="64" height="64" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="256" cy="256" r="180" fill="#7e5dc1" fillOpacity="0.15" />
-        <rect x="128" y="148" width="256" height="180" rx="20" fill="#7e5dc1" fillOpacity="0.3" />
-        <rect x="148" y="168" width="216" height="140" rx="12" fill="#7e5dc1" />
+        <circle cx="256" cy="256" r="180" fill="var(--color-highlight-lime)" fillOpacity="0.15" />
+        <rect x="128" y="148" width="256" height="180" rx="20" fill="var(--color-highlight-lime)" fillOpacity="0.3" />
+        <rect x="148" y="168" width="216" height="140" rx="12" fill="var(--color-highlight-lime)" />
         <rect x="168" y="188" width="80" height="12" rx="6" fill="white" fillOpacity="0.9" />
         <rect x="168" y="210" width="140" height="8" rx="4" fill="white" fillOpacity="0.5" />
         <rect x="168" y="228" width="100" height="8" rx="4" fill="white" fillOpacity="0.3" />
@@ -33,17 +33,17 @@ const events = [
     title: 'E-Sport Tournament',
     badge: 'E-SPORT ARENA',
     description: 'Bentuk tim terkuatmu, susun strategi terbaik, dan kuasai arena kompetitif Mobile Legends di SwitchFest E-Sport!',
-    accentColor: '#5cb3ff', // Canva Sky Blue
-    secondaryColor: '#7e5dc1',
+    accentColor: 'var(--color-highlight-orange)', // Canva Sky Blue
+    secondaryColor: 'var(--color-highlight-lime)',
     categories: ['Pelajar', 'Mahasiswa', 'Umum'],
     benefits: ['Total Prize Pool Jutaan Rupiah', 'Terbuka untuk Umum (MLBB)', 'Pertandingan Grand Final Offline'],
     actionType: 'popup',
     path: '/esport',
     icon: (
       <svg width="64" height="64" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="256" cy="256" r="180" fill="#5cb3ff" fillOpacity="0.15" />
-        <rect x="136" y="176" width="240" height="140" rx="40" fill="#5cb3ff" fillOpacity="0.3" />
-        <rect x="156" y="196" width="200" height="100" rx="30" fill="#5cb3ff" />
+        <circle cx="256" cy="256" r="180" fill="var(--color-highlight-orange)" fillOpacity="0.15" />
+        <rect x="136" y="176" width="240" height="140" rx="40" fill="var(--color-highlight-orange)" fillOpacity="0.3" />
+        <rect x="156" y="196" width="200" height="100" rx="30" fill="var(--color-highlight-orange)" />
         <rect x="190" y="236" width="30" height="10" rx="3" fill="white" fillOpacity="0.8" />
         <rect x="200" y="226" width="10" height="30" rx="3" fill="white" fillOpacity="0.8" />
         <circle cx="296" cy="236" r="10" fill="white" fillOpacity="0.8" />
@@ -56,19 +56,19 @@ const events = [
     title: 'Futsal Tournament',
     badge: 'FUTSAL CUP',
     description: 'Tunjukkan sportivitas, kelincahan, dan kerja sama tim terbaikmu dalam turnamen futsal memperebutkan Piala SwitchFest!',
-    accentColor: '#55D5E7', // Neon-Blue
-    secondaryColor: '#5cb3ff',
+    accentColor: 'var(--color-primary-light)', // Neon-Blue
+    secondaryColor: 'var(--color-primary-light)',
     categories: ['SMA/SMK'],
     benefits: ['Piala Bergilir & Uang Pembinaan', 'Sertifikat Juara & Pemain Terbaik', 'Kategori Pelajar SMA/SMK/Sederajat'],
     actionType: 'popup',
     path: '/futsal',
     icon: (
       <svg width="64" height="64" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="256" cy="256" r="180" fill="#55D5E7" fillOpacity="0.15" />
-        <path d="M256 120 L320 180 L300 320 L212 320 L192 180 Z" fill="#55D5E7" fillOpacity="0.3" />
-        <circle cx="256" cy="210" r="45" fill="#55D5E7" />
-        <rect x="236" y="320" width="40" height="60" fill="#55D5E7" fillOpacity="0.6" />
-        <rect x="216" y="370" width="80" height="16" rx="8" fill="#55D5E7" />
+        <circle cx="256" cy="256" r="180" fill="var(--color-primary-light)" fillOpacity="0.15" />
+        <path d="M256 120 L320 180 L300 320 L212 320 L192 180 Z" fill="var(--color-primary-light)" fillOpacity="0.3" />
+        <circle cx="256" cy="210" r="45" fill="var(--color-primary-light)" />
+        <rect x="236" y="320" width="40" height="60" fill="var(--color-primary-light)" fillOpacity="0.6" />
+        <rect x="216" y="370" width="80" height="16" rx="8" fill="var(--color-primary-light)" />
       </svg>
     ),
   },
@@ -77,19 +77,19 @@ const events = [
     title: 'National Talkshow',
     badge: 'INSPIRATIONAL SEMINAR',
     description: 'Ideas that Matter: Impactful Solution. Belajar langsung dari praktisi teknologi terkemuka Indonesia dalam sesi interaktif.',
-    accentColor: '#f97540', // Canva Orange
-    secondaryColor: '#7e5dc1',
+    accentColor: 'var(--color-primary-light)', // Canva Orange
+    secondaryColor: 'var(--color-highlight-orange)',
     categories: ['Mahasiswa', 'Umum'],
     benefits: ['Sertifikat & Seminar Kit Eksklusif', 'Wawasan Karir dari Praktisi Ahli', 'Kuisioner Berhadiah Menarik'],
     actionType: 'link',
     path: '/talkshow',
     icon: (
       <svg width="64" height="64" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="256" cy="256" r="180" fill="#f97540" fillOpacity="0.15" />
-        <rect x="231" y="140" width="50" height="120" rx="25" fill="#f97540" />
-        <path d="M196 210 C196 280 316 280 316 210" stroke="#f97540" strokeWidth="16" strokeLinecap="round" />
-        <rect x="246" y="276" width="20" height="70" fill="#f97540" fillOpacity="0.6" />
-        <rect x="216" y="340" width="80" height="16" rx="8" fill="#f97540" />
+        <circle cx="256" cy="256" r="180" fill="var(--color-primary-light)" fillOpacity="0.15" />
+        <rect x="231" y="140" width="50" height="120" rx="25" fill="var(--color-primary-light)" />
+        <path d="M196 210 C196 280 316 280 316 210" stroke="var(--color-primary-light)" strokeWidth="16" strokeLinecap="round" />
+        <rect x="246" y="276" width="20" height="70" fill="var(--color-primary-light)" fillOpacity="0.6" />
+        <rect x="216" y="340" width="80" height="16" rx="8" fill="var(--color-primary-light)" />
       </svg>
     ),
   },
@@ -98,18 +98,18 @@ const events = [
     title: 'Closing Concert',
     badge: 'MUSIC FESTIVAL',
     description: 'Momen puncak perayaan inovasi teknologi dengan penampilan panggung meriah dari guest star SwitchFest!',
-    accentColor: '#ed374d', // Canva Magenta
-    secondaryColor: '#f97540',
+    accentColor: 'var(--color-highlight-orange)', // Canva Magenta
+    secondaryColor: 'var(--color-highlight-orange)',
     categories: ['Umum'],
     benefits: ['Penampilan Bintang Tamu Spesial', 'Panggung Hiburan Musik Terbuka', 'Tiket Terjangkau & Spot Foto Keren'],
     actionType: 'link',
     path: '/concert',
     icon: (
       <svg width="64" height="64" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="256" cy="256" r="180" fill="#ed374d" fillOpacity="0.15" />
-        <path d="M140 360 L200 160 L312 160 L372 360 Z" fill="#ed374d" fillOpacity="0.3" />
-        <circle cx="256" cy="180" r="15" fill="#ed374d" />
-        <path d="M180 360 C200 300 312 300 332 360" fill="none" stroke="#ed374d" strokeWidth="12" />
+        <circle cx="256" cy="256" r="180" fill="var(--color-highlight-orange)" fillOpacity="0.15" />
+        <path d="M140 360 L200 160 L312 160 L372 360 Z" fill="var(--color-highlight-orange)" fillOpacity="0.3" />
+        <circle cx="256" cy="180" r="15" fill="var(--color-highlight-orange)" />
+        <path d="M180 360 C200 300 312 300 332 360" fill="none" stroke="var(--color-highlight-orange)" strokeWidth="12" />
         <circle cx="230" cy="260" r="12" fill="white" />
         <rect x="238" y="210" width="6" height="50" fill="white" />
         <circle cx="280" cy="240" r="12" fill="white" />

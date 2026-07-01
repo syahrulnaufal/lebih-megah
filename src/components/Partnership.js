@@ -7,7 +7,7 @@ const tiers = [
   {
     name: 'Diamond / Platinum',
     sub: 'Exclusive Partner',
-    color: '#5cb3ff', // Blue
+    color: 'var(--color-primary-light)', // Blue
     features: [
       'Logo eksklusif berukuran terbesar pada seluruh materi cetak & digital.',
       'Booth pameran utama di area strategis tengah festival.',
@@ -21,7 +21,7 @@ const tiers = [
   {
     name: 'Gold / Silver',
     sub: 'Supporting Sponsor',
-    color: '#f97540', // Orange
+    color: 'var(--color-highlight-orange)', // Orange
     features: [
       'Logo ukuran sedang pada backdrop panggung & banner promosi.',
       'Booth pameran standard di lokasi festival.',
@@ -34,7 +34,7 @@ const tiers = [
   {
     name: 'Bronze & Media',
     sub: 'Media Partner / Community',
-    color: '#7e5dc1', // Purple
+    color: 'var(--color-highlight-lime)', // Purple
     features: [
       'Logo bersama pada baliho publikasi & footer website.',
       'Publikasi feeds/story berkala di akun sosial media event.',
@@ -71,7 +71,7 @@ const Partnership = () => {
       className="py-16 md:py-32 relative overflow-hidden"
     >
       {/* Background radial glow */}
-      <div className="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-[#f97540]/5 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-[var(--color-highlight-orange)]/5 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         
@@ -99,7 +99,7 @@ const Partnership = () => {
               className={`glass-navy border p-8 md:p-10 rounded-[2.5rem] flex flex-col justify-between relative overflow-hidden transition-all duration-700 shadow-xl ${
                 tier.highlight
                   ? 'border-neon-blue bg-[rgba(92,179,255,0.03)]'
-                  : 'border-[#5cb3ff]/10'
+                  : 'border-[var(--color-primary-light)]/10'
               } hover:border-white/20 hover:scale-[1.01] ${
                 visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
@@ -184,7 +184,7 @@ const Partnership = () => {
             href="https://wa.me/6281215836206?text=Halo%20Panitia%20SwitchFest%202026%2C%20saya%20tertarik%20untuk%20menjalin%20kemitraan%2Fpartnership%20dan%20ingin%20meminta%20dokumen%20Proposal%20terbaru."
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl bg-neon-orange text-black font-bold uppercase tracking-wider hover:bg-[#ff8b53] hover:scale-105 active:scale-95 transition-all duration-300 font-jakarta text-xs shadow-[0_0_20px_rgba(249,117,64,0.3)]"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl bg-neon-orange text-black font-bold uppercase tracking-wider hover:bg-[var(--color-highlight-orange)] hover:scale-105 active:scale-95 transition-all duration-300 font-jakarta text-xs shadow-[0_0_20px_rgba(249,117,64,0.3)]"
           >
             <Phone className="w-4 h-4" />
             Hubungi Partnership (WA)

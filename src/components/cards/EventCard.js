@@ -10,7 +10,7 @@ export default function EventCard({
   description,
   categories = [],
   benefits = [],
-  accentColor = '#5cb3ff',
+  accentColor = 'var(--color-primary-light)',
   icon,
   actionType = 'link',
   path = '',
@@ -27,7 +27,7 @@ export default function EventCard({
       style={{
         ...style,
         transform: hovered ? 'translateY(-6px) scale(1.02)' : 'translateY(0) scale(1)',
-        borderColor: hovered ? `${accentColor}50` : 'rgba(92, 179, 255, 0.08)',
+        borderColor: hovered ? `${accentColor}` : 'rgba(92, 179, 255, 0.08)',
         boxShadow: hovered 
           ? `0 25px 60px -15px rgba(0,0,0,0.8), 0 0 35px ${accentColor}25` 
           : '0 20px 50px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.05)'
@@ -118,7 +118,7 @@ export default function EventCard({
             className="w-full py-4 px-6 font-bold rounded-2xl transition-all duration-300 font-jakarta text-xs uppercase tracking-wider flex items-center justify-center gap-2 hover:brightness-110 active:scale-98"
             style={{ 
               backgroundColor: accentColor,
-              color: (accentColor === '#5cb3ff' || accentColor === '#55D5E7') ? '#020817' : '#ffffff',
+              color: (accentColor === 'var(--color-highlight-lime)') ? '#020817' : '#ffffff',
               boxShadow: hovered ? `0 10px 25px -5px ${accentColor}50` : 'none'
             }}
           >
@@ -131,7 +131,7 @@ export default function EventCard({
             className="w-full py-4 px-6 font-bold rounded-2xl transition-all duration-300 font-jakarta text-xs uppercase tracking-wider flex items-center justify-center gap-2 hover:brightness-110 active:scale-98"
             style={{ 
               backgroundColor: accentColor,
-              color: (accentColor === '#5cb3ff' || accentColor === '#55D5E7') ? '#020817' : '#ffffff',
+              color: (accentColor === 'var(--color-highlight-lime)') ? '#020817' : '#ffffff',
               boxShadow: hovered ? `0 10px 25px -5px ${accentColor}50` : 'none'
             }}
           >
@@ -145,7 +145,7 @@ export default function EventCard({
           className="w-full py-3.5 px-6 font-bold rounded-2xl border transition-all duration-300 font-jakarta text-xs uppercase tracking-wider flex items-center justify-center gap-2 active:scale-98 text-white/70 hover:text-white"
           style={{
             borderColor: hovered ? `${accentColor}30` : 'rgba(255,255,255,0.1)',
-            background: hovered ? `${accentColor}0a` : 'rgba(255,255,255,0.02)',
+            background: hovered ? `color-mix(in srgb, ${accentColor} 4%, transparent)` : 'rgba(255,255,255,0.02)',
           }}
         >
           <Info className="w-4 h-4 text-white/40" />

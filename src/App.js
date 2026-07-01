@@ -59,15 +59,15 @@ const SubpageLayout = ({ children }) => {
   let orbs = [];
   if (path === '/lomba-it') {
     orbs = [
-      { color: 'purple', size: 'w-[700px] h-[700px]', position: 'top-[-10%] left-[-10%]', opacity: 'opacity-15' },
-      { color: 'purple', size: 'w-[600px] h-[600px]', position: 'bottom-[-10%] right-[-10%]', opacity: 'opacity-15' },
+      { color: 'blue', size: 'w-[700px] h-[700px]', position: 'top-[-10%] left-[-10%]', opacity: 'opacity-15' },
+      { color: 'blue', size: 'w-[600px] h-[600px]', position: 'bottom-[-10%] right-[-10%]', opacity: 'opacity-15' },
       { color: 'blue', size: 'w-[500px] h-[500px]', position: 'top-[25%] left-[25%]', opacity: 'opacity-10' }
     ];
   } else if (path === '/esport') {
     orbs = [
-      { color: 'blue', size: 'w-[700px] h-[700px]', position: 'top-[-10%] left-[-10%]', opacity: 'opacity-15' },
-      { color: 'purple', size: 'w-[600px] h-[600px]', position: 'bottom-[-10%] right-[-10%]', opacity: 'opacity-15' },
-      { color: 'blue', size: 'w-[500px] h-[500px]', position: 'top-[25%] left-[25%]', opacity: 'opacity-10' }
+      { color: 'orange', size: 'w-[700px] h-[700px]', position: 'top-[-10%] left-[-10%]', opacity: 'opacity-15' },
+      { color: 'orange', size: 'w-[600px] h-[600px]', position: 'bottom-[-10%] right-[-10%]', opacity: 'opacity-15' },
+      { color: 'orange', size: 'w-[500px] h-[500px]', position: 'top-[25%] left-[25%]', opacity: 'opacity-10' }
     ];
   } else if (path === '/futsal') {
     orbs = [
@@ -77,15 +77,15 @@ const SubpageLayout = ({ children }) => {
     ];
   } else if (path === '/talkshow') {
     orbs = [
-      { color: 'orange', size: 'w-[700px] h-[700px]', position: 'top-[-10%] left-[-10%]', opacity: 'opacity-15' },
+      { color: 'blue', size: 'w-[700px] h-[700px]', position: 'top-[-10%] left-[-10%]', opacity: 'opacity-15' },
       { color: 'purple', size: 'w-[600px] h-[600px]', position: 'bottom-[-10%] right-[-10%]', opacity: 'opacity-15' },
-      { color: 'orange', size: 'w-[500px] h-[500px]', position: 'top-[25%] left-[25%]', opacity: 'opacity-10' }
+      { color: 'blue', size: 'w-[500px] h-[500px]', position: 'top-[25%] left-[25%]', opacity: 'opacity-10' }
     ];
   } else if (path === '/concert') {
     orbs = [
       { color: 'orange', size: 'w-[700px] h-[700px]', position: 'top-[-10%] left-[-10%]', opacity: 'opacity-15' },
       { color: 'orange', size: 'w-[600px] h-[600px]', position: 'bottom-[-10%] right-[-10%]', opacity: 'opacity-15' },
-      { color: 'purple', size: 'w-[500px] h-[500px]', position: 'top-[25%] left-[25%]', opacity: 'opacity-10' }
+      { color: 'orange', size: 'w-[500px] h-[500px]', position: 'top-[25%] left-[25%]', opacity: 'opacity-10' }
     ];
   } else {
     // Default orbs for /sponsor, /partnership, /impact-projection

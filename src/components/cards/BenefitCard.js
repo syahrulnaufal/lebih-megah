@@ -7,7 +7,7 @@ export default function BenefitCard({
   logoPromo,
   fundContribution,
   promoRatio,
-  accentColor = '#5cb3ff',
+  accentColor = 'var(--color-primary-light)',
   glowClass = 'diamond'
 }) {
   return (
@@ -25,7 +25,7 @@ export default function BenefitCard({
         {tier} <span className="text-xs font-mono text-white/30 font-medium">TIER</span>
       </h3>
 
-      <div className="text-xl font-black font-mono text-[#5cb3ff] mb-6">
+      <div className="text-xl font-black font-mono text-[var(--color-primary-light)] mb-6">
         {price}
       </div>
 

@@ -4,7 +4,7 @@ import { BsInstagram, BsWhatsapp } from 'react-icons/bs';
 
 const Footer = () => {
   return (
-    <footer className="relative text-white border-t border-[#5cb3ff]/10">
+    <footer className="relative text-white border-t border-[var(--color-primary-light)]/10">
       {/* Background */}
       <div className="absolute inset-0 bg-transparent" />
 
@@ -20,7 +20,7 @@ const Footer = () => {
                 className="h-8 w-auto object-contain"
               />
             </div>
-            <h2 className="text-xl md:text-2xl font-bold text-[#5cb3ff] font-jakarta tracking-tight">
+            <h2 className="text-xl md:text-2xl font-bold text-[var(--color-highlight-orange)] font-jakarta tracking-tight">
               SWITCHFEST 2026
             </h2>
             <p className="mt-2 text-white/40 text-sm leading-relaxed max-w-xs">
@@ -37,7 +37,7 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Mail className="w-4 h-4 text-neon-orange" />
+              <Mail className="w-4 h-4 text-[var(--color-primary-light)]" />
               <span>switchfest.tiuinws@gmail.com</span>
             </a>
             <a
@@ -46,7 +46,7 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <BsInstagram className="w-4 h-4 text-neon-purple" />
+              <BsInstagram className="w-4 h-4 text-[var(--color-highlight-orange)]" />
               <span>@switchfest_</span>
             </a>
             <a
@@ -55,7 +55,7 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <BsWhatsapp className="w-4 h-4 text-neon-blue" />
+              <BsWhatsapp className="w-4 h-4 text-[var(--color-highlight-lime)]" />
               <span>+62 851-1736-9252 (Bagus)</span>
             </a>
           </div>
@@ -66,8 +66,8 @@ const Footer = () => {
 
         {/* Copyright */}
         <div className="text-center">
-          <p className="text-xs text-white/25">
-            © 2026 SWITCHFEST — Made with <span className="text-neon-orange">♥</span> for innovation. All rights reserved.
+          <p className="text-xs text-white/50">
+            © 2026 SWITCHFEST — Made with <span className="text-[var(--color-highlight-orange)]">♥</span> for innovation. All rights reserved.
           </p>
         </div>
       </div>

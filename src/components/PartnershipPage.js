@@ -53,21 +53,21 @@ const benefitsData = [
   {
     title: 'Brand Exposure',
     desc: 'Logo brand Anda memiliki kesempatan tampil secara masif di berbagai atribut acara mulai dari baju panitia, spanduk, spanduk panggung, photobooth, lanyard, pamflet digital, tiket cetak, hingga aftermovie resmi.',
-    color: '#ff8c42', // Orange theme
+    color: 'var(--color-highlight-orange)', // Orange theme
     icon: Gem,
     cardClass: 'benefit-card-diamond'
   },
   {
     title: 'Eksklusivitas Sektor',
     desc: 'Brand Anda berkesempatan menjadi satu-satunya partner perwakilan dari kategori bisnis/sektor industri Anda di SwitchFest 2026. Bebas persaingan dari kompetitor sejenis di area pameran acara.',
-    color: '#ff8c42',
+    color: 'var(--color-highlight-orange)',
     icon: Award,
     cardClass: 'benefit-card-gold'
   },
   {
     title: 'Interaksi Langsung',
     desc: 'Dapatkan fasilitas pendirian stan/booth penjualan di area pameran teramai, promosi lisan (Adlibs) berkala oleh MC utama, serta izin distribusi tester produk (sampling keliling) ke seluruh penonton.',
-    color: '#ff8c42',
+    color: 'var(--color-highlight-orange)',
     icon: Shield,
     cardClass: 'benefit-card-bronze'
   }
@@ -79,7 +79,7 @@ const mainTiers = [
     price: 'Rp 7.500.000,00',
     sub: 'Exclusive Title Partner',
     icon: Gem,
-    color: '#5cb3ff',
+    color: 'var(--color-primary-light)',
     badge: 'Slot Terbatas',
     features: [
       'Eksposur Utama (Extra Large Logo) pada pamflet, baliho, banner panggung, photobooth, & lanyard',
@@ -98,7 +98,7 @@ const mainTiers = [
     price: 'Rp 5.000.000,00',
     sub: 'Major Sponsor',
     icon: Award,
-    color: '#ffb938',
+    color: 'var(--color-highlight-orange)',
     badge: 'Rekomendasi',
     features: [
       'Eksposur Besar (Large Logo) pada pamflet, baliho, banner panggung, photobooth, & lanyard',
@@ -132,7 +132,7 @@ const mainTiers = [
     price: 'Rp 1.000.000,00',
     sub: 'Basic Sponsor',
     icon: Landmark,
-    color: '#ca7853',
+    color: 'var(--color-highlight-orange)',
     features: [
       'Eksposur Standar (Small Logo) pada pamflet, baliho, banner panggung, photobooth, & lanyard',
       'Penyebutan nama brand (Adlibs) oleh MC di sela kompetisi',
@@ -231,7 +231,7 @@ const alternateSponsors = [
     icon: Wrench,
     desc: 'Menyediakan atau meminjamkan alat/perlengkapan acara yang dibutuhkan selama rangkaian SwitchFest.',
     price: 'Fleksibel (Sesuai Alat)',
-    color: '#ff8c42',
+    color: 'var(--color-highlight-orange)',
     benefits: [
       'Penyantuman logo perusahaan pada banner publikasi.',
       'Promosi postingan feeds Instagram resmi.',
@@ -244,7 +244,7 @@ const alternateSponsors = [
     icon: Utensils,
     desc: 'Menyediakan porsi makan/minum panitia pelaksana selama turnamen futsal berlangsung.',
     price: 'Fleksibel (Sesuai Porsi)',
-    color: '#ff8c42',
+    color: 'var(--color-highlight-orange)',
     benefits: [
       'Penyantuman logo perusahaan pada pamflet promosi.',
       'Promosi postingan feeds Instagram resmi.',
@@ -314,7 +314,7 @@ const PartnershipPage = () => {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto -mt-16 pb-6 relative z-20">
           <button
             onClick={handleDownloadDeck}
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-white text-black font-bold uppercase tracking-wider hover:bg-white/90 hover:scale-105 active:scale-95 transition-all duration-300 font-jakarta text-xs"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-white text-black font-bold uppercase tracking-wider hover:bg-[var(--color-highlight-orange)] hover:text-white hover:scale-105 active:scale-95 transition-all duration-300 font-jakarta text-xs"
           >
             <Download className="w-4 h-4" />
             Unduh Proposal
@@ -323,7 +323,7 @@ const PartnershipPage = () => {
             href="https://wa.me/6281215836206?text=Halo%20Panitia%20SwitchFest%202026%2C%20saya%20tertarik%20untuk%20menjadi%20sponsor%20event."
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-[#f97540] text-black font-bold uppercase tracking-wider hover:bg-[#ff8b53] hover:scale-105 active:scale-95 transition-all duration-300 font-jakarta text-xs shadow-[0_0_25px_rgba(249,117,64,0.35)]"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-[var(--color-highlight-orange)] text-white font-bold uppercase tracking-wider hover:bg-white hover:text-black hover:scale-105 active:scale-95 transition-all duration-300 font-jakarta text-xs shadow-[0_0_25px_rgba(249,117,64,0.35)]"
           >
             <Phone className="w-4 h-4" />
             Hubungi Panitia
@@ -344,11 +344,11 @@ const PartnershipPage = () => {
               return (
                 <div
                   key={idx}
-                  className="glass-navy border border-[#5cb3ff]/10 p-8 md:p-10 rounded-[2.5rem] flex flex-col justify-between hover:border-[#f97540]/30 transition-all duration-500 group stat-card-gradient"
+                  className="glass-navy border border-[var(--color-primary-light)] p-8 md:p-10 rounded-[2.5rem] flex flex-col justify-between hover:border-[var(--color-highlight-orange)]/30 transition-all duration-500 group stat-card-gradient"
                 >
                   <div className="space-y-4">
-                    <div className="w-12 h-12 rounded-2xl bg-[#f97540]/10 flex items-center justify-center border border-[#f97540]/25 transition-transform duration-300 group-hover:scale-110">
-                      <StatIcon className="w-6 h-6 text-[#f97540]" />
+                    <div className="w-12 h-12 rounded-2xl bg-[var(--color-highlight-orange)]/10 flex items-center justify-center border border-[var(--color-highlight-orange-20)] transition-transform duration-300 group-hover:scale-110">
+                      <StatIcon className="w-6 h-6 text-[var(--color-highlight-orange)]" />
                     </div>
                     <div className="space-y-1">
                       <div className="font-black text-4xl md:text-5xl text-white tracking-tight font-jakarta">
@@ -386,9 +386,9 @@ const PartnershipPage = () => {
                 >
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-700 pointer-events-none" style={{ background: `radial-gradient(circle at 50% 0%, ${benefit.color} 0%, transparent 70%)` }} />
                   <div className="relative z-10 flex flex-col h-full space-y-6">
-                    <div className="w-16 h-16 rounded-3xl flex items-center justify-center relative transition-transform duration-500 group-hover:scale-110 border border-[#f97540]/30" style={{ background: 'rgba(249, 117, 64, 0.1)' }}>
-                      <BenefitIcon className="w-8 h-8 text-[#f97540]" />
-                      <div className="absolute inset-0 rounded-3xl blur-xl opacity-30 bg-[#f97540]" />
+                    <div className="w-16 h-16 rounded-3xl flex items-center justify-center relative transition-transform duration-500 group-hover:scale-110 border border-[var(--color-highlight-orange-20)]" style={{ background: 'rgba(249, 117, 64, 0.1)' }}>
+                      <BenefitIcon className="w-8 h-8 text-[var(--color-highlight-orange)]" />
+                      <div className="absolute inset-0 rounded-3xl blur-xl opacity-30 bg-[var(--color-highlight-orange)]" />
                     </div>
                     <h3 className="font-black text-2xl md:text-3xl text-white font-jakarta tracking-tight">
                       {benefit.title}
@@ -419,7 +419,7 @@ const PartnershipPage = () => {
                 <thead>
                   <tr className="border-b border-white/10">
                     <th className="sticky-col">
-                      <span className="text-xs font-bold text-[#f97540] tracking-widest font-mono">Benefit</span>
+                      <span className="text-xs font-bold text-[var(--color-highlight-orange)] tracking-widest font-mono">Benefit</span>
                     </th>
                     {mainTiers.map((tier) => (
                       <th key={tier.name} className="p-6 text-center">
@@ -494,7 +494,7 @@ const PartnershipPage = () => {
                             href={`https://wa.me/6281215836206?text=Halo%20Panitia%20SwitchFest%202026%2C%20kami%20tertarik%20untuk%20bekerjasama%20sebagai%20Sponsor%20${tier.name}.`}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="px-4 py-2 rounded-full border border-[#f97540]/30 hover:border-[#f97540] bg-[#f97540]/5 hover:bg-[#f97540] hover:text-black transition-all text-[10px] font-bold uppercase tracking-wider"
+                            className="px-4 py-2 rounded-full border border-[var(--color-highlight-orange)]/30 hover:border-[var(--color-highlight-orange)] bg-[var(--color-highlight-orange)]/5 hover:bg-[var(--color-highlight-orange)] hover:text-black transition-all text-[10px] font-bold uppercase tracking-wider"
                           >
                             Pilih Paket
                           </a>
@@ -516,7 +516,7 @@ const PartnershipPage = () => {
                   onClick={() => setActiveMobileTier(tier.name)}
                   className={`flex-1 py-3 px-2 rounded-xl text-xs font-black tracking-tight transition-all duration-300 shrink-0 ${
                     activeMobileTier === tier.name
-                      ? 'bg-[#f97540] text-black shadow-lg scale-105'
+                      ? 'bg-[var(--color-highlight-orange)] text-black shadow-lg scale-105'
                       : 'text-white/40 hover:text-white hover:bg-white/5'
                   }`}
                   style={{ minWidth: '85px' }}
@@ -528,7 +528,7 @@ const PartnershipPage = () => {
 
             {/* Selected Package Details */}
             {activeMobileTierData && (
-              <div className="glass-navy border border-[#5cb3ff]/10 p-8 md:p-10 rounded-[2.5rem] space-y-6 relative overflow-hidden animate-fade-in">
+              <div className="glass-navy border border-[var(--color-primary-light)]/10 p-8 md:p-10 rounded-[2.5rem] space-y-6 relative overflow-hidden animate-fade-in">
                 {/* Glowing corner indicator */}
                 <div
                   className="absolute -top-12 -right-12 w-32 h-32 rounded-full opacity-15 blur-2xl"
@@ -568,7 +568,7 @@ const PartnershipPage = () => {
                   <ul className="space-y-3">
                     {activeMobileTierData.features.map((feature, idx) => (
                       <li key={idx} className="flex items-start gap-3">
-                        <Check className="w-4 h-4 text-[#10b981] shrink-0 mt-0.5" />
+                        <Check className="w-4 h-4 text-[var(--color-highlight-lime)] shrink-0 mt-0.5" />
                         <p className="text-xs text-white/70 leading-relaxed font-jakarta">
                           {feature}
                         </p>
@@ -606,7 +606,7 @@ const PartnershipPage = () => {
               return (
                 <div
                   key={idx}
-                  className="glass-navy border border-[#5cb3ff]/10 p-8 md:p-10 rounded-[2.5rem] flex flex-col justify-between hover:border-[#f97540]/30 transition-all duration-500 relative group"
+                  className="glass-navy border border-[var(--color-primary-light)]/10 p-8 md:p-10 rounded-[2.5rem] flex flex-col justify-between hover:border-[var(--color-highlight-orange)]/30 transition-all duration-500 relative group"
                 >
                   <div className="space-y-6">
                     <div className="flex justify-between items-start border-b border-white/5 pb-4">
@@ -614,13 +614,13 @@ const PartnershipPage = () => {
                         <span className="text-[10px] font-bold tracking-widest font-mono uppercase text-white/30">
                           Sponsor Alternatif
                         </span>
-                        <h3 className="text-xl font-black font-jakarta flex items-center gap-2 text-white group-hover:text-[#f97540] transition-colors">
-                          <AltIcon className="w-5 h-5 text-[#f97540]" />
+                        <h3 className="text-xl font-black font-jakarta flex items-center gap-2 text-white group-hover:text-[var(--color-highlight-orange)] transition-colors">
+                          <AltIcon className="w-5 h-5 text-[var(--color-highlight-orange)]" />
                           {alt.title}
                         </h3>
                       </div>
                       <div className="text-right">
-                        <span className="text-sm font-black font-mono text-[#f97540]">
+                        <span className="text-sm font-black font-mono text-[var(--color-highlight-orange)]">
                           {alt.price}
                         </span>
                         <div className="text-[8px] text-white/30 uppercase tracking-widest font-mono">Format Kontribusi</div>
@@ -634,7 +634,7 @@ const PartnershipPage = () => {
                     <ul className="space-y-3">
                       {alt.benefits.map((b, bIdx) => (
                         <li key={bIdx} className="flex items-start gap-2 text-xs text-white/70">
-                          <Check className="w-4 h-4 text-[#10b981] shrink-0 mt-0.5" />
+                          <Check className="w-4 h-4 text-[var(--color-highlight-orange)] shrink-0 mt-0.5" />
                           <span className="font-jakarta">{b}</span>
                         </li>
                       ))}
@@ -646,7 +646,7 @@ const PartnershipPage = () => {
                       href={`https://wa.me/6281215836206?text=Halo%20Panitia%20SwitchFest%202026%2C%20kami%20tertarik%20untuk%20bekerjasama%20dalam%20kategori%20${encodeURIComponent(alt.title)}.`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-full py-3 px-4 font-bold rounded-2xl border text-center transition-all duration-300 font-jakarta text-xs uppercase tracking-wider block border-white/5 hover:border-[#f97540] hover:bg-[#f97540]/5 text-white/80 hover:text-white"
+                      className="w-full py-3 px-4 font-bold rounded-2xl border text-center transition-all duration-300 font-jakarta text-xs uppercase tracking-wider block border-white/5 hover:border-[var(--color-highlight-orange)] hover:bg-[var(--color-highlight-orange)]/5 text-white/80 hover:text-white"
                     >
                       Ajukan Kerjasama Alternatif
                     </a>
@@ -657,14 +657,14 @@ const PartnershipPage = () => {
           </div>
 
           {/* Paid Content Ads Panel */}
-          <div className="glass-navy border border-[#5cb3ff]/10 p-8 md:p-10 rounded-[2.5rem] max-w-4xl mx-auto shadow-2xl relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-[#f97540]/5 rounded-full blur-[40px] pointer-events-none" />
+          <div className="glass-navy border border-[var(--color-primary-light)]/10 p-8 md:p-10 rounded-[2.5rem] max-w-4xl mx-auto shadow-2xl relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-[var(--color-highlight-orange)]/5 rounded-full blur-[40px] pointer-events-none" />
             
             <div className="flex flex-col md:flex-row items-stretch gap-8 justify-between relative z-10">
               <div className="space-y-4 max-w-md flex flex-col justify-center">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#f97540]/30 bg-[#f97540]/10 w-fit">
-                  <paidContentAds.icon className="w-4 h-4 text-[#f97540]" />
-                  <span className="text-[#f97540] font-bold text-[9px] tracking-wider uppercase font-jakarta">Digital Placement</span>
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[var(--color-highlight-orange-20)] bg-[var(--color-highlight-orange)]/10 w-fit">
+                  <paidContentAds.icon className="w-4 h-4 text-[var(--color-highlight-orange)]" />
+                  <span className="text-[var(--color-highlight-orange)] font-bold text-[9px] tracking-wider uppercase font-jakarta">Digital Placement</span>
                 </div>
                 <h3 className="text-2xl font-black font-jakarta text-white">
                   {paidContentAds.title}
@@ -678,9 +678,9 @@ const PartnershipPage = () => {
                 {paidContentAds.tiers.map((t, tIdx) => (
                   <div
                     key={tIdx}
-                    className="bg-white/5 border border-white/5 p-4 rounded-xl space-y-1 hover:border-[#f97540]/40 transition-colors"
+                    className="bg-white/5 border border-white/5 p-4 rounded-xl space-y-1 hover:border-[var(--color-highlight-orange)]/40 transition-colors"
                   >
-                    <div className="text-sm font-black font-mono text-[#f97540]">{t.price}</div>
+                    <div className="text-sm font-black font-mono text-[var(--color-highlight-orange)]">{t.price}</div>
                     <div className="text-[9px] text-white/60 leading-snug font-jakarta">{t.text}</div>
                   </div>
                 ))}
@@ -688,7 +688,7 @@ const PartnershipPage = () => {
                   href="https://wa.me/6281215836206?text=Halo%20Panitia%20SwitchFest%202026%2C%20saya%20tertarik%20memesan%20Paid%20Content%20Ads."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full text-center py-2.5 rounded-xl bg-white text-black font-bold uppercase tracking-wider hover:bg-white/90 transition-all font-jakarta text-[10px]"
+                  className="w-full text-center py-2.5 rounded-xl bg-white text-black font-bold uppercase tracking-wider hover:bg-[var(--color-highlight-orange)] hover:text-white transition-all font-jakarta text-[10px]"
                 >
                   Pesan Iklan Sekarang
                 </a>
@@ -700,7 +700,7 @@ const PartnershipPage = () => {
         {/* READY TO PARTNER? (Contact Tiers) */}
         <div className="space-y-12">
           <div className="text-center">
-            <span className="text-[#f97540] font-mono text-xs uppercase tracking-[0.3em] font-bold block mb-2">
+            <span className="text-[var(--color-highlight-orange)] font-mono text-xs uppercase tracking-[0.3em] font-bold block mb-2">
               "Innovation dies in isolation. Great leaps are made through Meaningful Partnerships."
             </span>
             <SectionTitle
@@ -716,7 +716,7 @@ const PartnershipPage = () => {
               role="Ketua Pelaksana"
               name="Bagus Dwi Adi Nugroho"
               phone="+62 851-1736-9252"
-              accentColor="#f97540"
+              accentColor="var(--color-highlight-orange)"
             />
 
             {/* Coordinator 2 */}
@@ -724,15 +724,15 @@ const PartnershipPage = () => {
               role="Ketua Sponsorship"
               name="Bima"
               phone="+62 812-1583-6206"
-              accentColor="#f97540"
+              accentColor="var(--color-highlight-orange)"
             />
           </div>
         </div>
 
         {/* Partnership Warning/Note */}
-        <div className="glass-navy border border-[#5cb3ff]/10 p-8 md:p-10 rounded-[2.5rem] max-w-2xl mx-auto flex items-start gap-4">
-          <div className="w-8 h-8 rounded-full bg-[#f97540]/10 border border-[#f97540]/30 flex items-center justify-center shrink-0 mt-1">
-            <ShieldCheck className="w-4 h-4 text-[#f97540]" />
+        <div className="glass-navy border border-[var(--color-primary-light)]/10 p-8 md:p-10 rounded-[2.5rem] max-w-2xl mx-auto flex items-start gap-4">
+          <div className="w-8 h-8 rounded-full bg-[var(--color-highlight-orange)]/10 border border-[var(--color-highlight-orange)]/30 flex items-center justify-center shrink-0 mt-1">
+            <ShieldCheck className="w-4 h-4 text-[var(--color-highlight-orange)]" />
           </div>
           <div className="space-y-1">
             <h4 className="text-xs font-bold font-jakarta text-white uppercase tracking-wider">Catatan Tambahan</h4>

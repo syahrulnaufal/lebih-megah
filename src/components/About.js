@@ -8,7 +8,7 @@ const pillars = [
     title: 'Akademik',
     desc: 'Ajang kompetisi teknologi tingkat nasional. Uji kemampuanmu dalam bidang Web Programming, UI/UX Design, atau Infografis, dan jadikan karyamu sebagai bukti nyata inovasi.',
     icon: GraduationCap,
-    color: 'text-neon-blue',
+    color: 'text-[#F67B07]',
   },
   {
     title: 'Festival',
@@ -52,7 +52,7 @@ const About = () => {
             }`}
           >
             <h2 className="font-bold text-3xl md:text-5xl lg:text-6xl lg:leading-[1.1] mb-8 text-white flex flex-col gap-2 font-jakarta">
-              <span className="block text-neon-blue text-xs md:text-sm uppercase tracking-[0.4em] mb-2 opacity-80">
+              <span className="block text-[var(--color-highlight-lime)] text-xs md:text-sm uppercase tracking-[0.4em] mb-2 opacity-80">
                 Tentang SwitchFest 2026
               </span>
               <span className="block tracking-tight text-balance">Code the Stars,</span>

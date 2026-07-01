@@ -9,28 +9,28 @@ const metrics = [
     value: '5.000+',
     label: 'Target Pengunjung',
     desc: 'Estimasi total pengunjung offline & online untuk seluruh rangkaian kompetisi, seminar, dan konser penutup.',
-    color: '#5cb3ff', // Blue
+    color: 'var(--color-highlight-lime)', // Blue
   },
   {
     icon: Globe,
     value: '100.000+',
     label: 'Digital Impressions',
     desc: 'Target paparan publik melalui promosi media sosial resmi, publikasi media partner, dan kampanye digital.',
-    color: '#f97540', // Orange
+    color: 'var(--color-highlight-lime)', // Orange
   },
   {
     icon: Award,
     value: '50+',
     label: 'Sponsor & Mitra Media',
     desc: 'Kolaborasi aktif bersama berbagai instansi, perusahaan teknologi nasional, dan media partner terpercaya.',
-    color: '#7e5dc1', // Purple
+    color: 'var(--color-highlight-lime)', // Purple
   },
   {
     icon: Briefcase,
     value: '30+',
     label: 'Institusi Terlibat',
     desc: 'Partisipasi delegasi dari berbagai SMA/SMK, Universitas, serta komunitas IT terkemuka di Indonesia.',
-    color: '#ed374d', // Tivo Magenta
+    color: 'var(--color-highlight-lime)', // Tivo Magenta
   },
 ];
 
@@ -88,7 +88,7 @@ const ImpactProjectionPage = () => {
         {/* Title / Hero */}
         <div className="text-center space-y-4">
           <h1 className="text-4xl md:text-7xl font-black font-jakarta tracking-tight">
-            IMPACT <span className="text-[#5cb3ff]">PROJECTION</span>
+            IMPACT <span className="text-[var(--color-highlight-lime)]">PROJECTION</span>
           </h1>
           <p className="text-white/60 max-w-2xl mx-auto text-base md:text-lg">
             Rencana dampak SwitchFest 2026 dalam melahirkan paparan publik yang luas dan memperluas ekosistem teknologi nasional.
@@ -102,7 +102,7 @@ const ImpactProjectionPage = () => {
             return (
               <div
                 key={idx}
-                className="glass-navy border border-[#5cb3ff]/10 p-8 md:p-10 rounded-[2.5rem] flex flex-col justify-between hover:border-[#5cb3ff]/30 transition-all duration-300 relative group"
+                className="glass-navy border border-[var(--color-highlight-lime)]/10 p-8 md:p-10 rounded-[2.5rem] flex flex-col justify-between hover:border-[var(--color-highlight-lime)]/30 transition-all duration-300 relative group"
               >
                 {/* Accent glow on hover */}
                 <div
@@ -136,16 +136,16 @@ const ImpactProjectionPage = () => {
         {/* 7 Core Benefits of Partnership */}
         <div className="space-y-8">
           <h2 className="text-2xl md:text-4xl font-bold font-jakarta text-center">
-            Keuntungan Utama <span className="text-[#5cb3ff]">Kemitraan</span>
+            Keuntungan Utama <span className="text-[var(--color-highlight-lime)]">Kemitraan</span>
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {benefits.map((benefit, idx) => (
               <div
                 key={idx}
-                className="glass-navy border border-[#5cb3ff]/10 p-8 md:p-10 rounded-[2.5rem] flex gap-4 hover:border-[#5cb3ff]/30 transition-all"
+                className="glass-navy border border-[var(--color-highlight-lime)]/10 p-8 md:p-10 rounded-[2.5rem] flex gap-4 hover:border-[var(--color-highlight-lime)]/30 transition-all"
               >
-                <div className="w-8 h-8 rounded-full bg-[#7e5dc1]/10 border border-[#7e5dc1]/30 flex items-center justify-center shrink-0">
-                  <CheckCircle2 className="w-4 h-4 text-[#7e5dc1]" />
+                <div className="w-8 h-8 rounded-full bg-[var(--color-highlight-lime)]/10 border border-[var(--color-highlight-lime)]/30 flex items-center justify-center shrink-0">
+                  <CheckCircle2 className="w-4 h-4 text-[var(--color-highlight-lime)]" />
                 </div>
                 <div className="space-y-1">
                   <h4 className="text-base font-bold font-jakarta text-white">{benefit.title}</h4>
@@ -157,13 +157,13 @@ const ImpactProjectionPage = () => {
         </div>
 
         {/* Keselarasan Kesiapan Publikasi */}
-        <div className="glass-navy border border-[#5cb3ff]/10 p-8 md:p-10 rounded-[2.5rem] max-w-3xl mx-auto shadow-2xl relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-32 h-32 bg-[#5cb3ff]/15 rounded-full blur-[40px] pointer-events-none" />
+        <div className="glass-navy border border-[var(--color-highlight-lime)]/10 p-8 md:p-10 rounded-[2.5rem] max-w-3xl mx-auto shadow-2xl relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-32 h-32 bg-[var(--color-highlight-lime)]/15 rounded-full blur-[40px] pointer-events-none" />
           
           <div className="flex flex-col md:flex-row items-center gap-8 justify-between relative z-10">
             <div className="space-y-3 max-w-lg">
               <h3 className="text-lg md:text-xl font-bold font-jakarta text-white uppercase tracking-wider flex items-center gap-2">
-                <ShieldCheck className="w-5 h-5 text-[#5cb3ff]" />
+                <ShieldCheck className="w-5 h-5 text-[var(--color-highlight-lime)]" />
                 Rencana Kesiapan Publikasi
               </h3>
               <p className="text-sm text-white/60 leading-relaxed">
@@ -186,7 +186,7 @@ const ImpactProjectionPage = () => {
                     cx="56"
                     cy="56"
                     r="48"
-                    className="stroke-[#5cb3ff]"
+                    className="stroke-[var(--color-highlight-lime)]"
                     strokeWidth="8"
                     fill="transparent"
                     strokeDasharray={2 * Math.PI * 48}
@@ -199,7 +199,7 @@ const ImpactProjectionPage = () => {
                   <span className="text-[10px] font-mono tracking-wider text-white/40 uppercase">Aligned</span>
                 </div>
               </div>
-              <span className="text-xs font-semibold text-[#5cb3ff] uppercase tracking-widest font-mono">
+              <span className="text-xs font-semibold text-[var(--color-highlight-lime)] uppercase tracking-widest font-mono">
                 Publication Pipeline
               </span>
             </div>

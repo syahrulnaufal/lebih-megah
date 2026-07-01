@@ -21,10 +21,10 @@ export default function GuestStarCard({ image, name, genre, delay = '0s' }) {
 
         <div className="mt-5 space-y-1.5 text-center">
           <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-white/5 border border-white/10 text-[9px] font-mono text-white/50 uppercase tracking-wider">
-            <Music className="w-2.5 h-2.5 text-[#ed374d]" />
+            <Music className="w-2.5 h-2.5 text-[var(--color-highlight-orange)]" />
             <span>{genre}</span>
           </div>
-          <h4 className="text-xl font-black font-jakarta text-white group-hover:text-[#ed374d] transition-colors tracking-wide">{name}</h4>
+          <h4 className="text-xl font-black font-jakarta text-white group-hover:text-[var(--color-highlight-orange)] transition-colors tracking-wide">{name}</h4>
         </div>
       </div>
     );
@@ -47,7 +47,7 @@ export default function GuestStarCard({ image, name, genre, delay = '0s' }) {
         }}
       >
         {/* Inner glow ring */}
-        <div className="absolute inset-0 border-2 border-transparent group-hover:border-[#5cb3ff]/30 rounded-full transition-colors duration-500 z-10 pointer-events-none" />
+        <div className="absolute inset-0 border-2 border-transparent group-hover:border-[var(--color-primary-light)]/30 rounded-full transition-colors duration-500 z-10 pointer-events-none" />
         
         <img 
           src={image} 
@@ -55,7 +55,7 @@ export default function GuestStarCard({ image, name, genre, delay = '0s' }) {
           className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
         />
       </div>
-      <h4 className="text-sm font-bold font-jakarta text-white uppercase tracking-wider group-hover:text-[#5cb3ff] transition-colors">
+      <h4 className="text-sm font-bold font-jakarta text-white uppercase tracking-wider group-hover:text-[var(--color-primary-light)] transition-colors">
         {name}
       </h4>
     </div>

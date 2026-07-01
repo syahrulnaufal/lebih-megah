@@ -51,7 +51,7 @@ const SponsorPage = () => {
           <div className="flex items-center justify-center gap-4">
             <span className="h-px w-16 bg-gradient-to-r from-transparent to-white/20" />
             <div className="flex items-center gap-2">
-              <Award className="w-5 h-5 text-neon-orange" />
+              <Award className="w-5 h-5 text-[var(--color-primary-light)]" />
               <h2 className="text-lg md:text-xl font-bold uppercase tracking-[0.2em] font-jakarta text-white">Sponsor Resmi</h2>
             </div>
             <span className="h-px w-16 bg-gradient-to-l from-transparent to-white/20" />
@@ -94,7 +94,7 @@ const SponsorPage = () => {
         <div className="space-y-8 border-t border-white/5 pt-12">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
             <div className="flex items-center gap-2">
-              <Users className="w-5 h-5 text-neon-purple" />
+              <Users className="w-5 h-5 text-[var(--color-primary-light)]" />
               <h2 className="text-lg md:text-xl font-bold uppercase tracking-[0.2em] font-jakarta">Media Partner & Kolaborator</h2>
             </div>
 
@@ -109,8 +109,8 @@ const SponsorPage = () => {
                     onClick={() => setActiveTab(tab.key)}
                     className={`inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider font-jakarta transition-all duration-300 border ${
                       isActive
-                        ? 'bg-white text-black border-white shadow-[0_0_20px_rgba(255,255,255,0.15)]'
-                        : 'bg-white/5 text-white/60 border-white/10 hover:bg-white/10 hover:text-white'
+                        ? 'bg-[var(--color-primary-light)] text-white border-[var(--color-primary-light)] shadow-[0_0_20px_rgba(var(--color-primary-light-rgb),0.3)]'
+                        : 'bg-white/5 text-white/60 border-white/10 hover:bg-[var(--color-primary-light)] hover:text-white hover:border-[var(--color-primary-light)]'
                     }`}
                   >
                     <Icon className="w-3.5 h-3.5" />
@@ -167,9 +167,9 @@ const SponsorPage = () => {
         </div>
 
         {/* Partnership CTA */}
-        <div className="glass-navy border border-[#5cb3ff]/10 p-8 md:p-10 rounded-[2.5rem] max-w-3xl mx-auto text-center space-y-4">
+        <div className="glass-navy border border-[var(--color-primary-light)]/10 p-8 md:p-10 rounded-[2.5rem] max-w-3xl mx-auto text-center space-y-4">
           <h3 className="text-xl md:text-2xl font-black font-jakarta text-white">
-            Tertarik Menjadi <span className="text-[#5cb3ff]">Partner</span>?
+            Tertarik Menjadi <span className="text-[var(--color-primary-light)]">Partner</span>?
           </h3>
           <p className="text-xs text-white/50 max-w-lg mx-auto leading-relaxed">
             Bergabunglah bersama puluhan mitra media, komunitas teknologi, dan organisasi kampus lainnya untuk mendukung SwitchFest 2026.
@@ -177,7 +177,7 @@ const SponsorPage = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
             <Link
               to="/partnership"
-              className="px-8 py-3 rounded-2xl bg-white text-black font-bold uppercase tracking-wider hover:bg-white/90 hover:scale-105 active:scale-95 transition-all duration-300 font-jakarta text-xs"
+              className="px-8 py-3 rounded-2xl bg-white text-black font-bold uppercase tracking-wider hover:bg-[var(--color-primary-light)] hover:text-white hover:scale-105 active:scale-95 transition-all duration-300 font-jakarta text-xs"
             >
               Lihat Paket Kemitraan
             </Link>
@@ -185,7 +185,7 @@ const SponsorPage = () => {
               href="https://wa.me/6281215836206?text=Halo%20Panitia%20SwitchFest%202026%2C%20kami%20tertarik%20menjadi%20media%20partner."
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-3 rounded-2xl border border-white/20 text-white/80 font-bold uppercase tracking-wider hover:bg-white/5 hover:text-white transition-all duration-300 font-jakarta text-xs"
+              className="px-8 py-3 rounded-2xl border border-white/20 text-white/80 font-bold uppercase tracking-wider hover:bg-[var(--color-primary-light)] hover:border-[var(--color-primary-light)] hover:text-white transition-all duration-300 font-jakarta text-xs"
             >
               Hubungi Panitia (WA)
             </a>

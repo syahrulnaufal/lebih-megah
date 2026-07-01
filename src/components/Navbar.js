@@ -86,8 +86,8 @@ const Navbar = () => {
         <div
           className={`flex items-center justify-between transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] pointer-events-auto ${
             scrolled
-              ? 'w-full max-w-5xl py-2.5 px-6 md:px-8 bg-[#020817]/85 backdrop-blur-xl border border-[#5cb3ff]/15 rounded-full shadow-[0_10px_35px_rgba(0,0,0,0.8)]'
-              : 'w-full max-w-[100%] py-5 px-6 md:px-10 bg-[#020817]/40 backdrop-blur-md border-b border-[#5cb3ff]/10 rounded-none'
+              ? 'w-full max-w-5xl py-2.5 px-6 md:px-8 bg-[#020817]/85 backdrop-blur-xl border border-[var(--color-primary-light)]/15 rounded-full shadow-[0_10px_35px_rgba(0,0,0,0.8)]'
+              : 'w-full max-w-[100%] py-5 px-6 md:px-10 bg-[#020817]/40 backdrop-blur-md border-b border-[var(--color-primary-light)]/10 rounded-none'
           }`}
         >
           {/* Logo */}
@@ -128,12 +128,12 @@ const Navbar = () => {
                   {/* Glow underline */}
                   {active && (
                     <span className="nav-glow-line absolute -bottom-0.5 left-0 w-full h-px overflow-hidden">
-                      <span className="nav-shimmer-bar absolute inset-y-0 w-1/2 bg-white/60"></span>
+                      <span className="nav-shimmer-bar absolute inset-y-0 w-1/2 bg-[var(--color-highlight-lime)]"></span>
                     </span>
                   )}
                   {/* Dropdown */}
                   {dropdownOpen && (
-                    <div className="absolute top-full left-0 mt-3 w-56 bg-[#020817]/95 backdrop-blur-xl border border-[#5cb3ff]/15 rounded-xl shadow-2xl py-2 z-50">
+                    <div className="absolute top-full left-0 mt-3 w-56 bg-[#020817]/95 backdrop-blur-xl border border-[var(--color-highlight-lime)]/15 rounded-xl shadow-2xl py-2 z-50">
                       {link.children.map((child) => (
                         <Link
                           key={child.label}
@@ -141,8 +141,8 @@ const Navbar = () => {
                           onClick={() => setDropdownOpen(false)}
                           className={`block px-5 py-3 text-sm transition-all duration-200 font-jakarta ${
                             currentPath === child.href
-                              ? 'text-neon-blue bg-white/5 font-semibold'
-                              : 'text-white/70 hover:text-neon-blue hover:bg-white/5'
+                              ? 'text-neon-yellow bg-white/5 font-semibold'
+                              : 'text-white/70 hover:text-neon-yellow hover:bg-white/5'
                           }`}
                         >
                           {child.label}
@@ -178,7 +178,7 @@ const Navbar = () => {
           <div className="flex items-center gap-4">
             <Link
               to="/#category"
-              className="hidden md:block rounded-full font-black tracking-tight transition-all duration-300 px-6 py-2.5 text-base bg-white text-black hover:bg-white/90 font-jakarta"
+              className="hidden md:block rounded-full font-black tracking-tight transition-all duration-300 px-6 py-2.5 text-base bg-white text-black hover:bg-[var(--color-highlight-orange)] hover:text-white font-jakarta"
             >
               Daftar Sekarang
             </Link>
@@ -195,7 +195,7 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         <div
-          className={`md:hidden absolute top-[calc(100%+0.5rem)] right-4 w-64 bg-[#020817]/95 backdrop-blur-2xl border border-[#5cb3ff]/15 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.8)] p-5 transition-all duration-300 transform origin-top-right z-[59] ${
+          className={`md:hidden absolute top-[calc(100%+0.5rem)] right-4 w-64 bg-[#020817]/95 backdrop-blur-2xl border border-[var(--color-primary-light)]/15 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.8)] p-5 transition-all duration-300 transform origin-top-right z-[59] ${
             menuOpen
               ? 'opacity-100 scale-100 pointer-events-auto'
               : 'opacity-0 scale-95 pointer-events-none'
@@ -221,8 +221,8 @@ const Navbar = () => {
                             onClick={handleCloseMenu}
                             className={`block py-1.5 text-sm transition-colors font-jakarta ${
                               currentPath === child.href
-                                ? 'text-neon-blue font-semibold'
-                                : 'text-white/60 hover:text-neon-blue'
+                                ? 'text-neon-yellow font-semibold'
+                                : 'text-white/60 hover:text-neon-yellow'
                             }`}
                           >
                             {child.label}
@@ -236,8 +236,8 @@ const Navbar = () => {
                       onClick={handleCloseMenu}
                       className={`block py-2.5 text-base font-bold transition-colors font-jakarta ${
                         active
-                          ? 'text-neon-blue'
-                          : 'text-white/80 hover:text-neon-blue'
+                          ? 'text-neon-yellow'
+                          : 'text-white/80 hover:text-neon-yellow'
                       }`}
                     >
                       {link.label}

@@ -7,9 +7,9 @@ import TimelineCard from './cards/TimelineCard';
 import '../App.css';
 
 const talkshowInfo = [
-  { icon: Calendar, label: 'Tanggal', value: 'Kamis, 5 November 2026', iconColor: 'text-[#f97540]' },
-  { icon: Clock, label: 'Waktu', value: '08.30 - 11.30 WIB', iconColor: 'text-[#f97540]' },
-  { icon: MapPin, label: 'Lokasi', value: 'Gedung Auditorium 2, Kampus 3 UIN Walisongo', iconColor: 'text-[#f97540]' },
+  { icon: Calendar, label: 'Tanggal', value: 'Kamis, 5 November 2026', iconColor: 'text-[var(--color-primary-light)]' },
+  { icon: Clock, label: 'Waktu', value: '08.30 - 11.30 WIB', iconColor: 'text-[var(--color-primary-light)]' },
+  { icon: MapPin, label: 'Lokasi', value: 'Gedung Auditorium 2, Kampus 3 UIN Walisongo', iconColor: 'text-[var(--color-primary-light)]' },
 ];
 
 const timelineData = [
@@ -65,7 +65,7 @@ const TalkshowPage = () => {
             <span className="w-1.5 h-14 bg-white rounded-full" />
             <span className="w-1.5 h-6 bg-white rounded-full" />
           </div>
-          <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-[#f97540]/10 to-transparent blur-3xl pointer-events-none" />
+          <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-[var(--color-primary-light)]/20 to-transparent blur-3xl pointer-events-none" />
           
           <div className="flex flex-col md:flex-row items-center gap-6 relative z-10">
             <div className="relative shrink-0 animate-float">
@@ -77,7 +77,7 @@ const TalkshowPage = () => {
             </div>
             <div className="space-y-2">
               <div className="flex items-center gap-2">
-                <span className="px-2 py-0.5 rounded bg-[#f97540]/15 text-[#f97540] text-[9px] font-mono font-bold tracking-widest uppercase border border-[#f97540]/30">Keynote Speaker Info</span>
+                <span className="px-2 py-0.5 rounded bg-[var(--color-primary-light)]/20 text-[var(--color-primary-light)] text-[9px] font-mono font-bold tracking-widest uppercase border border-[var(--color-primary-light-20)]">Keynote Speaker Info</span>
                 <span className="text-white/30 text-[9px] font-mono">Status: Registrasi Dibuka</span>
               </div>
               <p className="text-white/90 font-medium text-sm md:text-base leading-relaxed font-jakarta">
@@ -97,19 +97,19 @@ const TalkshowPage = () => {
               style={{ animation: 'spin 30s linear infinite' }}
             />
             <div
-              className="absolute w-[180px] h-[180px] md:w-[280px] md:h-[280px] border-2 border-[#f97540]/20 rounded-full opacity-50"
+              className="absolute w-[180px] h-[180px] md:w-[280px] md:h-[280px] border-2 border-[var(--color-primary-light)]/20 rounded-full opacity-50"
               style={{ animation: 'spin 40s linear infinite reverse' }}
             />
-            <div className="absolute w-[180px] h-[180px] md:w-[280px] md:h-[280px] bg-gradient-to-tr from-[#f97540]/20 via-[#7e5dc1]/20 to-transparent rounded-full blur-[60px]" />
+            <div className="absolute w-[180px] h-[180px] md:w-[280px] md:h-[280px] bg-gradient-to-tr from-[var(--color-primary-light)]/20 via-[var(--color-primary-light)]/20 to-transparent rounded-full blur-[60px]" />
 
-            <div className="relative z-30 glass-navy border border-[#5cb3ff]/10 p-8 md:p-10 rounded-[2.5rem] shadow-[0_10px_30px_rgba(0,0,0,0.5)] text-center">
-              <div className="absolute top-0 right-0 w-24 h-24 bg-[#7e5dc1]/15 rounded-full blur-[30px] -mr-6 -mt-6 pointer-events-none" />
+            <div className="relative z-30 glass-navy border border-[var(--color-primary-light)]/20 p-8 md:p-10 rounded-[2.5rem] shadow-[0_10px_30px_rgba(0,0,0,0.5)] text-center">
+              <div className="absolute top-0 right-0 w-24 h-24 bg-[var(--color-primary-light)]/20 rounded-full blur-[30px] -mr-6 -mt-6 pointer-events-none" />
               <h3 className="text-xl md:text-3xl font-bold text-white mb-2 leading-none font-jakarta">
                 Speaker
                 <br />
                 SwitchFest
               </h3>
-              <p className="text-xs text-[#f97540] font-mono tracking-widest uppercase font-bold mt-2 animate-pulse">
+              <p className="text-xs text-[var(--color-primary-light)] font-mono tracking-widest uppercase font-bold mt-2 animate-pulse">
                 Coming Soon
               </p>
             </div>
@@ -148,7 +148,7 @@ const TalkshowPage = () => {
             <div className="pt-6">
               <Link
                 to="/register?category=talkshow"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#f97540] text-black font-bold uppercase tracking-widest rounded-full hover:scale-105 active:scale-95 transition-all duration-300 shadow-[0_0_30px_rgba(249,117,64,0.3)] font-jakarta text-sm"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[var(--color-primary-light)] text-white font-bold uppercase tracking-widest rounded-full hover:scale-105 active:scale-95 transition-all duration-300 shadow-[0_0_30px_var(--color-primary-light-20)] font-jakarta text-sm"
               >
                 Daftar Seminar Free
                 <UserPlus className="w-4 h-4" />
@@ -168,7 +168,7 @@ const TalkshowPage = () => {
 
           <div className="relative border-l border-white/10 md:border-l-0 pl-6 md:pl-0 space-y-10 md:space-y-0">
             {/* Spotlight timeline line */}
-            <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-[#f97540] via-[#7e5dc1] to-transparent -translate-x-1/2 pointer-events-none" />
+            <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-[2px] bg-white/70 -translate-x-1/2 pointer-events-none" />
 
             {timelineData.map((item, idx) => {
               const isEven = idx % 2 === 0;
@@ -176,8 +176,8 @@ const TalkshowPage = () => {
                 <div key={idx} className="relative md:grid md:grid-cols-2 md:gap-16 items-center md:pb-8">
                   {/* Speech bubble marker node */}
                   <div className="absolute left-[-32.5px] md:left-1/2 top-6 md:top-1/2 -translate-y-1/2 md:-translate-x-1/2 w-4 h-4 rounded-full border-2 border-black z-10 flex items-center justify-center bg-black transition-all group-hover:scale-110"
-                       style={{ borderColor: isEven ? '#f97540' : '#7e5dc1' }}>
-                    <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: isEven ? '#f97540' : '#7e5dc1', boxShadow: `0 0 10px ${isEven ? '#f97540' : '#7e5dc1'}` }} />
+                       style={{ borderColor: isEven ? 'var(--color-primary-light)' : 'var(--color-primary-light)' }}>
+                    <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: isEven ? 'var(--color-primary-light)' : 'var(--color-primary-light)', boxShadow: `0 0 10px ${isEven ? 'var(--color-primary-light)' : 'var(--color-primary-light)'}` }} />
                   </div>
 
                   {/* Left Side (Even) */}
@@ -188,7 +188,7 @@ const TalkshowPage = () => {
                         date={item.date}
                         title={item.title}
                         description={item.desc}
-                        accentColor="#f97540"
+                        accentColor="var(--color-primary-light)"
                         className="md:mr-4 shadow-xl"
                       />
                     )}
@@ -202,7 +202,7 @@ const TalkshowPage = () => {
                         date={item.date}
                         title={item.title}
                         description={item.desc}
-                        accentColor="#7e5dc1"
+                        accentColor="var(--color-primary-light)"
                         className="md:ml-4 shadow-xl"
                       />
                     )}

@@ -8,9 +8,9 @@ import GuestStarCard from './cards/GuestStarCard';
 import '../App.css';
 
 const concertInfo = [
-  { icon: Calendar, label: 'Tanggal', value: 'Jumat, 13 November 2026', iconColor: 'text-[#ed374d]' },
-  { icon: Clock, label: 'Waktu', value: '18.30 - Selesai', iconColor: 'text-[#ed374d]' },
-  { icon: MapPin, label: 'Lokasi', value: 'Gedung Auditorium 2, Kampus 3 UIN Walisongo Semarang', iconColor: 'text-[#ed374d]' },
+  { icon: Calendar, label: 'Tanggal', value: 'Jumat, 13 November 2026', iconColor: 'text-[var(--color-highlight-orange)]' },
+  { icon: Clock, label: 'Waktu', value: '18.30 - Selesai', iconColor: 'text-[var(--color-highlight-orange)]' },
+  { icon: MapPin, label: 'Lokasi', value: 'Gedung Auditorium 2, Kampus 3 UIN Walisongo Semarang', iconColor: 'text-[var(--color-highlight-orange)]' },
 ];
 
 const timelineData = [
@@ -119,14 +119,14 @@ const ConcertPage = () => {
         />
 
         {/* Stage Lights & Equalizer Header Card */}
-        <div className="glass-navy rounded-[2.5rem] border border-[#5cb3ff]/10 max-w-3xl mx-auto overflow-hidden shadow-2xl relative p-6 md:p-8">
+        <div className="glass-navy rounded-[2.5rem] border border-[var(--color-highlight-orange-20)] max-w-3xl mx-auto overflow-hidden shadow-2xl relative p-6 md:p-8">
           {/* Moving Stage Spotlights Graphic Overlay */}
           <div className="absolute inset-0 opacity-[0.05] pointer-events-none" style={{
             backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(237,55,77,0.3) 35px, rgba(237,55,77,0.3) 70px)',
             backgroundSize: '200% 200%',
             animation: 'shimmer 15s linear infinite'
           }} />
-          <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-[#ed374d]/10 to-transparent blur-3xl pointer-events-none" />
+          <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-[var(--color-highlight-orange-20)] to-transparent blur-3xl pointer-events-none" />
           
           <div className="flex flex-col md:flex-row items-center gap-6 relative z-10">
             <div className="relative shrink-0 animate-float">
@@ -138,7 +138,7 @@ const ConcertPage = () => {
             </div>
             <div className="space-y-2">
               <div className="flex items-center gap-2">
-                <span className="px-2 py-0.5 rounded bg-[#ed374d]/15 text-[#ed374d] text-[9px] font-mono font-bold tracking-widest uppercase border border-[#ed374d]/30">Live Concert Celebration</span>
+                <span className="px-2 py-0.5 rounded bg-[var(--color-highlight-orange-20)] text-[var(--color-highlight-orange)] text-[9px] font-mono font-bold tracking-widest uppercase border border-[var(--color-highlight-orange-20)]">Live Concert Celebration</span>
                 <span className="text-white/30 text-[9px] font-mono">Presale: Segera Hadir</span>
               </div>
               <p className="text-white/90 font-medium text-sm md:text-base leading-relaxed font-jakarta">
@@ -158,22 +158,22 @@ const ConcertPage = () => {
               style={{ animation: 'spin 25s linear infinite' }}
             />
             <div
-              className="absolute w-[180px] h-[180px] md:w-[280px] md:h-[280px] border-2 border-[#ed374d]/20 rounded-full opacity-45"
+              className="absolute w-[180px] h-[180px] md:w-[280px] md:h-[280px] border-2 border-[var(--color-highlight-orange-20)] rounded-full opacity-45"
               style={{ animation: 'spin 35s linear infinite reverse' }}
             />
-            <div className="absolute w-[180px] h-[180px] md:w-[280px] md:h-[280px] bg-gradient-to-tr from-[#ed374d]/20 via-purple-500/20 to-transparent rounded-full blur-[70px]" />
+            <div className="absolute w-[180px] h-[180px] md:w-[280px] md:h-[280px] bg-gradient-to-tr from-[var(--color-highlight-orange-20)] via-[var(--color-highlight-orange-20)] to-transparent rounded-full blur-[70px]" />
 
-            <div className="relative z-30 glass-navy border border-[#5cb3ff]/10 p-10 rounded-[2.5rem] shadow-[0_15px_40px_rgba(0,0,0,0.6)] text-center flex flex-col items-center">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-[#ed374d]/15 rounded-full blur-[40px] -mr-6 -mt-6 pointer-events-none" />
-              <div className="w-14 h-14 rounded-full bg-[#ed374d]/10 border border-[#ed374d]/30 flex items-center justify-center mb-4">
-                <Music className="w-6 h-6 text-[#ed374d]" />
+            <div className="relative z-30 glass-navy border border-[var(--color-highlight-orange-20)] p-10 rounded-[2.5rem] shadow-[0_15px_40px_rgba(0,0,0,0.6)] text-center flex flex-col items-center">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-[var(--color-highlight-orange-20)] rounded-full blur-[40px] -mr-6 -mt-6 pointer-events-none" />
+              <div className="w-14 h-14 rounded-full bg-[var(--color-highlight-orange-20)] border border-[var(--color-highlight-orange-20)] flex items-center justify-center mb-4">
+                <Music className="w-6 h-6 text-[var(--color-highlight-orange)]" />
               </div>
               <h3 className="text-xl md:text-3xl font-extrabold text-white mb-2 leading-tight font-jakarta">
                 Guest Star
                 <br />
                 SwitchFest
               </h3>
-              <p className="text-xs text-[#ed374d] font-mono tracking-widest uppercase font-black mt-2 animate-pulse">
+              <p className="text-xs text-[var(--color-highlight-orange)] font-mono tracking-widest uppercase font-black mt-2 animate-pulse">
                 To Be Announced
               </p>
             </div>
@@ -212,7 +212,7 @@ const ConcertPage = () => {
             <div className="pt-6">
               <Link
                 to="/register?category=concert"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#ed374d] text-white font-bold uppercase tracking-widest rounded-full hover:scale-105 active:scale-95 transition-all duration-300 shadow-[0_0_30px_rgba(237,55,77,0.3)] font-jakarta text-sm"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[var(--color-highlight-orange)] text-white font-bold uppercase tracking-widest rounded-full hover:scale-105 active:scale-95 transition-all duration-300 shadow-[0_0_30px_rgba(237,55,77,0.3)] font-jakarta text-sm"
               >
                 Pesan Tiket Konser
                 <Music className="w-4 h-4" />
@@ -274,8 +274,8 @@ const ConcertPage = () => {
             ))}
           </div>
 
-          <div className="glass-navy border border-[#5cb3ff]/10 p-8 md:p-10 rounded-[2.5rem] max-w-2xl mx-auto text-center space-y-4 shadow-2xl relative overflow-hidden">
-            <div className="absolute -top-12 -left-12 w-32 h-32 bg-[#ed374d]/10 rounded-full blur-[40px] pointer-events-none" />
+          <div className="glass-navy border border-[var(--color-highlight-orange-20)] p-8 md:p-10 rounded-[2.5rem] max-w-2xl mx-auto text-center space-y-4 shadow-2xl relative overflow-hidden">
+            <div className="absolute -top-12 -left-12 w-32 h-32 bg-[var(--color-highlight-orange-20)] rounded-full blur-[40px] pointer-events-none" />
             <h4 className="text-xl font-bold font-jakarta text-white">Ingin Menjadi Sponsor Utama Konser?</h4>
             <p className="text-xs text-white/60 leading-relaxed max-w-lg mx-auto">
               Dapatkan eksposur brand yang maksimal di hadapan ribuan audiens konser. Hubungi koordinator sponsorship kami untuk mendapatkan proposal kemitraan khusus.
@@ -285,7 +285,7 @@ const ConcertPage = () => {
                 href="https://wa.me/6285117369252?text=Halo%20Kak%20Bagus%2C%20saya%20tertarik%20untuk%20menjadi%20sponsor%20Closing%20Concert%20SwitchFest%202026."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-5 py-2.5 bg-white/5 hover:bg-white/10 border border-[#ed374d]/30 hover:border-[#ed374d]/60 text-white font-bold rounded-2xl transition-all duration-300 font-jakarta text-xs uppercase tracking-wider shadow-lg active:scale-95"
+                className="inline-flex items-center gap-2 px-5 py-2.5 bg-white/5 hover:bg-white/10 border border-[var(--color-highlight-orange-20)] hover:border-[var(--color-highlight-orange)]/60 text-white font-bold rounded-2xl transition-all duration-300 font-jakarta text-xs uppercase tracking-wider shadow-lg active:scale-95"
               >
                 Hubungi Koordinator Sponsor (WA)
               </a>
@@ -309,10 +309,10 @@ const ConcertPage = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Band Submission Card */}
-            <div className="glass-navy border border-[#5cb3ff]/10 p-8 rounded-[2.5rem] flex flex-col justify-between space-y-6 shadow-2xl relative overflow-hidden group hover:border-[#ed374d]/30 transition-all duration-300">
-              <div className="absolute top-0 right-0 w-24 h-24 bg-[#ed374d]/5 rounded-full blur-2xl pointer-events-none" />
+            <div className="glass-navy border border-[var(--color-highlight-orange-20)] p-8 rounded-[2.5rem] flex flex-col justify-between space-y-6 shadow-2xl relative overflow-hidden group hover:border-[var(--color-highlight-orange-20)] transition-all duration-300">
+              <div className="absolute top-0 right-0 w-24 h-24 bg-[var(--color-highlight-orange-20)] rounded-full blur-2xl pointer-events-none" />
               <div className="space-y-4">
-                <div className="w-12 h-12 rounded-2xl bg-[#ed374d]/10 border border-[#ed374d]/20 flex items-center justify-center text-[#ed374d] group-hover:scale-110 transition-transform duration-300">
+                <div className="w-12 h-12 rounded-2xl bg-[var(--color-highlight-orange-20)] border border-[var(--color-highlight-orange-20)] flex items-center justify-center text-[var(--color-highlight-orange)] group-hover:scale-110 transition-transform duration-300">
                   <Sparkles className="w-6 h-6" />
                 </div>
                 <h4 className="text-xl font-bold font-jakarta text-white">Band Performance (Opening Act)</h4>
@@ -321,11 +321,11 @@ const ConcertPage = () => {
                 </p>
                 <ul className="text-xs text-white/50 space-y-2 pt-2 font-jakarta">
                   <li className="flex items-center gap-2">
-                    <span className="w-1 h-1 rounded-full bg-[#ed374d]" />
+                    <span className="w-1 h-1 rounded-full bg-[var(--color-highlight-orange)]" />
                     Membawakan genre musik yang enerjik
                   </li>
                   <li className="flex items-center gap-2">
-                    <span className="w-1 h-1 rounded-full bg-[#ed374d]" />
+                    <span className="w-1 h-1 rounded-full bg-[var(--color-highlight-orange)]" />
                     Mengirimkan link video live session/YouTube
                   </li>
                 </ul>
@@ -335,7 +335,7 @@ const ConcertPage = () => {
                   href="https://wa.me/6285117369252?text=Halo%20Koordinator%20Acara%20SwitchFest%202026%2C%20saya%20tertarik%20untuk%20mendaftarkan%20band%20saya%20sebagai%20Opening%20Act%20di%20Closing%20Concert."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-[#ed374d]/10 hover:bg-[#ed374d] border border-[#ed374d]/30 hover:border-[#ed374d] text-white font-bold rounded-2xl transition-all duration-300 font-jakarta text-xs uppercase tracking-wider shadow-lg active:scale-95 text-center"
+                  className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-white/5 hover:bg-[var(--color-highlight-orange)] border border-[var(--color-highlight-orange-20)] hover:border-[var(--color-highlight-orange)] text-white font-bold rounded-2xl transition-all duration-300 font-jakarta text-xs uppercase tracking-wider shadow-lg active:scale-95 text-center"
                 >
                   Hubungi Koordinator Band (WA)
                 </a>
@@ -343,10 +343,10 @@ const ConcertPage = () => {
             </div>
 
             {/* Tenant Submission Card */}
-            <div className="glass-navy border border-[#5cb3ff]/10 p-8 rounded-[2.5rem] flex flex-col justify-between space-y-6 shadow-2xl relative overflow-hidden group hover:border-[#5cb3ff]/30 transition-all duration-300">
-              <div className="absolute top-0 right-0 w-24 h-24 bg-[#5cb3ff]/5 rounded-full blur-2xl pointer-events-none" />
+            <div className="glass-navy border border-[var(--color-highlight-orange-20)] p-8 rounded-[2.5rem] flex flex-col justify-between space-y-6 shadow-2xl relative overflow-hidden group hover:border-[var(--color-highlight-orange-20)] transition-all duration-300">
+              <div className="absolute top-0 right-0 w-24 h-24 bg-[var(--color-highlight-orange-20)] rounded-full blur-2xl pointer-events-none" />
               <div className="space-y-4">
-                <div className="w-12 h-12 rounded-2xl bg-[#5cb3ff]/10 border border-[#5cb3ff]/20 flex items-center justify-center text-[#5cb3ff] group-hover:scale-110 transition-transform duration-300">
+                <div className="w-12 h-12 rounded-2xl bg-[var(--color-highlight-orange-20)] border border-[var(--color-highlight-orange-20)] flex items-center justify-center text-[var(--color-highlight-orange)] group-hover:scale-110 transition-transform duration-300">
                   <Store className="w-6 h-6" />
                 </div>
                 <h4 className="text-xl font-bold font-jakarta text-white">Bazaar Tenant (F&B & Creative)</h4>
@@ -355,11 +355,11 @@ const ConcertPage = () => {
                 </p>
                 <ul className="text-xs text-white/50 space-y-2 pt-2 font-jakarta">
                   <li className="flex items-center gap-2">
-                    <span className="w-1 h-1 rounded-full bg-[#5cb3ff]" />
+                    <span className="w-1 h-1 rounded-full bg-[var(--color-highlight-orange)]" />
                     Terbuka untuk F&B, Aksesoris, & Creative Brand
                   </li>
                   <li className="flex items-center gap-2">
-                    <span className="w-1 h-1 rounded-full bg-[#5cb3ff]" />
+                    <span className="w-1 h-1 rounded-full bg-[var(--color-highlight-orange)]" />
                     Slot terbatas untuk menjaga variasi produk
                   </li>
                 </ul>
@@ -369,7 +369,7 @@ const ConcertPage = () => {
                   href="https://wa.me/6285117369252?text=Halo%20Koordinator%20Tenant%20SwitchFest%202026%2C%20saya%20tertarik%20untuk%20mendaftarkan%20booth%2Ftenant%20saya%20di%20Closing%20Concert."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-white/5 hover:bg-[#5cb3ff] hover:text-[#020817] border border-[#5cb3ff]/30 hover:border-[#5cb3ff] text-white font-bold rounded-2xl transition-all duration-300 font-jakarta text-xs uppercase tracking-wider shadow-lg active:scale-95 text-center"
+                  className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-white/5 hover:bg-[var(--color-highlight-orange)] hover:text-white border border-[var(--color-highlight-orange-20)] hover:border-[var(--color-highlight-orange)] text-white font-bold rounded-2xl transition-all duration-300 font-jakarta text-xs uppercase tracking-wider shadow-lg active:scale-95 text-center"
                 >
                   Hubungi Koordinator Tenant (WA)
                 </a>
@@ -389,7 +389,7 @@ const ConcertPage = () => {
 
           <div className="relative border-l border-white/10 md:border-l-0 pl-6 md:pl-0 space-y-10 md:space-y-0">
             {/* Wavy music note line connecting list (Desktop) */}
-            <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-[#ed374d] via-[#f97540] to-transparent -translate-x-1/2 pointer-events-none" />
+            <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-[var(--color-highlight-orange)] via-[var(--color-highlight-orange)] to-transparent -translate-x-1/2 pointer-events-none" />
 
             {timelineData.map((item, idx) => {
               const isEven = idx % 2 === 0;
@@ -397,8 +397,8 @@ const ConcertPage = () => {
                 <div key={idx} className="relative md:grid md:grid-cols-2 md:gap-16 items-center md:pb-8">
                   {/* Music Node marker (glowing) */}
                   <div className="absolute left-[-32.5px] md:left-1/2 top-6 md:top-1/2 -translate-y-1/2 md:-translate-x-1/2 w-4 h-4 rounded-full border-2 border-black z-10 flex items-center justify-center bg-black transition-all group-hover:scale-110"
-                       style={{ borderColor: isEven ? '#ed374d' : '#f97540' }}>
-                    <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: isEven ? '#ed374d' : '#f97540', boxShadow: `0 0 10px ${isEven ? '#ed374d' : '#f97540'}` }} />
+                       style={{ borderColor: isEven ? 'var(--color-highlight-orange)' : 'var(--color-highlight-orange)' }}>
+                    <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: isEven ? 'var(--color-highlight-orange)' : 'var(--color-highlight-orange)', boxShadow: `0 0 10px ${isEven ? 'var(--color-highlight-orange)' : 'var(--color-highlight-orange)'}` }} />
                   </div>
 
                   {/* Left Side (Even) */}
@@ -409,7 +409,7 @@ const ConcertPage = () => {
                         date={item.date}
                         title={item.title}
                         description={item.desc}
-                        accentColor="#ed374d"
+                        accentColor="var(--color-highlight-orange)"
                         className="md:mr-4 shadow-xl"
                       />
                     )}
@@ -423,7 +423,7 @@ const ConcertPage = () => {
                         date={item.date}
                         title={item.title}
                         description={item.desc}
-                        accentColor="#f97540"
+                        accentColor="var(--color-highlight-orange)"
                         className="md:ml-4 shadow-xl"
                       />
                     )}

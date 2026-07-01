@@ -12,7 +12,7 @@ const timelineEvents = [
     title: 'Pembukaan Switchfest',
     desc: 'Opening ceremony peresmian rangkaian festival Switchfest 2026 secara simbolis.',
     icon: Calendar,
-    color: '#7e5dc1', // Purple
+    color: 'var(--color-highlight-orange)', // Purple
     link: '#',
   },
   {
@@ -20,7 +20,7 @@ const timelineEvents = [
     title: 'Lomba Eksternal IT',
     desc: 'Kompetisi IT tingkat nasional (Web Programming, UI/UX Design, dan Design Poster / Infografis) secara online & offline.',
     icon: Trophy,
-    color: '#5cb3ff', // Sky Blue
+    color: 'var(--color-highlight-lime)', // Sky Blue
     link: '/lomba-it',
   },
   {
@@ -28,7 +28,7 @@ const timelineEvents = [
     title: 'Lomba Internal',
     desc: 'Kompetisi khusus mahasiswa Teknologi Informasi UIN Walisongo Semarang untuk mengasah bakat internal.',
     icon: Users,
-    color: '#55D5E7', // Teal
+    color: 'var(--color-primary-light)', // Teal
     link: '#',
   },
   {
@@ -36,7 +36,7 @@ const timelineEvents = [
     title: 'Lomba E-Sport (MLBB)',
     desc: 'Turnamen Mobile Legends: Bang Bang memperebutkan hadiah jutaan rupiah di panggung utama.',
     icon: Award,
-    color: '#f97540', // Orange
+    color: 'var(--color-highlight-orange)', // Orange
     link: '/esport',
   },
   {
@@ -44,7 +44,7 @@ const timelineEvents = [
     title: 'Lomba Futsal Cup',
     desc: 'Pertandingan futsal bergengsi antar instansi/sekolah untuk memperebutkan piala Switchfest.',
     icon: Trophy,
-    color: '#ed374d', // Red
+    color: 'var(--color-highlight-lime)', // Red
     link: '/futsal',
   },
   {
@@ -52,7 +52,7 @@ const timelineEvents = [
     title: 'National Talkshow',
     desc: 'Seminar nasional bertema "Ideas that Matter: Impactful Solution" bersama praktisi teknologi terkemuka Indonesia.',
     icon: Mic,
-    color: '#f97540', // Orange
+    color: 'var(--color-primary-light)', // Orange
     link: '/talkshow',
   },
   {
@@ -60,7 +60,7 @@ const timelineEvents = [
     title: 'Closing Concert',
     desc: 'Konser penutup spektakuler sebagai perayaan puncak rangkaian festival SwitchFest 2026 bersama bintang tamu spesial.',
     icon: Music,
-    color: '#a856ee', // Violet
+    color: 'var(--color-highlight-orange)', // Violet
     link: '/concert',
   },
 ];
@@ -109,7 +109,7 @@ const Timeline = () => {
           
           {/* Central Connecting SVG Road (Desktop only) */}
           <div className="absolute left-1/2 top-0 bottom-0 -translate-x-1/2 w-[600px] hidden lg:block pointer-events-none" aria-hidden="true">
-            <svg width="100%" height="100%" viewBox="0 0 600 1200" fill="none" preserveAspectRatio="none" className="opacity-25">
+            <svg width="100%" height="100%" viewBox="0 0 600 1200" fill="none" preserveAspectRatio="none" className="opacity-40">
               {/* Path winding route */}
               <path 
                 d="M 300 0 C 300 150, 480 150, 480 300 C 480 450, 120 450, 120 600 C 120 750, 480 750, 480 900 C 480 1050, 300 1050, 300 1200" 
@@ -120,17 +120,22 @@ const Timeline = () => {
               />
               <defs>
                 <linearGradient id="road-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                  <stop offset="0%" stopColor="#7e5dc1" />
-                  <stop offset="30%" stopColor="#5cb3ff" />
-                  <stop offset="60%" stopColor="#f97540" />
-                  <stop offset="100%" stopColor="#a856ee" />
+                  {/* <stop offset="0%" stopColor="var(--color-highlight-orange)" />
+                  <stop offset="16.5%" stopColor="var(--color-highlight-lime)" />
+                  <stop offset="33%" stopColor="var(--color-primary-light)" />
+                  <stop offset="49.5%" stopColor="var(--color-highlight-orange)" />
+                  <stop offset="66%" stopColor="var(--color-highlight-lime)" />
+                  <stop offset="82.5%" stopColor="var(--color-primary-light)" />
+                  <stop offset="100%" stopColor="var(--color-highlight-orange)" /> */}
+                  <stop offset="0%" stopColor="#fff" />
+                  <stop offset="100%" stopColor="#fff" />
                 </linearGradient>
               </defs>
             </svg>
           </div>
 
           {/* Simple left line (Mobile only) */}
-          <div className="absolute left-6 md:left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-[#7e5dc1] via-[#f97540] to-[#a856ee] opacity-25 lg:hidden" aria-hidden="true" />
+          <div className="absolute left-6 md:left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-[var(--color-highlight-lime)] via-[var(--color-highlight-orange)] to-[var(--color-highlight-lime)] opacity-25 lg:hidden" aria-hidden="true" />
 
           {/* Roadmap Milestones */}
           <div className="space-y-12 lg:space-y-0 relative">
@@ -169,7 +174,7 @@ const Timeline = () => {
                     {/* Outer pulse */}
                     <div 
                       className="w-12 h-12 md:w-16 md:h-16 rounded-full border border-white/5 flex items-center justify-center glass-navy shadow-[0_0_20px_rgba(255,255,255,0.05)] transform transition-transform duration-300 hover:scale-110 cursor-pointer"
-                      style={{ borderColor: `${evt.color}40`, background: `${evt.color}0a` }}
+                      style={{ borderColor: `color-mix(in srgb, ${evt.color} 25%, transparent)`, background: `color-mix(in srgb, ${evt.color} 4%, transparent)` }}
                     >
                       <EvtIcon className="w-5 h-5 md:w-6 md:h-6" style={{ color: evt.color }} />
                     </div>

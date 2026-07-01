@@ -49,13 +49,13 @@ const FutsalPage = () => {
         />
 
         {/* Futsal Tactics Pitch Header Card */}
-        <div className="glass-navy rounded-[2.5rem] border border-[#5cb3ff]/10 max-w-3xl mx-auto overflow-hidden shadow-2xl relative p-6 md:p-8">
+        <div className="glass-navy rounded-[2.5rem] border border-[var(--color-primary-light)]/10 max-w-3xl mx-auto overflow-hidden shadow-2xl relative p-6 md:p-8">
           {/* Tactical Pitch Lines Graphic Overlay */}
           <div className="absolute inset-0 opacity-[0.04] bg-no-repeat bg-center pointer-events-none" style={{
             backgroundImage: 'radial-gradient(circle at center, transparent 30%, white 30.5%, transparent 31%), linear-gradient(to right, transparent 49%, white 49.5%, white 50.5%, transparent 51%)',
             backgroundSize: '100% 100%'
           }} />
-          <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-[#55D5E7]/10 to-transparent blur-3xl pointer-events-none" />
+          <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-[var(--color-primary-light)]/10 to-transparent blur-3xl pointer-events-none" />
           
           <div className="flex flex-col md:flex-row items-center gap-6 relative z-10">
             <div className="relative shrink-0 animate-float">
@@ -67,7 +67,7 @@ const FutsalPage = () => {
             </div>
             <div className="space-y-2">
               <div className="flex items-center gap-2">
-                <span className="px-2 py-0.5 rounded bg-[#55D5E7]/15 text-[#55D5E7] text-[9px] font-mono font-bold tracking-widest uppercase border border-[#55D5E7]/30">Coach TIVO Instructions</span>
+                <span className="px-2 py-0.5 rounded bg-[var(--color-primary-light)]/15 text-[var(--color-primary-light)] text-[9px] font-mono font-bold tracking-widest uppercase border border-[var(--color-primary-light-20)]">Coach TIVO Instructions</span>
                 <span className="text-white/30 text-[9px] font-mono">Formasi: 2-2 / Diamond</span>
               </div>
               <p className="text-white/90 font-medium text-sm md:text-base leading-relaxed font-jakarta">
@@ -80,24 +80,24 @@ const FutsalPage = () => {
         {/* Details & CTA Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
           {/* Rules/Info Card */}
-          <div className="glass-navy border border-[#5cb3ff]/10 p-8 md:p-10 rounded-[2.5rem] space-y-6 flex flex-col justify-between shadow-xl">
+          <div className="glass-navy border border-[var(--color-primary-light)]/10 p-8 md:p-10 rounded-[2.5rem] space-y-6 flex flex-col justify-between shadow-xl">
             <div className="space-y-4">
               <h3 className="text-2xl font-bold font-jakarta text-white">Detail Kompetisi</h3>
               <ul className="space-y-3 text-sm text-white/70">
                 <li className="flex items-start gap-2">
-                  <span className="text-[#55D5E7] font-bold">•</span>
+                  <span className="text-[var(--color-primary-light)] font-bold">•</span>
                   <span>Kategori: Pelajar SMA/SMK/Sederajat</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-[#55D5E7] font-bold">•</span>
+                  <span className="text-[var(--color-primary-light)] font-bold">•</span>
                   <span>Biaya Registrasi: Rp 150.000,- / Tim</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-[#55D5E7] font-bold">•</span>
+                  <span className="text-[var(--color-primary-light)] font-bold">•</span>
                   <span>Pemain: 5 Utama + Pemain Cadangan</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-[#55D5E7] font-bold">•</span>
+                  <span className="text-[var(--color-primary-light)] font-bold">•</span>
                   <span>Sistem: Grup Stage + Knockout Stage</span>
                 </li>
               </ul>
@@ -111,7 +111,7 @@ const FutsalPage = () => {
               </a>
               <Link
                 to="/register?category=futsal"
-                className="flex-1 text-center py-3.5 px-4 font-bold rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden font-jakarta text-xs uppercase tracking-wider flex items-center justify-center gap-1.5 bg-[#55D5E7] text-black hover:bg-[#55D5E7]/95"
+                className="flex-1 text-center py-3.5 px-4 font-bold rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden font-jakarta text-xs uppercase tracking-wider flex items-center justify-center gap-1.5 bg-[var(--color-primary-light)] text-black hover:bg-[var(--color-primary-light)]/95"
               >
                 <UserPlus className="w-3.5 h-3.5" />
                 Daftar Turnamen
@@ -120,11 +120,11 @@ const FutsalPage = () => {
           </div>
 
           {/* Prize Pool Card */}
-          <div className="glass-navy border border-[#5cb3ff]/10 p-8 md:p-10 rounded-[2.5rem] space-y-6 flex flex-col justify-center shadow-xl relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-tr from-[#55D5E7]/10 to-transparent blur-2xl" />
+          <div className="glass-navy border border-[var(--color-primary-light)]/10 p-8 md:p-10 rounded-[2.5rem] space-y-6 flex flex-col justify-center shadow-xl relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-tr from-[var(--color-primary-light)]/10 to-transparent blur-2xl" />
             <h3 className="text-2xl font-bold font-jakarta text-white text-center">Total Hadiah</h3>
             <div className="text-center space-y-2">
-              <p className="text-4xl md:text-6xl font-black font-jakarta text-[#5cb3ff] tracking-wider drop-shadow-[0_0_15px_rgba(92,179,255,0.4)]">
+              <p className="text-4xl md:text-6xl font-black font-jakarta text-[var(--color-primary-light)] tracking-wider drop-shadow-[0_0_15px_rgba(92,179,255,0.4)]">
                 JUTAAN RUPIAH
               </p>
               <p className="text-sm text-white/50 font-mono tracking-widest uppercase">
@@ -145,7 +145,7 @@ const FutsalPage = () => {
 
           <div className="relative border-l border-white/10 md:border-l-0 pl-6 md:pl-0 space-y-10 md:space-y-0">
             {/* Connecting Dashed Line representing football passes/tactics */}
-            <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-0 border-l-2 border-dashed border-[#55D5E7] -translate-x-1/2 pointer-events-none opacity-40" />
+            <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-0 border-l-2 border-dashed border-[var(--color-primary-light)] -translate-x-1/2 pointer-events-none opacity-40" />
 
             {timelineData.map((item, idx) => {
               const isEven = idx % 2 === 0;
@@ -153,8 +153,8 @@ const FutsalPage = () => {
                 <div key={idx} className="relative md:grid md:grid-cols-2 md:gap-16 items-center md:pb-8">
                   {/* Soccer ball node marker */}
                   <div className="absolute left-[-32.5px] md:left-1/2 top-6 md:top-1/2 -translate-y-1/2 md:-translate-x-1/2 w-4 h-4 rounded-full border border-black z-10 flex items-center justify-center bg-black transition-all group-hover:rotate-45"
-                       style={{ borderColor: isEven ? '#55D5E7' : '#5cb3ff' }}>
-                    <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: isEven ? '#55D5E7' : '#5cb3ff', boxShadow: `0 0 10px ${isEven ? '#55D5E7' : '#5cb3ff'}` }} />
+                       style={{ borderColor: isEven ? 'var(--color-primary-light)' : 'var(--color-primary-light)' }}>
+                    <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: isEven ? 'var(--color-primary-light)' : 'var(--color-primary-light)', boxShadow: `0 0 10px ${isEven ? 'var(--color-primary-light)' : 'var(--color-primary-light)'}` }} />
                   </div>
 
                   {/* Left Side (Even) */}
@@ -165,7 +165,7 @@ const FutsalPage = () => {
                         date={item.date}
                         title={item.title}
                         description={item.desc}
-                        accentColor="#55D5E7"
+                        accentColor="var(--color-primary-light)"
                         className="md:mr-4 shadow-xl"
                       />
                     )}
@@ -179,7 +179,7 @@ const FutsalPage = () => {
                         date={item.date}
                         title={item.title}
                         description={item.desc}
-                        accentColor="#5cb3ff"
+                        accentColor="var(--color-primary-light)"
                         className="md:ml-4 shadow-xl"
                       />
                     )}

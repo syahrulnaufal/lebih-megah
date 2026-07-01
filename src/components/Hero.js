@@ -238,11 +238,11 @@ const CountdownTimer = () => {
 const FloatingOrbs = () => {
   const orbs = useMemo(
     () => [
-      { id: 0, size: 400, x: -8, y: -12, speed: 24, color: 'rgba(12,30,70,0.45)' },
-      { id: 1, size: 300, x: 80, y: 65, speed: 28, color: 'rgba(92,179,255,0.06)' },
-      { id: 2, size: 220, x: 45, y: -20, speed: 20, color: 'rgba(249,117,64,0.05)' },
-      { id: 3, size: 350, x: 88, y: -8, speed: 26, color: 'rgba(126,93,193,0.05)' },
-      { id: 4, size: 250, x: 15, y: 75, speed: 22, color: 'rgba(92,179,255,0.04)' },
+      { id: 0, size: 400, x: -8, y: -12, speed: 24, color: 'color-mix(in srgb, var(--color-primary-dark) 45%, transparent)' },
+      { id: 1, size: 300, x: 80, y: 65, speed: 28, color: 'color-mix(in srgb, var(--color-primary-light) 6%, transparent)' },
+      { id: 2, size: 220, x: 45, y: -20, speed: 20, color: 'color-mix(in srgb, var(--color-highlight-orange) 5%, transparent)' },
+      { id: 3, size: 350, x: 88, y: -8, speed: 26, color: 'color-mix(in srgb, var(--color-highlight-lime) 5%, transparent)' },
+      { id: 4, size: 250, x: 15, y: 75, speed: 22, color: 'color-mix(in srgb, var(--color-primary-light) 4%, transparent)' },
     ],
     []
   );
@@ -361,9 +361,9 @@ const Hero = () => {
           className="absolute inset-0"
           style={{
             background: `
-              radial-gradient(ellipse 60% 50% at 5% 15%, rgba(92,179,255,0.10) 0%, transparent 60%),
-              radial-gradient(ellipse 40% 40% at 95% 85%, rgba(126,93,193,0.08) 0%, transparent 55%),
-              radial-gradient(ellipse 30% 30% at 85% 10%, rgba(249,117,64,0.06) 0%, transparent 50%)
+              radial-gradient(ellipse 60% 50% at 5% 15%, color-mix(in srgb, var(--color-primary-light) 10%, transparent) 0%, transparent 60%),
+              radial-gradient(ellipse 40% 40% at 95% 85%, color-mix(in srgb, var(--color-highlight-lime) 8%, transparent) 0%, transparent 55%),
+              radial-gradient(ellipse 30% 30% at 85% 10%, color-mix(in srgb, var(--color-highlight-orange) 6%, transparent) 0%, transparent 50%)
             `,
           }}
         />
@@ -381,9 +381,9 @@ const Hero = () => {
                 visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
             >
-              <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-[#5cb3ff]/15 bg-[#5cb3ff]/[0.04] backdrop-blur-sm">
-                <span className="w-2 h-2 rounded-full bg-[#5cb3ff] animate-pulse shadow-[0_0_10px_rgba(92,179,255,0.6)]" />
-                <span className="text-[11px] sm:text-xs uppercase tracking-[0.2em] font-bold text-[#5cb3ff]/70 font-jakarta">
+              <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-[var(--color-primary-light)]/15 bg-[var(--color-primary-light)]/[0.04] backdrop-blur-sm">
+                <span className="w-2 h-2 rounded-full bg-[var(--color-highlight-lime)] animate-pulse shadow-[0_0_10px_rgba(92,179,255,0.6)]" />
+                <span className="text-[11px] sm:text-xs uppercase tracking-[0.2em] font-bold text-[var(--color-primary-light)]/70 font-jakarta">
                   Festival Teknologi & Kreativitas
                 </span>
               </div>
@@ -405,7 +405,7 @@ const Hero = () => {
                     />
                     <AnimatedTitle
                       text="FEST"
-                      className="block text-[#5cb3ff] drop-shadow-[0_0_40px_rgba(92,179,255,0.2)]"
+                      className="block text-[var(--color-highlight-orange)] drop-shadow-[0_0_40px_rgba(92,179,255,0.2)]"
                       baseDelay={0.55}
                     />
                   </>
@@ -431,11 +431,11 @@ const Hero = () => {
               }`}
             >
               <div className="hero-info-pill">
-                <Calendar className="w-3.5 h-3.5 text-[#5cb3ff]" />
+                <Calendar className="w-3.5 h-3.5 text-[var(--color-highlight-lime)]" />
                 <span>24 Sep – 13 Nov 2026</span>
               </div>
               <div className="hero-info-pill">
-                <MapPin className="w-3.5 h-3.5 text-neon-orange" />
+                <MapPin className="w-3.5 h-3.5 text-[var(--color-highlight-lime)]" />
                 <span>UIN Walisongo Semarang</span>
               </div>
             </div>
@@ -471,7 +471,7 @@ const Hero = () => {
               <div
                 className="hero-glow-ring absolute inset-0 rounded-full pointer-events-none"
                 style={{
-                  background: 'radial-gradient(circle, rgba(92,179,255,0.15) 0%, rgba(126,93,193,0.08) 40%, transparent 65%)',
+                  background: 'radial-gradient(circle, color-mix(in srgb, var(--color-primary-light) 15%, transparent) 0%, color-mix(in srgb, var(--color-highlight-lime) 8%, transparent) 40%, transparent 65%)',
                   transform: 'scale(1.4)',
                   filter: 'blur(30px)',
                 }}
@@ -498,7 +498,7 @@ const Hero = () => {
                 <div
                   className="glass-navy relative rounded-xl p-4 sm:p-5 overflow-hidden"
                 >
-                  <div className="absolute top-0 left-[15%] right-[15%] h-px bg-gradient-to-r from-transparent via-[#5cb3ff]/15 to-transparent" />
+                  <div className="absolute top-0 left-[15%] right-[15%] h-px bg-gradient-to-r from-transparent via-[var(--color-primary-light)]/15 to-transparent" />
                   <div className="text-center mb-3">
                     <p className="text-[9px] sm:text-[10px] tracking-[0.2em] font-bold uppercase text-white/35 font-jakarta flex items-center justify-center gap-2">
                       <span className="w-1.5 h-1.5 rounded-full animate-pulse bg-neon-orange shadow-[0_0_8px_rgba(249,115,22,0.7)]" />

@@ -1,13 +1,13 @@
 // src/components/cards/TimelineCard.js
 import React from 'react';
 
-export default function TimelineCard({ step, date, title, description, accentColor = '#5cb3ff', className = '', style = {} }) {
+export default function TimelineCard({ step, date, title, description, accentColor = 'var(--color-primary-light)', className = '', style = {} }) {
   return (
     <div 
-      className={`glass-navy border border-[#5cb3ff]/10 p-8 md:p-10 rounded-[2.5rem] relative overflow-hidden group hover:border-[#5cb3ff]/30 transition-all duration-500 shadow-xl text-left card-hover ${className}`}
+      className={`glass-navy border border-[var(--color-primary-light)]/10 p-8 md:p-10 rounded-[2.5rem] relative overflow-hidden group hover:border-[var(--color-primary-light)]/30 transition-all duration-500 shadow-xl text-left card-hover ${className}`}
       style={style}
     >
-      <div className="absolute top-0 right-0 w-24 h-24 bg-[#5cb3ff]/5 rounded-full blur-[20px] pointer-events-none" />
+      <div className="absolute top-0 right-0 w-24 h-24 bg-[var(--color-primary-light)]/5 rounded-full blur-[20px] pointer-events-none" />
       
       <div className="flex items-center justify-between gap-4 mb-2.5">
         <span className="text-[10px] font-black font-mono tracking-wider uppercase" style={{ color: accentColor }}>

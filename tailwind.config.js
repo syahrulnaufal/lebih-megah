@@ -13,11 +13,11 @@ export default {
           card: 'rgba(25, 25, 40, 0.4)',
         },
         neon: {
-          orange: '#f97540',
-          purple: '#7e5dc1',
-          blue: '#5cb3ff',
-          yellow: '#f7f651',
-          magenta: '#ed374d',
+          orange: 'var(--color-highlight-orange)',
+          purple: 'var(--color-primary-light)',
+          blue: 'var(--color-primary-dark)',
+          yellow: 'var(--color-highlight-lime)',
+          magenta: 'var(--color-highlight-orange)',
         }
       },
       fontFamily: {

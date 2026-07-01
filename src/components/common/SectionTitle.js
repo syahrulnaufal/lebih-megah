@@ -5,7 +5,7 @@ export default function SectionTitle({ mainText, accentText, subtitle, center = 
   return (
     <div className={`mb-10 ${center ? 'text-center' : 'text-left'}`}>
       {subtitle && (
-        <span className="text-[10px] font-bold text-[#5cb3ff] tracking-[0.3em] uppercase block mb-2 font-mono">
+        <span className="text-[10px] font-bold text-[var(--color-highlight-lime)] tracking-[0.3em] uppercase block mb-2 font-mono">
           {subtitle}
         </span>
       )}

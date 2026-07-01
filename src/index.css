@@ -1,0 +1,26 @@
+:root {
+  /* Dominant Dark Blue from Image */
+  /* --color-primary-dark: #0125A9; */
+  /* --color-primary-dark-rgb: 1, 37, 169; */
+  --color-primary-dark: #153bc5;
+  --color-primary-dark-rgb: 21, 59, 197;
+  --color-primary-dark-20:  rgba(21, 59, 197, 0.2);
+
+  
+  /* Lighter Blue from Image */
+  /* --color-primary-light: #022ABE;
+  --color-primary-light-rgb: 2, 42, 190; */
+  --color-primary-light: #446dff;
+  --color-primary-light-rgb: 30, 72, 223;
+  --color-primary-light-20:  rgba(30, 72, 223, 0.2);
+  
+  /* Orange Highlight from Image */
+  --color-highlight-orange: #F67B07;
+  --color-highlight-orange-rgb: 246, 123, 7;
+  --color-highlight-orange-20:  rgba(246, 123, 7, 0.2);
+  
+  /* Lime Green Highlight from Image */
+  --color-highlight-lime: #C1F600;
+  --color-highlight-lime-rgb: 193, 246, 0;
+  --color-highlight-lime-20:  rgba(193, 246, 0, 0.2);
+}
