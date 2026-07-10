@@ -82,7 +82,7 @@ const LombaItPage = () => {
           <div className="bg-white/5 px-4 py-2.5 border-b border-white/5 flex items-center justify-between">
             <div className="flex items-center gap-1.5">
               <span className="w-2.5 h-2.5 rounded-full bg-[var(--color-highlight-lime)]/80" />
-              <span className="w-2.5 h-2.5 rounded-full bg-[var(--color-highlight-orange)]/80" />
+              <span className="w-2.5 h-2.5 rounded-full bg-[var(--color-highlight-lime)]/80" />
               <span className="w-2.5 h-2.5 rounded-full bg-[var(--color-highlight-lime)]/80" />
             </div>
             <span className="text-white/40 text-[9px] uppercase tracking-[0.2em] font-jakarta font-bold">tivo@switchfest: ~/competition-it</span>
@@ -103,7 +103,72 @@ const LombaItPage = () => {
           </div>
         </div>
 
+        {/* Info & Rule Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
+          {/* Rules Card */}
+          <div className="glass-navy border border-[var(--color-highlight-lime)]/10 p-8 md:p-10 rounded-[2.5rem] space-y-6 shadow-xl relative overflow-hidden">
+            <div className="absolute top-0 left-0 w-32 h-32 bg-gradient-to-br from-[var(--color-highlight-lime)]/10 to-transparent blur-2xl" />
+            <h3 className="text-2xl font-bold font-jakarta text-white">Ketentuan Turnamen</h3>
+            <div className="space-y-4">
+              <ul className="space-y-3 text-sm text-white/70">
+                <li className="flex items-start gap-2">
+                  <span className="text-[var(--color-highlight-lime)] font-bold">•</span>
+                  <span>Game: Mobile Legends: Bang Bang (MLBB)</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-[var(--color-highlight-lime)] font-bold">•</span>
+                  <span>Biaya Registrasi: Rp 50.000,- / Tim</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-[var(--highlight-lime)] font-bold">•</span>
+                  <span>Pemain: 5 Utama + 1 Cadangan</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-[var(--color-highlight-lime)] font-bold">•</span>
+                  <span>Skins & Emotes: Bebas/Allowed (mengikuti aturan TM)</span>
+                </li>
+              </ul>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-3 pt-6 border-t border-white/5">
+              <a
+                href="https://wa.me/6282325067587?text=Halo%20Kak%20Wafiq%2C%20saya%20ingin%20bertanya%20mengenai%20Turnamen%20E-Sport%20SwitchFest%202026."
+                className="flex-1 text-center py-3.5 px-4 font-bold rounded-2xl border border-white/10 hover:border-white/30 text-white bg-white/5 transition-all duration-300 font-jakarta text-xs uppercase tracking-wider flex items-center justify-center gap-1.5"
+              >
+                Tanya Panitia (WA)
+              </a>
+              <Link
+                to="/register?category=esport"
+                className="flex-1 text-center py-3.5 px-4 font-bold rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden font-jakarta text-xs uppercase tracking-wider flex items-center justify-center gap-1.5 bg-[var(--color-highlight-lime)] text-black hover:bg-[var(--color-highlight-lime)]/95"
+              >
+                <UserPlus className="w-3.5 h-3.5" />
+                Daftar Turnamen
+              </Link>
+            </div>
+          </div>
+
+          {/* Prize Pool Card */}
+          <div className="glass-navy border border-[var(--color-highlight-lime-20)] p-8 md:p-10 rounded-[2.5rem] flex flex-col justify-between gap-5 items-center shadow-xl relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-tr from-[var(--color-highlight-lime-20)] to-transparent blur-2xl" />
+            <h3 className="text-2xl font-bold font-jakarta text-white text-center">Total Hadiah</h3>
+            <div className="text-center space-y-2 pb-6">
+              <p className="text-4xl md:text-6xl font-black font-jakarta text-[var(--color-highlight-lime)] tracking-wider drop-shadow-[0_0_15px_rgba(92,179,255,0.4)]">
+                JUTAAN RUPIAH
+              </p>
+            </div>
+              <p className="text-sm text-white/50 font-mono tracking-widest uppercase">
+                + E-Certificate 
+              </p>
+          </div>
+        </div>
+
         {/* Sub-Competitions Cards */}
+        
+        <SectionTitle
+            mainText="Cabang"
+            accentText="Lomba IT"
+            center={true}
+            size="text-2xl md:text-4xl"
+          />
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {subComps.map((comp) => (
             <div

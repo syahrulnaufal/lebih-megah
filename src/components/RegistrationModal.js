@@ -12,7 +12,8 @@ const GOOGLE_FORM_LINKS = {
   ui_ux: 'https://docs.google.com/forms/d/e/1FAIpQLSfplaceholder_ui_ux/viewform',
   poster: 'https://docs.google.com/forms/d/e/1FAIpQLSfplaceholder_infografis/viewform',
   esport: 'https://docs.google.com/forms/d/e/1FAIpQLSfplaceholder_esport/viewform',
-  futsal: 'https://docs.google.com/forms/d/e/1FAIpQLSfplaceholder_futsal/viewform',
+  // futsal: 'https://docs.google.com/forms/d/e/1FAIpQLSfplaceholder_futsal/viewform',
+  futsal: 'https://docs.google.com/forms/d/e/1FAIpQLSc4XNd74BPYXdDAf-sqbUa57rprvF7aJVfZZlqWW2vXt8mMQw/viewform?usp=header',
   talkshow: 'https://docs.google.com/forms/d/e/1FAIpQLSfplaceholder_talkshow/viewform',
   concert: 'https://wa.me/6285117369252?text=Halo%20Kak%20Bagus%2C%20saya%20ingin%20memesan%20tiket%20Closing%20Concert%20SwitchFest%202026.',
 };

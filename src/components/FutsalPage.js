@@ -7,8 +7,9 @@ import TimelineCard from './cards/TimelineCard';
 import '../App.css';
 
 const timelineData = [
-  { title: 'Pendaftaran Tim', date: '1 - 30 September 2026', desc: 'Registrasi tim futsal SMA/SMK/Sederajat resmi dibuka secara online.' },
-  { title: 'Technical Meeting', date: '15 Oktober 2026', desc: 'Drawing grup pertandingan, regulasi juklak, juknis, dan tata tertib.' },
+  { title: 'Pendaftaran Gelombang 1', date: '15 Agustus - 13 September 2026', desc: 'Registrasi tim futsal SMA/SMK/Sederajat Gelombang 1 resmi dibuka secara online (Terbatas untuk 10 Tim Pertama).' },
+  { title: 'Pendaftaran Gelombang 2', date: '14 September - 18 Oktober 2026', desc: 'Registrasi tim futsal SMA/SMK/Sederajat Gelombang 2 resmi dibuka secara online (Kuota 22 Tim ).' },
+  { title: 'Technical Meeting', date: '21 Oktober 2026', desc: 'Drawing grup pertandingan, regulasi juklak, juknis, dan tata tertib.' },
   { title: 'Group Stage (Penyisihan)', date: '24 Oktober 2026', desc: 'Pertandingan fase grup penyisihan turnamen futsal di lapangan utama.' },
   { title: 'Grand Final & Awarding', date: '25 Oktober 2026', desc: 'Pertandingan babak semifinal, perebutan juara, dan penyerahan piala.' },
 ];
@@ -20,11 +21,11 @@ const faqData = [
   },
   {
     question: 'Berapakah biaya pendaftaran turnamen futsal?',
-    answer: 'Biaya registrasi adalah Rp 150.000,- per tim perwakilan.',
+    answer: 'Biaya registrasi adalah Rp 300.000,- (Gelombang 1) dan Rp 350.000,- (Gelombang 2) per tim .',
   },
   {
     question: 'Di mana lokasi pertandingan berlangsung?',
-    answer: 'Pertandingan futsal akan diselenggarakan secara offline di lapangan olahraga mitra UIN Walisongo Semarang.',
+    answer: 'Pertandingan futsal akan diselenggarakan secara offline di Gedung Serbaguna (Kampus 3) UIN Walisongo Semarang.',
   },
 ];
 
@@ -57,7 +58,7 @@ const FutsalPage = () => {
           }} />
           <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-[var(--color-primary-light)]/10 to-transparent blur-3xl pointer-events-none" />
           
-          <div className="flex flex-col md:flex-row items-center gap-6 relative z-10">
+          <div className="flex flex-row items-center gap-6 relative z-10">
             <div className="relative shrink-0 animate-float">
               <img
                 src="/images/mass.png"
@@ -90,11 +91,19 @@ const FutsalPage = () => {
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-[var(--color-primary-light)] font-bold">•</span>
-                  <span>Biaya Registrasi: Rp 150.000,- / Tim</span>
+                  <span>Biaya Registrasi Gelombang 1: Rp 300.000,- / Tim</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-[var(--color-primary-light)] font-bold">•</span>
+                  <span>Biaya Registrasi Gelombang 2: Rp 350.000,- / Tim</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-[var(--color-primary-light)] font-bold">•</span>
                   <span>Pemain: 5 Utama + Pemain Cadangan</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-[var(--color-primary-light)] font-bold">•</span>
+                  <span>Total Kuoata Tim: 32 Tim</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-[var(--color-primary-light)] font-bold">•</span>
@@ -120,17 +129,17 @@ const FutsalPage = () => {
           </div>
 
           {/* Prize Pool Card */}
-          <div className="glass-navy border border-[var(--color-primary-light)]/10 p-8 md:p-10 rounded-[2.5rem] space-y-6 flex flex-col justify-center shadow-xl relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-tr from-[var(--color-primary-light)]/10 to-transparent blur-2xl" />
+          <div className="glass-navy border border-[var(--color-primary-light-20)] p-8 md:p-10 rounded-[2.5rem] flex flex-col gap-5 justify-between items-center shadow-xl relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-tr from-[var(--color-primary-light-20)] to-transparent blur-2xl" />
             <h3 className="text-2xl font-bold font-jakarta text-white text-center">Total Hadiah</h3>
-            <div className="text-center space-y-2">
+            <div className="text-center space-y-2 ">
               <p className="text-4xl md:text-6xl font-black font-jakarta text-[var(--color-primary-light)] tracking-wider drop-shadow-[0_0_15px_rgba(92,179,255,0.4)]">
                 JUTAAN RUPIAH
               </p>
+            </div>
               <p className="text-sm text-white/50 font-mono tracking-widest uppercase">
                 + Trophy Pemenang & Medali Penghargaan
               </p>
-            </div>
           </div>
         </div>
 
@@ -187,6 +196,28 @@ const FutsalPage = () => {
                 </div>
               );
             })}
+          </div>
+        </div>
+
+        {/* Location Section */}
+        <div className="space-y-8 max-w-4xl mx-auto mb-16">
+          <SectionTitle
+            mainText="Lokasi"
+            accentText="Pertandingan"
+            center={true}
+            size="text-2xl md:text-4xl"
+          />
+          <div className="glass-navy border border-[var(--color-primary-light)]/10 p-2 md:p-4 rounded-[2rem] shadow-xl overflow-hidden w-full">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.1479365723467!2d110.3467565749964!3d-6.9918508684748035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708abbef38ef5d%3A0x9b2c3667a534e34!2sGSG%20UIN%20WALISONGO!5e0!3m2!1sen!2sid!4v1783587232465!5m2!1sen!2sid" 
+              width="100%" 
+              height="450" 
+              style={{ border: 0, borderRadius: '1.5rem' }} 
+              allowFullScreen="" 
+              loading="lazy" 
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Lokasi Pertandingan Futsal"
+            ></iframe>
           </div>
         </div>
 

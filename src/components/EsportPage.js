@@ -124,17 +124,17 @@ const EsportPage = () => {
           </div>
 
           {/* Prize Pool Card */}
-          <div className="glass-navy border border-[var(--color-highlight-orange)]/10 p-8 md:p-10 rounded-[2.5rem] space-y-4 flex flex-col justify-center shadow-xl relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-tr from-[var(--color-highlight-orange)]/10 to-transparent blur-2xl" />
+          <div className="glass-navy border border-[var(--color-highlight-orange-20)] p-8 md:p-10 rounded-[2.5rem] flex flex-col justify-between gap-5 items-center shadow-xl relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-tr from-[var(--color-highlight-orange-20)] to-transparent blur-2xl" />
             <h3 className="text-2xl font-bold font-jakarta text-white text-center">Total Hadiah</h3>
             <div className="text-center space-y-2 pb-6">
               <p className="text-4xl md:text-6xl font-black font-jakarta text-[var(--color-highlight-orange)] tracking-wider drop-shadow-[0_0_15px_rgba(92,179,255,0.4)]">
                 JUTAAN RUPIAH
               </p>
+            </div>
               <p className="text-sm text-white/50 font-mono tracking-widest uppercase">
                 + E-Certificate & Trophy Pemenang
               </p>
-            </div>
           </div>
         </div>
 
