@@ -8,9 +8,9 @@ import '../App.css';
 
 const timelineData = [
   { title: 'Pendaftaran Tim', date: '1 - 30 September 2026', desc: 'Registrasi pendaftaran tim Mobile Legends resmi dibuka secara online.' },
-  { title: 'Technical Meeting', date: '12 Oktober 2026', desc: 'Sesi drawing bracket tim dan pembacaan regulasi turnamen secara daring.' },
-  { title: 'Kualifikasi Online', date: '13 - 15 Oktober 2026', desc: 'Pertandingan kualifikasi online fase penyisihan sistem gugur.' },
-  { title: 'Semifinal & Grand Final', date: '17 Oktober 2026', desc: 'Laga puncak perebutan gelar juara secara luring di Gedung Auditorium 2.' },
+  { title: 'Technical Meeting', date: '10 Oktober 2026', desc: 'Sesi drawing bracket tim dan pembacaan regulasi turnamen secara daring.' },
+  { title: 'Babak Kualifikasi (Offline)', date: '13 - 15 Oktober 2026', desc: 'Pertandingan kualifikasi online fase penyisihan sistem gugur.' },
+  { title: 'Semifinal & Grand Final (Offline)', date: '17 Oktober 2026', desc: 'Laga puncak perebutan gelar juara secara luring di Gedung Auditorium 2.' },
 ];
 
 const faqData = [
@@ -98,7 +98,7 @@ const EsportPage = () => {
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-[var(--color-highlight-orange)] font-bold">•</span>
-                  <span>Pemain: 5 Utama + 1 Cadangan</span>
+                  <span>Pemain: 5 Utama + 2 Cadangan</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-[var(--color-highlight-orange)] font-bold">•</span>
@@ -133,7 +133,7 @@ const EsportPage = () => {
               </p>
             </div>
               <p className="text-sm text-white/50 font-mono tracking-widest uppercase">
-                + E-Certificate & Trophy Pemenang
+                + E-Certificate 
               </p>
           </div>
         </div>
