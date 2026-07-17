@@ -9,8 +9,8 @@ import '../App.css';
 const timelineData = [
   { title: 'Pendaftaran Tim', date: '1 - 30 September 2026', desc: 'Registrasi pendaftaran tim Mobile Legends resmi dibuka secara online.' },
   { title: 'Technical Meeting', date: '10 Oktober 2026', desc: 'Sesi drawing bracket tim dan pembacaan regulasi turnamen secara daring.' },
-  { title: 'Babak Kualifikasi (Offline)', date: '13 - 15 Oktober 2026', desc: 'Pertandingan kualifikasi online fase penyisihan sistem gugur.' },
-  { title: 'Semifinal & Grand Final (Offline)', date: '17 Oktober 2026', desc: 'Laga puncak perebutan gelar juara secara luring di Gedung Auditorium 2.' },
+  { title: 'Babak Kualifikasi & Babak Final(Offline)', date: '17 Oktober 2026', desc: 'Pertandingan kualifikasi online fase penyisihan sistem gugur dan Laga puncak perebutan gelar juara secara luring di Gedung Auditorium 2' },
+  // { title: 'Semifinal & Grand Final (Offline)', date: '17 Oktober 2026', desc: 'Laga puncak perebutan gelar juara secara luring di Gedung Auditorium 2.' },
 ];
 
 const faqData = [
@@ -128,7 +128,7 @@ const EsportPage = () => {
             <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-tr from-[var(--color-highlight-orange-20)] to-transparent blur-2xl" />
             <h3 className="text-2xl font-bold font-jakarta text-white text-center">Total Hadiah</h3>
             <div className="text-center space-y-2 pb-6">
-              <p className="text-4xl md:text-6xl font-black font-jakarta text-[var(--color-highlight-orange)] tracking-wider drop-shadow-[0_0_15px_rgba(92,179,255,0.4)]">
+              <p className="text-4xl md:text-6xl font-black font-jakarta text-[var(--color-highlight-orange)] tracking-wider drop-shadow-[0_0_15px_rgba(246,123,7,0.4)]">
                 JUTAAN RUPIAH
               </p>
             </div>

@@ -273,12 +273,21 @@ const FloatingOrbs = () => {
    ║         MAIN HERO COMPONENT                ║
    ╚═════════════════════════════════════════════╝ */
 const Hero = () => {
+  const [loadingPhase, setLoadingPhase] = useState(0);
   const [visible, setVisible] = useState(false);
   const mascotRef = useRef(null);
 
   useEffect(() => {
-    const t = setTimeout(() => setVisible(true), 200);
-    return () => clearTimeout(t);
+    const t1 = setTimeout(() => setLoadingPhase(1), 200);
+    const t2 = setTimeout(() => {
+      setLoadingPhase(2);
+      setTimeout(() => setVisible(true), 200);
+      setTimeout(() => setLoadingPhase(3), 800);
+    }, 800);
+    return () => {
+      clearTimeout(t1);
+      clearTimeout(t2);
+    };
   }, []);
 
   // 3D parallax for mascot on desktop
@@ -332,7 +341,28 @@ const Hero = () => {
 
 
   return (
-    <section className="relative min-h-screen flex flex-col justify-center overflow-hidden">
+    <>
+      {loadingPhase < 3 && (
+        <div
+          className={`fixed inset-0 z-[100] flex flex-col items-center justify-center transition-opacity duration-700  ${
+            loadingPhase === 2 ? 'opacity-0 pointer-events-none' : 'opacity-100'
+          } ${
+            loadingPhase >= 1 ? 'bg-white' : 'bg-black'
+          }`}
+        >
+          <div className="flex font-black text-6xl sm:text-8xl md:text-9xl tracking-tighter font-sans uppercase">
+            <p className={`${loadingPhase === 1 ? 'text-black' : 'text-white'}`}>
+              SWITCH
+            </p>
+            <p
+              className={`${loadingPhase === 1 ? 'text-black opacity-100' : 'opacity-0'} transition-opacity duration-0`}
+            >
+              FEST
+            </p>
+          </div>
+        </div>
+      )}
+      <section className="relative min-h-screen flex flex-col justify-center overflow-hidden">
       {/* ── AURORA BACKGROUND ── */}
       <div className="absolute inset-0 bg-transparent" />
 
@@ -381,12 +411,12 @@ const Hero = () => {
                 visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
             >
-              <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-[var(--color-primary-light)]/15 bg-[var(--color-primary-light)]/[0.04] backdrop-blur-sm">
+              {/* <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-[var(--color-primary-light)]/15 bg-[var(--color-primary-light)]/[0.04] backdrop-blur-sm">
                 <span className="w-2 h-2 rounded-full bg-[var(--color-highlight-lime)] animate-pulse shadow-[0_0_10px_rgba(92,179,255,0.6)]" />
                 <span className="text-[11px] sm:text-xs uppercase tracking-[0.2em] font-bold text-[var(--color-primary-light)]/70 font-jakarta">
                   Festival Teknologi & Kreativitas
                 </span>
-              </div>
+              </div> */}
             </div>
 
             {/* Main title — letter by letter */}
@@ -522,6 +552,7 @@ const Hero = () => {
         <ChevronDown className="w-4 h-4 animate-bounce text-white/15" aria-hidden="true" />
       </div>
     </section>
+    </>
   );
 };
 

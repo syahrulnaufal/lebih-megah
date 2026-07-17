@@ -81,7 +81,7 @@ const events = [
     secondaryColor: 'var(--color-highlight-orange)',
     categories: ['Mahasiswa', 'Umum'],
     benefits: ['Sertifikat & Seminar Kit Eksklusif', 'Wawasan Karir dari Praktisi Ahli', 'Kuisioner Berhadiah Menarik'],
-    actionType: 'link',
+    actionType: 'popup',
     path: '/talkshow',
     icon: (
       <svg width="64" height="64" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -102,7 +102,7 @@ const events = [
     secondaryColor: 'var(--color-highlight-orange)',
     categories: ['Umum'],
     benefits: ['Penampilan Bintang Tamu Spesial', 'Panggung Hiburan Musik Terbuka', 'Tiket Terjangkau & Spot Foto Keren'],
-    actionType: 'link',
+    actionType: 'popup',
     path: '/concert',
     icon: (
       <svg width="64" height="64" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -137,6 +137,14 @@ const popupItemsByEventId = {
     { nama: 'Daftar Turnamen Futsal', link: '/register?category=futsal' },
     { nama: 'Hubungi Panitia (WA)', link: 'https://wa.me/6281229811522' },
   ],
+  talkshow: [
+    { nama: 'Daftar Talkshow', link: '/register?category=talkshow' },
+    { nama: 'Hubungi Panitia (WA)', link: 'https://wa.me/6287743872524' },
+  ],
+  konser: [
+    { nama: 'Daftar Konser', link: '/register?category=concert' },
+    { nama: 'Hubungi Panitia (WA)', link: 'https://wa.me/628156808770' },
+  ]
 };
 
 const Category = () => {

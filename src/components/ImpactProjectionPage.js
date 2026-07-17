@@ -88,7 +88,8 @@ const ImpactProjectionPage = () => {
         {/* Title / Hero */}
         <div className="text-center space-y-4">
           <h1 className="text-4xl md:text-7xl font-black font-jakarta tracking-tight">
-            IMPACT <span className="text-[var(--color-highlight-lime)]">PROJECTION</span>
+            {/* IMPACT <span className="text-[var(--color-highlight-lime)]">PROJECTION</span> */}
+            IMPACT PROJECTION
           </h1>
           <p className="text-white/60 max-w-2xl mx-auto text-base md:text-lg">
             Rencana dampak SwitchFest 2026 dalam melahirkan paparan publik yang luas dan memperluas ekosistem teknologi nasional.
@@ -136,7 +137,8 @@ const ImpactProjectionPage = () => {
         {/* 7 Core Benefits of Partnership */}
         <div className="space-y-8">
           <h2 className="text-2xl md:text-4xl font-bold font-jakarta text-center">
-            Keuntungan Utama <span className="text-[var(--color-highlight-lime)]">Kemitraan</span>
+            {/* Keuntungan Utama <span className="text-[var(--color-highlight-lime)]">Kemitraan</span> */}
+            Keuntungan Utama Kemitraan
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {benefits.map((benefit, idx) => (

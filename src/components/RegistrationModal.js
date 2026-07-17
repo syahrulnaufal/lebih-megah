@@ -8,9 +8,9 @@ import '../App.css';
 // CENTRALIZED GOOGLE FORM LINKS CONFIGURATION
 // Silakan ganti link di bawah ini dengan tautan Google Form pendaftaran Anda yang asli.
 const GOOGLE_FORM_LINKS = {
-  web_dev: 'https://docs.google.com/forms/d/e/1FAIpQLSfplaceholder_web_dev/viewform',
-  ui_ux: 'https://docs.google.com/forms/d/e/1FAIpQLSfplaceholder_ui_ux/viewform',
-  poster: 'https://docs.google.com/forms/d/e/1FAIpQLSfplaceholder_infografis/viewform',
+  web_dev: 'http://bit.ly/WebDevelopment_SwicthFest2026',
+  ui_ux: 'https://bit.ly/UIUX-Design_SwitchFest2026',
+  poster: 'http://bit.ly/Infografis_SwitchFest2026',
   // esport: 'https://docs.google.com/forms/d/e/1FAIpQLSfplaceholder_esport/viewform',
   esport: 'https://forms.gle/BhnGhhgK2cRRT6Rx5',
   // futsal: 'https://docs.google.com/forms/d/e/1FAIpQLSfplaceholder_futsal/viewform',
