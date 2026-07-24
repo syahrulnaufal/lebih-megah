@@ -10,7 +10,7 @@ import '../App.css';
 const GOOGLE_FORM_LINKS = {
   web_dev: 'http://bit.ly/WebDevelopment_SwicthFest2026',
   ui_ux: 'https://bit.ly/UIUX-Design_SwitchFest2026',
-  poster: 'http://bit.ly/Infografis_SwitchFest2026',
+  poster: 'https://bit.ly/Infografis_SwitchFest2026',
   // esport: 'https://docs.google.com/forms/d/e/1FAIpQLSfplaceholder_esport/viewform',
   esport: 'https://forms.gle/BhnGhhgK2cRRT6Rx5',
   // futsal: 'https://docs.google.com/forms/d/e/1FAIpQLSfplaceholder_futsal/viewform',

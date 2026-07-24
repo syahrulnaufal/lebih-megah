@@ -123,11 +123,11 @@ const events = [
 const popupItemsByEventId = {
   lomba_it: [
     { nama: 'Daftar Web Programming', link: '/register?category=web_dev' },
-    { nama: 'Juklak Web Programming', link: 'https://drive.google.com/file/d/1ve29XMamqWfeevCN7htFM6XCHo8tAL5i/view?usp=drivesdk' },
+    { nama: 'Guidebook Web Programming', link: 'https://drive.google.com/drive/folders/19lcJ5OGSdBJ8DW3renEE0x_MnAEFzi_4?usp=sharing' },
     { nama: 'Daftar UI/UX Design', link: '/register?category=ui_ux' },
-    { nama: 'Juklak UI/UX Design', link: 'https://drive.google.com/file/d/1vadpN8UT0icQn3SCuflCTc6di7DFLgwQ/view?usp=drivesdk' },
+    { nama: 'Guidebook UI/UX Design', link: 'https://drive.google.com/drive/folders/1gQqwYeJ4q7zakAfKSQAsisJ6p4VPS9J-?usp=sharing' },
     { nama: 'Daftar Infografis', link: '/register?category=poster' },
-    { nama: 'Juklak Infografis', link: 'https://drive.google.com/file/d/1vi1-bds6tkxZTdSDhCAP7OWfMt0iFLtn/view?usp=drivesdk' },
+    { nama: 'Guidebook Infografis', link: 'https://drive.google.com/drive/folders/1Vxn9K78GyfQtwHcuR-fDXS3_KHTq1jc8?usp=drive_link' },
   ],
   esport: [
     { nama: 'Daftar Turnamen E-Sport', link: '/register?category=esport' },

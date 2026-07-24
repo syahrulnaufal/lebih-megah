@@ -278,7 +278,7 @@ const Hero = () => {
   const mascotRef = useRef(null);
 
   useEffect(() => {
-    const t1 = setTimeout(() => setLoadingPhase(1), 300);
+    const t1 = setTimeout(() => setLoadingPhase(1), 500);
     const t2 = setTimeout(() => {
       setLoadingPhase(2);
       setTimeout(() => setVisible(true), 200);
