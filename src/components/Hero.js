@@ -283,7 +283,7 @@ const Hero = () => {
       setLoadingPhase(2);
       setTimeout(() => setVisible(true), 200);
       setTimeout(() => setLoadingPhase(3), 800);
-    }, 1000);
+    }, 1300);
     return () => {
       clearTimeout(t1);
       clearTimeout(t2);
