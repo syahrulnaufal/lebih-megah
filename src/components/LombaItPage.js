@@ -113,19 +113,23 @@ const LombaItPage = () => {
               <ul className="space-y-3 text-sm text-white/70">
                 <li className="flex items-start gap-2">
                   <span className="text-[var(--color-highlight-lime)] font-bold">•</span>
-                  <span>Game: Mobile Legends: Bang Bang (MLBB)</span>
+                  <span>Peserta merupakan Murid SMA/Sederajat atau Mahasiswa</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-[var(--color-highlight-lime)] font-bold">•</span>
-                  <span>Biaya Registrasi: Rp 50.000,- / Tim</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-[var(--highlight-lime)] font-bold">•</span>
-                  <span>Pemain: 5 Utama + 1 Cadangan</span>
+                  <span>Biaya Registrasi bervariasi tergantung batch dan cabang lomba yang diikuti (bisa dilihat di guidebook masing-masing lomba)</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-[var(--color-highlight-lime)] font-bold">•</span>
-                  <span>Skins & Emotes: Bebas/Allowed (mengikuti aturan TM)</span>
+                  <span>Satu Tim teridiri dari 3 orang, kecuali lomba poster yang merupakan lomba individu (1 orang)</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-[var(--color-highlight-lime)] font-bold">•</span>
+                  <span>Hadiah berupa uang tunai dan sertifikat</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-[var(--color-highlight-lime)] font-bold">•</span>
+                  <span>Peserta wajib follow akun <a href="https://www.instagram.com/ti.uinws" target="_blank" rel="noopener noreferrer" className="text-[var(--color-highlight-lime)] hover:text-[var(--color-highlight-lime-20)] transition-all duration-300">@ti.uinws</a> dan <a href="https://www.instagram.com/switchfest_" target="_blank" rel="noopener noreferrer" className="text-[var(--color-highlight-lime)] hover:text-[var(--color-highlight-lime-20)] transition-all duration-300">@switchfest_</a> </span>
                 </li>
               </ul>
             </div>
