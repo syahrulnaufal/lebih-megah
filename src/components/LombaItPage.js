@@ -135,7 +135,7 @@ const LombaItPage = () => {
             </div>
             <div className="flex flex-col sm:flex-row gap-3 pt-6 border-t border-white/5">
               <a
-                href="https://wa.me/6282325067587?text=Halo%20Kak%20Wafiq%2C%20saya%20ingin%20bertanya%20mengenai%20Turnamen%20E-Sport%20SwitchFest%202026."
+                href="https://wa.me/628973434055?text=Halo%20Kak%20Syahrul%2C%20saya%20ingin%20bertanya%20mengenai%20Lomba%20IT%20SwitchFest%202026."
                 className="flex-1 text-center py-3.5 px-4 font-bold rounded-2xl border border-white/10 hover:border-white/30 text-white bg-white/5 transition-all duration-300 font-jakarta text-xs uppercase tracking-wider flex items-center justify-center gap-1.5"
               >
                 Contact Person
