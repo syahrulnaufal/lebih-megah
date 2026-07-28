@@ -108,7 +108,7 @@ const LombaItPage = () => {
           {/* Rules Card */}
           <div className="glass-navy border border-[var(--color-highlight-lime)]/10 p-8 md:p-10 rounded-[2.5rem] space-y-6 shadow-xl relative overflow-hidden">
             <div className="absolute top-0 left-0 w-32 h-32 bg-gradient-to-br from-[var(--color-highlight-lime)]/10 to-transparent blur-2xl" />
-            <h3 className="text-2xl font-bold font-jakarta text-white">Ketentuan Turnamen</h3>
+            <h3 className="text-2xl font-bold font-jakarta text-white">Ketentuan Lomba IT</h3>
             <div className="space-y-4">
               <ul className="space-y-3 text-sm text-white/70">
                 <li className="flex items-start gap-2">
