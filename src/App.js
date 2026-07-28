@@ -22,7 +22,7 @@ const ConcertPage = lazy(() => import("./components/ConcertPage"));
 const ImpactProjectionPage = lazy(() => import("./components/ImpactProjectionPage"));
 const PartnershipPage = lazy(() => import("./components/PartnershipPage"));
 const SponsorPage = lazy(() => import("./components/SponsorPage"));
-
+const MakeYourTwibbon = lazy(() => import("./components/MakeYourTwibbon"));
 // Scroll to Hash behavior helper
 const ScrollToHash = () => {
   const { pathname, hash } = useLocation();
@@ -86,6 +86,12 @@ const SubpageLayout = ({ children }) => {
       { color: 'orange', size: 'w-[700px] h-[700px]', position: 'top-[-10%] left-[-10%]', opacity: 'opacity-15' },
       { color: 'orange', size: 'w-[600px] h-[600px]', position: 'bottom-[-10%] right-[-10%]', opacity: 'opacity-15' },
       { color: 'orange', size: 'w-[500px] h-[500px]', position: 'top-[25%] left-[25%]', opacity: 'opacity-10' }
+    ];
+  } else if (path === '/twibbon') {
+    orbs = [
+      { color: 'blue', size: 'w-[700px] h-[700px]', position: 'top-[-10%] left-[-10%]', opacity: 'opacity-15' },
+      { color: 'orange', size: 'w-[600px] h-[600px]', position: 'bottom-[-10%] right-[-10%]', opacity: 'opacity-15' },
+      { color: 'purple', size: 'w-[500px] h-[500px]', position: 'top-[25%] left-[25%]', opacity: 'opacity-10' }
     ];
   } else {
     // Default orbs for /sponsor, /partnership, /impact-projection
@@ -198,6 +204,7 @@ const App = () => {
             <Route path="/futsal" element={<SubpageLayout><FutsalPage /></SubpageLayout>} />
             <Route path="/talkshow" element={<SubpageLayout><TalkshowPage /></SubpageLayout>} />
             <Route path="/concert" element={<SubpageLayout><ConcertPage /></SubpageLayout>} />
+            <Route path="/twibbon" element={<SubpageLayout><MakeYourTwibbon /></SubpageLayout>} />
 
             {/* Registration */}
             <Route path="/register" element={<RegistrationModal />} />

@@ -116,7 +116,7 @@ const FutsalPage = () => {
                 href="https://wa.me/6281229811522?text=Halo%20Kak%20Yunus%2C%20saya%20ingin%20bertanya%20mengenai%20Turnamen%20Futsal%20SwitchFest%202026."
                 className="flex-1 text-center py-3.5 px-4 font-bold rounded-2xl border border-white/10 hover:border-white/30 text-white bg-white/5 transition-all duration-300 font-jakarta text-xs uppercase tracking-wider flex items-center justify-center gap-1.5"
               >
-                Tanya Panitia (WA)
+                Contact Person
               </a>
               <Link
                 to="/register?category=futsal"

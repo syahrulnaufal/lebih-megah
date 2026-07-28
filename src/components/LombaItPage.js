@@ -12,21 +12,21 @@ const subComps = [
     title: 'Web Programming',
     desc: 'Tantang kemampuanmu dalam membangun aplikasi web inovatif, fungsional, dan responsif menggunakan teknologi terdepan.',
     registerLink: '/register?category=web_dev',
-    juklakLink: 'https://drive.google.com/file/d/1ve29XMamqWfeevCN7htFM6XCHo8tAL5i/view?usp=drivesdk',
+    juklakLink: 'https://drive.google.com/drive/folders/19lcJ5OGSdBJ8DW3renEE0x_MnAEFzi_4?usp=sharing',
   },
   {
     id: 'uiux',
     title: 'UI/UX Design',
     desc: 'Tunjukkan kreativitasmu dalam merancang antarmuka (interface) dan pengalaman pengguna (experience) yang memukau dan user-friendly.',
     registerLink: '/register?category=ui_ux',
-    juklakLink: 'https://drive.google.com/file/d/1vadpN8UT0icQn3SCuflCTc6di7DFLgwQ/view?usp=drivesdk',
+    juklakLink: 'https://drive.google.com/drive/folders/1gQqwYeJ4q7zakAfKSQAsisJ6p4VPS9J-?usp=sharing',
   },
   {
     id: 'poster',
     title: 'Infografis',
     desc: 'Ekspresikan gagasan dan pesanmu secara artistik melalui desain infografis digital yang kreatif, inspiratif, dan persuasif.',
     registerLink: '/register?category=poster',
-    juklakLink: 'https://drive.google.com/file/d/1vi1-bds6tkxZTdSDhCAP7OWfMt0iFLtn/view?usp=drivesdk',
+    juklakLink: 'https://drive.google.com/drive/folders/1Vxn9K78GyfQtwHcuR-fDXS3_KHTq1jc8',
   },
 ];
 
@@ -138,7 +138,7 @@ const LombaItPage = () => {
                 href="https://wa.me/6282325067587?text=Halo%20Kak%20Wafiq%2C%20saya%20ingin%20bertanya%20mengenai%20Turnamen%20E-Sport%20SwitchFest%202026."
                 className="flex-1 text-center py-3.5 px-4 font-bold rounded-2xl border border-white/10 hover:border-white/30 text-white bg-white/5 transition-all duration-300 font-jakarta text-xs uppercase tracking-wider flex items-center justify-center gap-1.5"
               >
-                Tanya Panitia (WA)
+                Contact Person
               </a>
               <Link
                 to="/register?category=esport"
