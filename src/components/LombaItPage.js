@@ -23,7 +23,7 @@ const subComps = [
   },
   {
     id: 'poster',
-    title: 'Infografis',
+    title: 'Poster Infografis',
     desc: 'Ekspresikan gagasan dan pesanmu secara artistik melalui desain infografis digital yang kreatif, inspiratif, dan persuasif.',
     registerLink: '/register?category=poster',
     juklakLink: 'https://drive.google.com/drive/folders/1Vxn9K78GyfQtwHcuR-fDXS3_KHTq1jc8',
@@ -71,7 +71,7 @@ const LombaItPage = () => {
         <SubpageHeader
           title="LOMBA"
           accentTitle="IT NASIONAL"
-          subtitle="Asah keahlian teknismu dan ciptakan karya teknologi inovatif dalam 3 sub-cabang kompetisi IT bergengsi SwitchFest 2026."
+          subtitle="Asah keahlian teknismu dan ciptakan karya teknologi inovatif dalam 3 cabang kompetisi IT bergengsi SwitchFest 2026."
           categoryLabel="IT COMPETITION"
           backPath="/"
         />
