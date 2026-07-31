@@ -141,11 +141,10 @@ const LombaItPage = () => {
                 Contact Person
               </a>
               <Link
-                to="/register?category=esport"
+                to="/twibbon"
                 className="flex-1 text-center py-3.5 px-4 font-bold rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden font-jakarta text-xs uppercase tracking-wider flex items-center justify-center gap-1.5 bg-[var(--color-highlight-lime)] text-black hover:bg-[var(--color-highlight-lime)]/95"
               >
-                <UserPlus className="w-3.5 h-3.5" />
-                Daftar Sekarang
+                Buat Twibbon
               </Link>
             </div>
           </div>

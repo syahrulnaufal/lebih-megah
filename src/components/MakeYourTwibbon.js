@@ -1,8 +1,8 @@
-import React, { useState, useCallback, useEffect } from 'react';
+import React, { useState, useCallback, useEffect, useRef } from 'react';
 import Cropper from 'react-easy-crop';
 import SubpageHeader from './common/SubpageHeader';
 import SectionTitle from './common/SectionTitle';
-import { Upload, Download, ZoomIn, ZoomOut, Image as ImageIcon } from 'lucide-react';
+import { Upload, Download, ZoomIn, ZoomOut, Image as ImageIcon, Copy, Check } from 'lucide-react';
 import '../App.css';
 
 const createImage = (url) =>
@@ -20,10 +20,11 @@ async function getCroppedImg(imageSrc, pixelCrop, twibbonSrc) {
   const canvas = document.createElement('canvas');
   const ctx = canvas.getContext('2d');
 
-  // Standardize the output size, e.g. 1080x1080
-  const twibbonSize = 1080;
-  canvas.width = twibbonSize;
-  canvas.height = twibbonSize;
+  // Standardize the output size for 3:4 ratio, e.g. 1080x1440
+  const canvasWidth = 1080;
+  const canvasHeight = 1440;
+  canvas.width = canvasWidth;
+  canvas.height = canvasHeight;
 
   // Draw the cropped user image
   ctx.drawImage(
@@ -34,14 +35,14 @@ async function getCroppedImg(imageSrc, pixelCrop, twibbonSrc) {
     pixelCrop.height,
     0,
     0,
-    twibbonSize,
-    twibbonSize
+    canvasWidth,
+    canvasHeight
   );
 
   // Try to draw the twibbon overlay on top if it exists
   try {
     const twibbon = await createImage(twibbonSrc);
-    ctx.drawImage(twibbon, 0, 0, twibbonSize, twibbonSize);
+    ctx.drawImage(twibbon, 0, 0, canvasWidth, canvasHeight);
   } catch (error) {
     console.warn("Twibbon overlay image not found or failed to load. Exporting only cropped photo.");
   }
@@ -59,6 +60,26 @@ const MakeYourTwibbon = () => {
   const [zoom, setZoom] = useState(1);
   const [croppedAreaPixels, setCroppedAreaPixels] = useState(null);
   const [isGenerating, setIsGenerating] = useState(false);
+  const [isCopied, setIsCopied] = useState(false);
+
+  const captionText = `READY TO SWITCH, INNOVATE, AND MAKE AN IMPACT! 🚀
+
+Halo semuanya! Saya [Nama Kamu] dari [Asal Sekolah/Universitas], siap untuk beralih ke level berikutnya dan menantang diri di ajang Switchfest External Competition 2026! 🌟
+
+
+Saya mengikuti perlombaan di kategori [Web Development / UI/UX Design / Desain Infografis], dan siap berinovasi serta menjadi bagian dari perubahan ekosistem digital masa depan bersama @switchfest_ dan @ti.uinws
+
+
+How about you? Are you ready to switch with us? 💡✨
+
+
+#Switchfest2026 #SwitchfestIT #SwitchToTheFuture #LombaITNasional #LombaWebDev #LombaUIUX #LombaInfografis #LombaMahasiswa #LombaSMA #TechCompetition2026 #ITFestival #MahasiswaIT #WebDevelopment #UIUXDesign #InfographicDesign`;
+
+  const handleCopyCaption = () => {
+    navigator.clipboard.writeText(captionText);
+    setIsCopied(true);
+    setTimeout(() => setIsCopied(false), 2000);
+  };
 
   // Default twibbon image path
   const twibbonSrc = '/images/twibbon.png';
@@ -67,8 +88,11 @@ const MakeYourTwibbon = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  const croppedAreaPixelsRef = useRef(null);
+
   const onCropComplete = useCallback((croppedArea, croppedAreaPixels) => {
     setCroppedAreaPixels(croppedAreaPixels);
+    croppedAreaPixelsRef.current = croppedAreaPixels;
   }, []);
 
   const handleFileChange = async (e) => {
@@ -90,11 +114,12 @@ const MakeYourTwibbon = () => {
   const showResult = async () => {
     try {
       setIsGenerating(true);
-      const croppedImage = await getCroppedImg(imageSrc, croppedAreaPixels, twibbonSrc);
+      const latestCrop = croppedAreaPixelsRef.current || croppedAreaPixels;
+      const croppedImage = await getCroppedImg(imageSrc, latestCrop, twibbonSrc);
       
       // Trigger download
       const link = document.createElement('a');
-      link.download = 'SwitchFest-Twibbon.png';
+      link.download = `SwitchFest-Twibbon-${Date.now()}.png`;
       link.href = croppedImage;
       link.click();
     } catch (e) {
@@ -135,7 +160,7 @@ const MakeYourTwibbon = () => {
                 </div>
                 <h3 className="text-xl md:text-2xl font-bold font-jakarta mb-2">Upload Foto Terbaikmu</h3>
                 <p className="text-white/50 text-sm mb-6 max-w-sm">
-                  Pilih foto rasio 1:1 atau persegi panjang untuk dipaskan ke dalam bingkai twibbon.
+                  Pilih foto favoritmu untuk dibingkai ke dalam twibbon SwitchFest 2026.
                 </p>
                 <label className="cursor-pointer inline-flex items-center gap-2 px-8 py-4 bg-[var(--color-primary-light)] text-white font-bold uppercase tracking-widest rounded-full hover:bg-[var(--color-primary-light)]/90 transition-all shadow-[0_0_20px_var(--color-primary-light-20)]">
                   <Upload className="w-5 h-5" />
@@ -149,81 +174,102 @@ const MakeYourTwibbon = () => {
                 </label>
               </div>
             ) : (
-              <div className="space-y-6">
-                <div className="relative w-full max-w-md mx-auto aspect-square rounded-2xl overflow-hidden bg-black/50 border border-white/10 shadow-2xl">
-                  {/* Cropper Component */}
-                  <Cropper
-                    image={imageSrc}
-                    crop={crop}
-                    zoom={zoom}
-                    aspect={1}
-                    onCropChange={setCrop}
-                    onCropComplete={onCropComplete}
-                    onZoomChange={setZoom}
-                    showGrid={false}
-                  />
-                  
-                  {/* Twibbon Overlay */}
-                  <div className="absolute inset-0 pointer-events-none z-10">
-                    <img 
-                      src={twibbonSrc} 
-                      alt="Twibbon Overlay" 
-                      className="w-full h-full object-contain"
-                      onError={(e) => {
-                        e.target.style.display = 'none'; // Sembunyikan jika twibbon belum ada di folder public/images
-                      }}
-                    />
-                  </div>
-                </div>
-
-                {/* Controls */}
-                <div className="max-w-md mx-auto space-y-6 bg-white/5 p-6 rounded-2xl border border-white/5">
-                  <div className="space-y-3">
-                    <div className="flex items-center justify-between text-sm text-white/70 font-jakarta">
-                      <span className="flex items-center gap-2"><ZoomOut className="w-4 h-4" /> Zoom Out</span>
-                      <span className="flex items-center gap-2">Zoom In <ZoomIn className="w-4 h-4" /></span>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+                <div className="space-y-6">
+                  <div className="relative w-full max-w-md mx-auto aspect-[3/4] rounded-2xl overflow-hidden bg-black/50 border border-white/10 shadow-2xl">
+                    <div className="absolute -inset-10 sm:-inset-12 md:-inset-14">
+                      {/* Cropper Component */}
+                      <Cropper
+                        image={imageSrc}
+                        crop={crop}
+                        zoom={zoom}
+                        aspect={3 / 4}
+                        onCropChange={setCrop}
+                        onCropComplete={onCropComplete}
+                        onZoomChange={setZoom}
+                        showGrid={false}
+                        style={{
+                          cropAreaStyle: {
+                            backgroundImage: `url(${twibbonSrc})`,
+                            backgroundSize: '100% 100%',
+                            backgroundPosition: 'center',
+                            backgroundRepeat: 'no-repeat',
+                            border: 'none'
+                          }
+                        }}
+                      />
                     </div>
-                    <input
-                      type="range"
-                      value={zoom}
-                      min={1}
-                      max={3}
-                      step={0.1}
-                      aria-labelledby="Zoom"
-                      onChange={(e) => {
-                        setZoom(e.target.value);
-                      }}
-                      className="w-full h-2 bg-white/10 rounded-lg appearance-none cursor-pointer accent-[var(--color-primary-light)]"
-                    />
                   </div>
 
-                  <div className="flex gap-4">
-                    <button
-                      onClick={() => setImageSrc(null)}
-                      className="flex-1 py-3 px-4 rounded-xl border border-white/10 hover:bg-white/10 transition-colors font-jakarta text-sm font-bold"
-                    >
-                      Ganti Foto
-                    </button>
-                    <button
-                      onClick={showResult}
-                      disabled={isGenerating}
-                      className="flex-1 py-3 px-4 bg-[var(--color-primary-light)] text-white rounded-xl hover:bg-[var(--color-primary-light)]/90 transition-colors font-jakarta text-sm font-bold flex items-center justify-center gap-2 shadow-[0_0_15px_var(--color-primary-light-20)]"
-                    >
-                      {isGenerating ? (
-                        <span className="animate-pulse">Memproses...</span>
-                      ) : (
-                        <>
-                          <Download className="w-4 h-4" /> Download
-                        </>
-                      )}
-                    </button>
+                  {/* Controls */}
+                  <div className="max-w-md mx-auto space-y-6 bg-white/5 p-6 rounded-2xl border border-white/5">
+                    <div className="space-y-3">
+                      <div className="flex items-center justify-between text-sm text-white/70 font-jakarta">
+                        <span className="flex items-center gap-2"><ZoomOut className="w-4 h-4" /> Zoom Out</span>
+                        <span className="flex items-center gap-2">Zoom In <ZoomIn className="w-4 h-4" /></span>
+                      </div>
+                      <input
+                        type="range"
+                        value={zoom}
+                        min={1}
+                        max={3}
+                        step={0.1}
+                        aria-labelledby="Zoom"
+                        onChange={(e) => {
+                          setZoom(Number(e.target.value));
+                        }}
+                        className="w-full h-2 bg-white/10 rounded-lg appearance-none cursor-pointer accent-[var(--color-primary-light)]"
+                      />
+                    </div>
+
+                    <div className="flex gap-4">
+                      <button
+                        onClick={() => setImageSrc(null)}
+                        className="flex-1 py-3 px-4 rounded-xl border border-white/10 hover:bg-white/10 transition-colors font-jakarta text-sm font-bold"
+                      >
+                        Ganti Foto
+                      </button>
+                      <button
+                        onClick={showResult}
+                        disabled={isGenerating}
+                        className="flex-1 py-3 px-4 bg-[var(--color-primary-light)] text-white rounded-xl hover:bg-[var(--color-primary-light)]/90 transition-colors font-jakarta text-sm font-bold flex items-center justify-center gap-2 shadow-[0_0_15px_var(--color-primary-light-20)]"
+                      >
+                        {isGenerating ? (
+                          <span className="animate-pulse">Memproses...</span>
+                        ) : (
+                          <>
+                            <Download className="w-4 h-4" /> Download
+                          </>
+                        )}
+                      </button>
+                    </div>
+                  </div>
+                  
+                  <p className="text-center text-xs text-white/40 font-jakarta mt-4">
+                    *Geser untuk mengatur posisi, gunakan slider untuk zoom.
+                  </p>
+                </div>
+
+                {/* Caption Box */}
+                <div className="bg-white/5 border border-white/10 rounded-2xl p-6 h-full max-h-[600px] flex flex-col space-y-4">
+                  <h4 className="text-lg ms-2 font-bold font-jakarta text-white">Caption Twibbon</h4>
+                  <div className="flex-grow bg-black/30 rounded-xl p-4 border border-white/5 overflow-y-auto text-sm text-white/80 font-jakarta whitespace-pre-wrap leading-relaxed select-all">
+                    {captionText}
+                  </div>
+                  <button
+                    onClick={handleCopyCaption}
+                    className={`w-full py-3 px-4 text-white rounded-xl transition-all duration-300 font-jakarta text-sm font-bold flex items-center justify-center gap-2 ${
+                      isCopied ? 'bg-green-500 hover:bg-green-600' : 'hover:bg-white/10 bg-[var(--color-primary-light)]'
+                    }`}
+                  >
+                    {isCopied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
+                    {isCopied ? "Berhasil Disalin!" : "Salin Caption"}
+                  </button>
+                  <h4 className="text-lg ms-2 font-bold font-jakarta text-white/80">Tag akun instagram dibawah</h4>
+                  <div className="flex-grow bg-black/30 rounded-xl p-4 border border-white/5 text-sm text-white/80 font-jakarta">
+                      Instagram: @switchfest_ dan @ti.uinws
                   </div>
                 </div>
-                
-                <p className="text-center text-xs text-white/40 font-jakarta mt-4">
-                  *Geser untuk mengatur posisi, gunakan slider untuk zoom.<br/>
-                  Pastikan file <code className="text-white/60">twibbon.png</code> sudah diletakkan di dalam folder <code className="text-white/60">public/images/</code>.
-                </p>
               </div>
             )}
           </div>
