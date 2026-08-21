@@ -22,6 +22,11 @@ const sponsorData = [
   { file: 'pojok-event.png', name: 'Pojok Event', category: 'media' },
   { file: 'pusat-info-lomba.png', name: 'Pusat Info Lomba', category: 'media' },
   { file: 'tekno-event.png', name: 'Tekno Event', category: 'media' },
+  { file: 'Logo-eventpelajar.png', name: 'Event Pelajar', category: 'media' },
+  { file: 'Logo-LombaUIUX.png', name: 'Lomba UIUX', category: 'media' },
+  { file: 'Logo-LombaTekno.png', name: 'Lomba Tekno', category: 'media' },
+  { file: 'Logo-TeknoEventCampus25.png', name: 'Tekno Event Campus25', category: 'media' },
+
 
   // Komunitas Teknologi
   { file: 'google-development-group.png', name: 'Google Dev Group', category: 'komunitas' },
