@@ -48,7 +48,7 @@ const timelineEvents = [
     link: '/futsal',
   },
   {
-    date: '5 NOV 2026',
+    date: '19 NOV 2026',
     title: 'National Talkshow',
     desc: 'Seminar nasional bertema "Ideas that Matter: Impactful Solution" bersama praktisi teknologi terkemuka Indonesia.',
     icon: Mic,
@@ -56,7 +56,7 @@ const timelineEvents = [
     link: '/talkshow',
   },
   {
-    date: 'JUM\'AT, 13 NOV 2026',
+    date: '19 NOV 2026',
     title: 'Closing Concert',
     desc: 'Konser penutup spektakuler sebagai perayaan puncak rangkaian festival SwitchFest 2026 bersama bintang tamu spesial.',
     icon: Music,

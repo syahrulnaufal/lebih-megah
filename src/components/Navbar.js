@@ -20,6 +20,7 @@ const NAV_LINKS = [
   { label: 'Proyeksi', href: '/impact-projection' },
   { label: 'Kemitraan', href: '/partnership' },
   { label: 'Sponsor', href: '/sponsor' },
+  { label: 'Twibbon', href: '/twibbon'}
 ];
 
 const Navbar = () => {

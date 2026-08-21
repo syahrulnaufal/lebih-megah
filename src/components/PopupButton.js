@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 // <button onClick={() => setShowModal(true)}>Trigger</button>
 // <PopupButton showModal={showModal} setShowModal={setShowModal} label="Daftar" items={[{nama: 'Lomba 1', link: '/form/daftar-lomba-1'}, ...]} />
 
-const PopupButton = ({ showModal, setShowModal, label = "Pilih", items = [] }) => {
+const PopupButton = ({ showModal, setShowModal, label = "Pilih", items = [], accentColor }) => {
   const modalRef = useRef(null);
 
   useEffect(() => {
@@ -55,7 +55,10 @@ const PopupButton = ({ showModal, setShowModal, label = "Pilih", items = [] }) =
         >
           &times;
         </button>
-        <h3 className="text-lg md:text-xl font-bold mb-6 text-gradient-section text-center font-jakarta uppercase tracking-wider">
+        <h3 
+          className="text-lg md:text-xl font-bold mb-6 text-center font-jakarta uppercase tracking-wider"
+          style={{ color: accentColor }}
+        >
           Pilih {label || "Opsi"}
         </h3>
         <ul className="w-full space-y-3">

@@ -7,17 +7,17 @@ import TimelineCard from './cards/TimelineCard';
 import '../App.css';
 
 const talkshowInfo = [
-  { icon: Calendar, label: 'Tanggal', value: 'Kamis, 5 November 2026', iconColor: 'text-[var(--color-primary-light)]' },
+  { icon: Calendar, label: 'Tanggal', value: 'Kamis, 19 November 2026', iconColor: 'text-[var(--color-primary-light)]' },
   { icon: Clock, label: 'Waktu', value: '08.30 - 11.30 WIB', iconColor: 'text-[var(--color-primary-light)]' },
   { icon: MapPin, label: 'Lokasi', value: 'Gedung Auditorium 2, Kampus 3 UIN Walisongo', iconColor: 'text-[var(--color-primary-light)]' },
 ];
 
 const timelineData = [
   { title: 'Registrasi Peserta', date: '10 September - 25 Oktober 2026', desc: 'Pendaftaran tiket seminar talkshow teknologi nasional secara online.' },
-  { title: 'Open Gate & Check-in', date: '5 November 2026 - 08.00 WIB', desc: 'Pintu masuk dibuka, penukaran tiket fisik di meja registrasi.' },
-  { title: 'Opening & Keynote', date: '5 November 2026 - 08.30 WIB', desc: 'Pembukaan acara resmi oleh rektorat dan sambutan panitia.' },
-  { title: 'Sesi Talkshow Utama', date: '5 November 2026 - 09.00 WIB', desc: 'Penyampaian materi dan sesi tanya jawab interaktif bersama narasumber.' },
-  { title: 'Networking & Closing', date: '5 November 2026 - 11.30 WIB', desc: 'Sesi dokumentasi bersama dan pembagian e-sertifikat.' },
+  { title: 'Open Gate & Check-in', date: '19 November 2026 - 08.00 WIB', desc: 'Pintu masuk dibuka, penukaran tiket fisik di meja registrasi.' },
+  { title: 'Opening & Keynote', date: '19 November 2026 - 08.30 WIB', desc: 'Pembukaan acara resmi oleh rektorat dan sambutan panitia.' },
+  { title: 'Sesi Talkshow Utama', date: '19 November 2026 - 09.00 WIB', desc: 'Penyampaian materi dan sesi tanya jawab interaktif bersama narasumber.' },
+  { title: 'Networking & Closing', date: '19 November 2026 - 11.30 WIB', desc: 'Sesi dokumentasi bersama dan pembagian e-sertifikat.' },
 ];
 
 const faqData = [

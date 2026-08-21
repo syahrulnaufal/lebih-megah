@@ -462,7 +462,7 @@ const Hero = () => {
             >
               <div className="hero-info-pill">
                 <Calendar className="w-3.5 h-3.5 text-[var(--color-highlight-lime)]" />
-                <span>24 Sep – 13 Nov 2026</span>
+                <span>24 Sep – 19 Nov 2026</span>
               </div>
               <div className="hero-info-pill">
                 <MapPin className="w-3.5 h-3.5 text-[var(--color-highlight-lime)]" />

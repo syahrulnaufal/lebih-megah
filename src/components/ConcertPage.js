@@ -8,17 +8,17 @@ import GuestStarCard from './cards/GuestStarCard';
 import '../App.css';
 
 const concertInfo = [
-  { icon: Calendar, label: 'Tanggal', value: 'Jumat, 13 November 2026', iconColor: 'text-[var(--color-highlight-orange)]' },
+  { icon: Calendar, label: 'Tanggal', value: 'Kamis, 19 November 2026', iconColor: 'text-[var(--color-highlight-orange)]' },
   { icon: Clock, label: 'Waktu', value: '18.30 - Selesai', iconColor: 'text-[var(--color-highlight-orange)]' },
   { icon: MapPin, label: 'Lokasi', value: 'Gedung Auditorium 2, Kampus 3 UIN Walisongo Semarang', iconColor: 'text-[var(--color-highlight-orange)]' },
 ];
 
 const timelineData = [
-  { title: 'Pendaftaran Tiket', date: '20 September - 5 November 2026', desc: 'Registrasi pemesanan tiket masuk konser secara online.' },
-  { title: 'Open Gate Area', date: '13 November 2026 - 17.00 WIB', desc: 'Gerbang utama dibuka untuk pemeriksaan tiket penonton.' },
-  { title: 'Opening Act (Band Lokal)', date: '13 November 2026 - 18.30 WIB', desc: 'Penampilan pembuka dari band-band lokal pilihan.' },
-  { title: 'Sesi Awarding & Penutupan', date: '13 November 2026 - 20.00 WIB', desc: 'Pemberian penghargaan simbolis kepada panitia dan seluruh pihak terkait.' },
-  { title: 'Guest Star Performance', date: '13 November 2026 - 20.30 WIB', desc: 'Konser perayaan puncak persembahan dari bintang tamu utama SwitchFest.' },
+  { title: 'Pendaftaran Tiket', date: '20 September - 18 November 2026', desc: 'Registrasi pemesanan tiket masuk konser secara online.' },
+  { title: 'Open Gate Area', date: '19 November 2026 - 17.00 WIB', desc: 'Gerbang utama dibuka untuk pemeriksaan tiket penonton.' },
+  { title: 'Opening Act (Band Lokal)', date: '19 November 2026 - 18.30 WIB', desc: 'Penampilan pembuka dari band-band lokal pilihan.' },
+  { title: 'Sesi Awarding & Penutupan', date: '19 November 2026 - 20.00 WIB', desc: 'Pemberian penghargaan simbolis kepada panitia dan seluruh pihak terkait.' },
+  { title: 'Guest Star Performance', date: '19 November 2026 - 20.30 WIB', desc: 'Konser perayaan puncak persembahan dari bintang tamu utama SwitchFest.' },
 ];
 
 const wishlistArtists = [

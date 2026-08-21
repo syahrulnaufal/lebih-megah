@@ -224,6 +224,7 @@ const Category = () => {
           setShowModal={setShowModal}
           label={modalEvent.title}
           items={popupItemsByEventId[modalEvent.id] || []}
+          accentColor={modalEvent.accentColor}
         />
       )}
     </section>

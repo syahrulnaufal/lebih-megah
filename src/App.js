@@ -6,7 +6,6 @@ import GlowingOrb from "./components/common/GlowingOrb";
 import About from './components/About';
 import Mascot from './components/Mascot';
 import Category from "./components/Category";
-import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Sponsor from "./components/Sponsor";
 import Timeline from "./components/Timeline";
@@ -133,7 +132,7 @@ const SubpageLayout = ({ children }) => {
         {children}
       </div>
       <div className="relative z-10">
-        <Contact />
+        {/* <Contact /> */}
         <Footer />
       </div>
     </div>
@@ -188,7 +187,6 @@ const App = () => {
                 <Timeline />
                 <Category />
                 <Sponsor />
-                <Contact />
                 <Footer />
               </main>
             } />

@@ -2,7 +2,7 @@ import React, { useState, useCallback, useEffect, useRef } from 'react';
 import Cropper from 'react-easy-crop';
 import SubpageHeader from './common/SubpageHeader';
 import SectionTitle from './common/SectionTitle';
-import { Upload, Download, ZoomIn, ZoomOut, Image as ImageIcon, Copy, Check } from 'lucide-react';
+import { Upload, Download, ZoomIn, ZoomOut, Image as ImageIcon, Copy, Check, RotateCcw, RotateCw } from 'lucide-react';
 import '../App.css';
 
 const createImage = (url) =>
@@ -14,30 +14,49 @@ const createImage = (url) =>
     image.src = url;
   });
 
-async function getCroppedImg(imageSrc, pixelCrop, twibbonSrc) {
+export const getRadianAngle = (degreeValue) => {
+  return (degreeValue * Math.PI) / 180;
+}
+
+async function getCroppedImg(imageSrc, pixelCrop, twibbonSrc, rotation = 0) {
   const image = await createImage(imageSrc);
   
   const canvas = document.createElement('canvas');
   const ctx = canvas.getContext('2d');
 
-  // Standardize the output size for 3:4 ratio, e.g. 1080x1440
+  // Calculate bounding box of the rotated image
+  const rotRad = getRadianAngle(rotation);
+  const bBoxWidth = Math.abs(Math.cos(rotRad) * image.width) + Math.abs(Math.sin(rotRad) * image.height);
+  const bBoxHeight = Math.abs(Math.sin(rotRad) * image.width) + Math.abs(Math.cos(rotRad) * image.height);
+
+  canvas.width = bBoxWidth;
+  canvas.height = bBoxHeight;
+
+  // translate canvas context to a central location to allow rotating and flipping around the center
+  ctx.translate(bBoxWidth / 2, bBoxHeight / 2);
+  ctx.rotate(rotRad);
+  ctx.translate(-image.width / 2, -image.height / 2);
+
+  // draw rotated image
+  ctx.drawImage(image, 0, 0);
+
+  // extract the cropped image data
+  const data = ctx.getImageData(pixelCrop.x, pixelCrop.y, pixelCrop.width, pixelCrop.height);
+
+  // create a temporary canvas to draw the cropped image data
+  const tempCanvas = document.createElement('canvas');
+  tempCanvas.width = pixelCrop.width;
+  tempCanvas.height = pixelCrop.height;
+  tempCanvas.getContext('2d').putImageData(data, 0, 0);
+
+  // Standardize the output size for 3:4 ratio
   const canvasWidth = 1080;
   const canvasHeight = 1440;
   canvas.width = canvasWidth;
   canvas.height = canvasHeight;
 
-  // Draw the cropped user image
-  ctx.drawImage(
-    image,
-    pixelCrop.x,
-    pixelCrop.y,
-    pixelCrop.width,
-    pixelCrop.height,
-    0,
-    0,
-    canvasWidth,
-    canvasHeight
-  );
+  // Draw the temporary canvas to main canvas scaled
+  ctx.drawImage(tempCanvas, 0, 0, canvasWidth, canvasHeight);
 
   // Try to draw the twibbon overlay on top if it exists
   try {
@@ -58,6 +77,7 @@ const MakeYourTwibbon = () => {
   const [imageSrc, setImageSrc] = useState(null);
   const [crop, setCrop] = useState({ x: 0, y: 0 });
   const [zoom, setZoom] = useState(1);
+  const [rotation, setRotation] = useState(0);
   const [croppedAreaPixels, setCroppedAreaPixels] = useState(null);
   const [isGenerating, setIsGenerating] = useState(false);
   const [isCopied, setIsCopied] = useState(false);
@@ -115,7 +135,7 @@ How about you? Are you ready to switch with us? 💡✨
     try {
       setIsGenerating(true);
       const latestCrop = croppedAreaPixelsRef.current || croppedAreaPixels;
-      const croppedImage = await getCroppedImg(imageSrc, latestCrop, twibbonSrc);
+      const croppedImage = await getCroppedImg(imageSrc, latestCrop, twibbonSrc, rotation);
       
       // Trigger download
       const link = document.createElement('a');
@@ -177,14 +197,18 @@ How about you? Are you ready to switch with us? 💡✨
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
                 <div className="space-y-6">
                   <div className="relative w-full max-w-md mx-auto aspect-[3/4] rounded-2xl overflow-hidden bg-black/50 border border-white/10 shadow-2xl">
-                    <div className="absolute -inset-10 sm:-inset-12 md:-inset-14">
+                    <div className="absolute inset-0 scale-[1] origin-center">
                       {/* Cropper Component */}
                       <Cropper
                         image={imageSrc}
                         crop={crop}
                         zoom={zoom}
+                        rotation={rotation}
                         aspect={3 / 4}
+                        restrictPosition={false}
+                        minZoom={0.1}
                         onCropChange={setCrop}
+                        onRotationChange={setRotation}
                         onCropComplete={onCropComplete}
                         onZoomChange={setZoom}
                         showGrid={false}
@@ -205,18 +229,39 @@ How about you? Are you ready to switch with us? 💡✨
                   <div className="max-w-md mx-auto space-y-6 bg-white/5 p-6 rounded-2xl border border-white/5">
                     <div className="space-y-3">
                       <div className="flex items-center justify-between text-sm text-white/70 font-jakarta">
-                        <span className="flex items-center gap-2"><ZoomOut className="w-4 h-4" /> Zoom Out</span>
-                        <span className="flex items-center gap-2">Zoom In <ZoomIn className="w-4 h-4" /></span>
+                        <span className="flex items-center gap-2 w-1/3"><ZoomOut className="w-4 h-4" /> Zoom Out</span>
+                        <span className="text-center font-mono text-white/50 w-1/3">{Number(zoom).toFixed(1)}x</span>
+                        <span className="flex items-center justify-end gap-2 w-1/3">Zoom In <ZoomIn className="w-4 h-4" /></span>
                       </div>
                       <input
                         type="range"
                         value={zoom}
-                        min={1}
-                        max={3}
+                        min={0}
+                        max={2}
                         step={0.1}
                         aria-labelledby="Zoom"
                         onChange={(e) => {
                           setZoom(Number(e.target.value));
+                        }}
+                        className="w-full h-2 bg-white/10 rounded-lg appearance-none cursor-pointer accent-[var(--color-primary-light)]"
+                      />
+                    </div>
+                    
+                    <div className="space-y-3">
+                      <div className="flex items-center justify-between text-sm text-white/70 font-jakarta">
+                        <span className="flex items-center gap-2 w-1/3"><RotateCcw className="w-4 h-4" /> Putar Kiri</span>
+                        <span className="text-center font-mono text-white/50 w-1/3">{rotation}&deg;</span>
+                        <span className="flex items-center justify-end gap-2 w-1/3">Putar Kanan <RotateCw className="w-4 h-4" /></span>
+                      </div>
+                      <input
+                        type="range"
+                        value={rotation}
+                        min={-180}
+                        max={180}
+                        step={1}
+                        aria-labelledby="Rotation"
+                        onChange={(e) => {
+                          setRotation(Number(e.target.value));
                         }}
                         className="w-full h-2 bg-white/10 rounded-lg appearance-none cursor-pointer accent-[var(--color-primary-light)]"
                       />
