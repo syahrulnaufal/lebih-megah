@@ -43,6 +43,9 @@ const sponsorData = [
   { file: 'hmp-mikroptik-uns.png', name: 'HMP Mikroptik UNS', category: 'organisasi' },
   { file: 'hmpsi-uin-saizu.png', name: 'HMPSI UIN Saizu', category: 'organisasi' },
   { file: 'hmtif-unisula.png', name: 'HMTIF Unisula', category: 'organisasi' },
+  { file: 'Logo-HMJ-MTK.png', name: 'HMJ Matematika UIN Walisongo', category: 'organisasi' },
+  { file: 'Logo-HMJ-KIMIA.png', name: 'HMJ Kimia UIN Walisongo', category: 'organisasi' },
+  { file: 'Logo-HMJ-Fisika.jpg', name: 'HMJ Fisika UIN Walisongo', category: 'organisasi' },
   // Official Sponsors
   { file: 'burjo-pantry.jpg', name: 'Burjo Pantry', category: 'sponsor' },
   { file: 'cv-mata-hati-chakra-hadi-rasa.jpg', name: 'CV. Mata Hati Chakra Hadi Rasa', category: 'sponsor' },
