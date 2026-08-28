@@ -24,7 +24,7 @@ const faqData = [
   },
   {
     question: 'Bagaimana sistem pertandingannya?',
-    answer: 'Sistem penyisihan menggunakan format Single Elimination (sistem gugur) BO3 (Best of 3) pada babak tertentu, dan BO5 pada babak Grand Final.',
+    answer: 'Sistem penyisihan menggunakan format Single Elimination (sistem gugur) BO1 (Best of 1), SemiFinal menggunakan BO3 (Best of 3) dan Final menggunakan BO5 (Best of 5)',
   },
 ];
 
@@ -98,7 +98,7 @@ const EsportPage = () => {
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-[var(--color-highlight-orange)] font-bold">•</span>
-                  <span>Pemain: 5 Utama + 2 Cadangan</span>
+                  <span>Pemain: 5 Utama + 1 Cadangan</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-[var(--color-highlight-orange)] font-bold">•</span>
