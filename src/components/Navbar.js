@@ -12,7 +12,7 @@ const NAV_LINKS = [
     children: [
       { label: 'Lomba IT', href: '/lomba-it' },
       { label: 'E-Sport', href: '/esport' },
-      { label: 'Futsal', href: '/futsal' },
+      // { label: 'Futsal', href: '/futsal' },
       { label: 'Talkshow', href: '/talkshow' },
       { label: 'Konser', href: '/concert' },
     ],
@@ -41,7 +41,7 @@ const Navbar = () => {
     }
     if (link.href === '/#category') {
       return (currentPath === '/' && currentHash === '#category') || 
-             ['/lomba-it', '/esport', '/futsal', '/talkshow', '/concert'].includes(currentPath);
+             ['/lomba-it', '/esport', '/talkshow', '/concert'].includes(currentPath);
     }
     if (link.href.startsWith('/#')) {
       const targetHash = link.href.replace('/', '');

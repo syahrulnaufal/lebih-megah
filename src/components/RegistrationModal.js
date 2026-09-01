@@ -13,9 +13,8 @@ const GOOGLE_FORM_LINKS = {
   poster: 'https://bit.ly/Infografis_SwitchFest2026',
   // esport: 'https://docs.google.com/forms/d/e/1FAIpQLSfplaceholder_esport/viewform',
   esport: 'https://forms.gle/BhnGhhgK2cRRT6Rx5',
-  // futsal: 'https://docs.google.com/forms/d/e/1FAIpQLSfplaceholder_futsal/viewform',
-  futsal: 'https://docs.google.com/forms/d/e/1FAIpQLSc4XNd74BPYXdDAf-sqbUa57rprvF7aJVfZZlqWW2vXt8mMQw/viewform?usp=header',
-  talkshow: 'https://docs.google.com/forms/d/e/1FAIpQLSfplaceholder_talkshow/viewform',
+  // futsal: 'https://docs.google.com/forms/d/e/1FAIpQLSc4XNd74BPYXdDAf-sqbUa57rprvF7aJVfZZlqWW2vXt8mMQw/viewform?usp=header',
+  talkshow: 'https://docs.google.com/forms/d/e/1FAIpQLSf2O8aEisvXN18rJ79Fz0XQd170tH4ZJ3bY8L7e_8o9B9fX4Q/viewform?usp=header',
   concert: 'https://wa.me/6285117369252?text=Halo%20Kak%20Bagus%2C%20saya%20ingin%20memesan%20tiket%20Closing%20Concert%20SwitchFest%202026.',
 };
 
@@ -23,9 +22,9 @@ const EVENT_LABELS = {
   web_dev: 'Lomba IT – Web Programming',
   ui_ux: 'Lomba IT – UI/UX Design',
   poster: 'Lomba IT – Infografis',
-  esport: 'Lomba E-Sport',
-  futsal: 'Lomba Futsal',
-  talkshow: 'Talkshow Nasional',
+  esport: 'Turnamen E-Sport',
+  // futsal: 'Lomba Futsal',
+  talkshow: 'Seminar Nasional (Talkshow)',
   concert: 'Konser Penutup (Closing Concert)',
 };
 
@@ -153,10 +152,10 @@ export default function RegistrationModal() {
                     <option value="">Pilih Kategori...</option>
                     <option value="web_dev">Lomba IT – Web Programming</option>
                     <option value="ui_ux">Lomba IT – UI/UX Design</option>
-                    <option value="poster">Lomba IT – Infografis</option>
-                    <option value="esport">Lomba E‑Sport</option>
-                    <option value="futsal">Lomba Futsal</option>
-                    <option value="talkshow">Talkshow Nasional</option>
+                    <option value="poster">Lomba Infografis</option>
+                    <option value="esport">Turnamen E-Sport</option>
+                    {/* <option value="futsal">Lomba Futsal</option> */}
+                    <option value="talkshow">Seminar Nasional (Talkshow)</option>
                     <option value="concert">Konser Penutup (Closing Concert)</option>
                   </select>
                 </div>

@@ -51,6 +51,7 @@ const events = [
       </svg>
     ),
   },
+  /*
   {
     id: 'futsal',
     title: 'Futsal Tournament',
@@ -72,6 +73,7 @@ const events = [
       </svg>
     ),
   },
+  */
   {
     id: 'talkshow',
     title: 'National Talkshow',
@@ -133,10 +135,12 @@ const popupItemsByEventId = {
     { nama: 'Daftar Turnamen E-Sport', link: '/register?category=esport' },
     { nama: 'Hubungi Panitia (WA)', link: 'https://wa.me/6282325067587' },
   ],
+  /*
   futsal: [
     { nama: 'Daftar Turnamen Futsal', link: '/register?category=futsal' },
     { nama: 'Hubungi Panitia (WA)', link: 'https://wa.me/6281229811522' },
   ],
+  */
   talkshow: [
     { nama: 'Daftar Talkshow', link: '/register?category=talkshow' },
     { nama: 'Hubungi Panitia (WA)', link: 'https://wa.me/6287743872524' },

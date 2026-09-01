@@ -15,7 +15,7 @@ import './App.css';
 const RegistrationModal = lazy(() => import("./components/RegistrationModal"));
 const LombaItPage = lazy(() => import("./components/LombaItPage"));
 const EsportPage = lazy(() => import("./components/EsportPage"));
-const FutsalPage = lazy(() => import("./components/FutsalPage"));
+// const FutsalPage = lazy(() => import("./components/FutsalPage"));
 const TalkshowPage = lazy(() => import("./components/TalkshowPage"));
 const ConcertPage = lazy(() => import("./components/ConcertPage"));
 const ImpactProjectionPage = lazy(() => import("./components/ImpactProjectionPage"));
@@ -199,7 +199,7 @@ const App = () => {
             {/* Event Subpages */}
             <Route path="/lomba-it" element={<SubpageLayout><LombaItPage /></SubpageLayout>} />
             <Route path="/esport" element={<SubpageLayout><EsportPage /></SubpageLayout>} />
-            <Route path="/futsal" element={<SubpageLayout><FutsalPage /></SubpageLayout>} />
+            {/* <Route path="/futsal" element={<SubpageLayout><FutsalPage /></SubpageLayout>} /> */}
             <Route path="/talkshow" element={<SubpageLayout><TalkshowPage /></SubpageLayout>} />
             <Route path="/concert" element={<SubpageLayout><ConcertPage /></SubpageLayout>} />
             <Route path="/twibbon" element={<SubpageLayout><MakeYourTwibbon /></SubpageLayout>} />

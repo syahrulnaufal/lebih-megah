@@ -39,6 +39,7 @@ const timelineEvents = [
     color: 'var(--color-highlight-orange)', // Orange
     link: '/esport',
   },
+  /*
   {
     date: '24 - 25 OKT 2026',
     title: 'Lomba Futsal Cup',
@@ -47,6 +48,7 @@ const timelineEvents = [
     color: 'var(--color-highlight-lime)', // Red
     link: '/futsal',
   },
+  */
   {
     date: '19 NOV 2026',
     title: 'National Talkshow',
