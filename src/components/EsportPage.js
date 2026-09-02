@@ -7,8 +7,8 @@ import TimelineCard from './cards/TimelineCard';
 import '../App.css';
 
 const timelineData = [
-  { title: 'Pendaftaran Tim', date: '1 - 30 September 2026', desc: 'Registrasi pendaftaran tim Mobile Legends resmi dibuka secara online.' },
-  { title: 'Technical Meeting', date: '10 Oktober 2026', desc: 'Sesi drawing bracket tim dan pembacaan regulasi turnamen secara daring.' },
+  { title: 'Pendaftaran Tim', date: '10 September - 10 Oktober 2026', desc: 'Registrasi pendaftaran tim Mobile Legends resmi dibuka secara online.' },
+  { title: 'Technical Meeting', date: '13 Oktober 2026', desc: 'Sesi drawing bracket tim dan pembacaan regulasi turnamen secara daring.' },
   { title: 'Babak Kualifikasi & Babak Final(Offline)', date: '17 Oktober 2026', desc: 'Pertandingan kualifikasi online fase penyisihan sistem gugur dan Laga puncak perebutan gelar juara secara luring di Gedung Auditorium 2' },
   // { title: 'Semifinal & Grand Final (Offline)', date: '17 Oktober 2026', desc: 'Laga puncak perebutan gelar juara secara luring di Gedung Auditorium 2.' },
 ];
